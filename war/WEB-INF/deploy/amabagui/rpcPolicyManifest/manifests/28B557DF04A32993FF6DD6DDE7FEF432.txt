@@ -1,0 +1,2 @@
+serviceClass: ch.amaba.client.GreetingService
+path: E924E9D1C58D284D4386481DCFFF784A.gwt.rpc

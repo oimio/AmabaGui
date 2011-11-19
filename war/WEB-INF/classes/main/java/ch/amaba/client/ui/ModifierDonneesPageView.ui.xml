@@ -1,0 +1,121 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:npui="urn:import:ch.amaba.client.ui.composite">
+
+	<ui:with type="ch.amaba.client.NameTokens"
+		field="nameTokens"></ui:with>
+	<ui:style>
+		.error {
+			background-color: red;
+			border: 1px solid red;
+			font-weight: bold;
+			color: white;
+			margin: 5px;
+			padding: 2px;
+		}
+	</ui:style>
+	<g:DecoratorPanel>
+		<g:VerticalPanel ui:field="htmlPanel" spacing="1">
+			<g:DisclosurePanel animationEnabled="true" width="400px"
+				open="true">
+				<g:customHeader>
+					<g:HorizontalPanel verticalAlignment="bottom"
+						height="40px">
+						<g:Image url="images/chef.png"></g:Image>
+						<g:Label title='Devenir membre'>Modifier mes données personnelles</g:Label>
+					</g:HorizontalPanel>
+				</g:customHeader>
+				<g:HTMLPanel>
+					<table>
+						<tr>
+							<td>
+								<g:VerticalPanel width="150px">
+									<g:Label>Je suis(*) </g:Label>
+									<g:ListBox ui:field="codeSexeListBox">
+										<g:item value='-1'>-- - --</g:item>
+										<g:item value='1'>un Homme</g:item>
+										<g:item value='2'>une Femme</g:item>
+									</g:ListBox>
+								</g:VerticalPanel>
+							</td>
+							<td>
+								<g:VerticalPanel>
+									<g:Label>Date naissance (*)</g:Label>
+									<g:HorizontalPanel spacing="3">
+										<g:TextBox width="18px" maxLength="2" ui:field="jourTextBox"></g:TextBox>
+										<g:TextBox width="18px" maxLength="2" ui:field="moisTextBox"></g:TextBox>
+										<g:TextBox width="36px" maxLength="4" ui:field="anneeTextBox"></g:TextBox>
+									</g:HorizontalPanel>
+								</g:VerticalPanel>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<g:VerticalPanel>
+									<g:Label>Nom(*)</g:Label>
+									<g:TextBox ui:field="nomTextBox" maxLength="75" />
+								</g:VerticalPanel>
+							</td>
+							<td>
+								<g:VerticalPanel>
+									<g:Label>Prénom(*)</g:Label>
+									<g:TextBox ui:field="prenomTextBox" maxLength="75" />
+								</g:VerticalPanel>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<g:VerticalPanel>
+									<g:Label>Ancien Password(*)</g:Label>
+									<g:PasswordTextBox ui:field="passwordAncienTextBox"
+										maxLength="45" />
+								</g:VerticalPanel>
+							</td>
+							<td>
+								<g:VerticalPanel>
+									<g:Label>Nouveau Password(*)</g:Label>
+									<g:PasswordTextBox ui:field="passwordTextBox"
+										maxLength="45" />
+								</g:VerticalPanel>
+							</td>
+							<td>
+								<g:VerticalPanel>
+									<g:Label>Nouveau Password confirmez(*)</g:Label>
+									<g:PasswordTextBox ui:field="passwordRepeatTextBox"
+										maxLength="45" />
+								</g:VerticalPanel>
+							</td>
+						</tr>
+						<tr>
+							<td colspan='2'>
+								<npui:CantonsListBoxPanel ui:field="cantonsListBoxPanel" />
+							</td>
+						</tr>
+						<tr>
+							<td colspan='3'>
+								<g:DisclosurePanel animationEnabled="true"
+									open="false">
+																<g:customHeader>
+								<g:HorizontalPanel verticalAlignment="bottom"
+									height="40px">
+									<g:Image url="images/chef.png"></g:Image>
+									<g:Label title='Devenir membre'>Sports</g:Label>
+								</g:HorizontalPanel>
+							</g:customHeader>
+									<npui:ChoixMultiplePanel ui:field="choixMultiplePanel"></npui:ChoixMultiplePanel>
+								</g:DisclosurePanel>
+
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<g:Button text='Modifier mes données' ui:field="modifierButton" />
+							</td>
+						</tr>
+					</table>
+				</g:HTMLPanel>
+
+			</g:DisclosurePanel>
+		</g:VerticalPanel>
+	</g:DecoratorPanel>
+</ui:UiBinder> 

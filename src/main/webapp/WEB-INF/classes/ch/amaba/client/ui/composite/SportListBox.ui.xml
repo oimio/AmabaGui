@@ -1,0 +1,29 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+	<ui:with type="ch.amaba.client.NameTokens"
+		field="nameTokens"></ui:with>
+
+	<g:VerticalPanel verticalAlignment="middle" horizontalAlignment="center">
+		<g:Label title='Choisissez un ou plusieurs sports'>Sports </g:Label>
+		<g:HorizontalPanel verticalAlignment="middle">
+			<g:ListBox ui:field="sportListBox" multipleSelect="false" visibleItemCount="5">
+				<g:item value='-1'>Choisissez un sport</g:item>
+				<g:item value='1' selected='true'>FOOT</g:item>
+				<g:item value='2'>BASKET</g:item>
+				<g:item value='3'>NATATION</g:item>
+				<g:item value='4'>ESCALADE</g:item>
+				<g:item value='5'>COURSE</g:item>
+				<g:item value='6'>TENNIS</g:item>
+				<g:item value='7'>EQUITATION</g:item>
+				<g:item value='8'>VOLLEY</g:item>
+				<g:item value='9'>VTT</g:item>
+				<g:item value='10'>ROLLER</g:item>
+				<g:item value='11'>DANSE</g:item>
+				<g:item value='12'>PLONGEE</g:item>
+				<g:item value='13'>VOILE</g:item>
+			</g:ListBox>
+		</g:HorizontalPanel>
+	</g:VerticalPanel>
+</ui:UiBinder> 

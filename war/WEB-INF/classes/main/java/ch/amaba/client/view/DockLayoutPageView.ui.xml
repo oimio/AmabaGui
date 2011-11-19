@@ -1,0 +1,110 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:npui="urn:import:ch.amaba.client.view">
+
+	<ui:with type="ch.amaba.client.NameTokens"
+		field="nameTokens"></ui:with>
+
+	<ui:style>
+		.redBox {
+			background-color: white;
+			border: 1px solid red;
+			height: 600px;
+			width: 100%;
+		}
+		
+		.cursor{
+		  cursor:pointer;
+		}
+		
+		.border {
+			border: 1px solid black;
+		}
+		
+		.borderGreen {
+			border: 3px solid green;
+			margin: 1px;
+			padding: 1px;
+		}
+		
+		.enabled {
+			color: black;
+		}
+		
+		.disabled {
+			color: gray;
+		}
+	</ui:style>
+
+	<g:SplitLayoutPanel styleName='{style.redBox}'>
+		<g:north size='60'>
+			<g:HorizontalPanel styleName='{style.borderGreen}' width='100%' height='100%'>
+				<npui:RechercheRapide />
+				<g:Label styleName='{style.cursor}' title='Déconnexion'>Logout</g:Label>
+			</g:HorizontalPanel>
+		</g:north>
+		<g:center size='200'>
+			<g:VerticalPanel styleName='{style.borderGreen}'
+				width='100%' height='100%' ui:field="bodyPanel">
+				<g:Label ui:field="bodyLabel" styleName='{style.border}'>Body</g:Label>
+			</g:VerticalPanel>
+		</g:center>
+		<g:south size='50'>
+			<g:VerticalPanel styleName='{style.borderGreen}'
+				width='100%' height='100%'>
+				<g:Label styleName='{style.border}'>South</g:Label>
+			</g:VerticalPanel>
+		</g:south>
+		<g:west size='200' styleName='{style.border}'>
+			<g:LayoutPanel>
+				<g:layer>
+					<g:StackLayoutPanel unit='PX' animationDuration="0">
+						<g:stack>
+							<g:customHeader size='25'>
+								<g:Label>Recherche</g:Label>
+							</g:customHeader>
+							<g:VerticalPanel width="100%">
+								<g:Label ui:field="rechercheDetaillee">Recherche détaillée</g:Label>
+								<g:Label>Mes recherches</g:Label>
+							</g:VerticalPanel>
+						</g:stack>
+						<g:stack>
+							<g:customHeader size='25'>
+								<g:Label>Amis</g:Label>
+							</g:customHeader>
+							<g:Label>baker</g:Label>
+						</g:stack>
+						<g:stack>
+							<g:customHeader size='25'>
+								<g:Label>Messages</g:Label>
+							</g:customHeader>
+							<g:VerticalPanel>
+								<g:Label>Messages reçus</g:Label>
+								<g:Label>Messages envoyés</g:Label>
+								<g:Label>Messages supprimés</g:Label>
+							</g:VerticalPanel>
+						</g:stack>
+						<g:stack>
+							<g:customHeader size='25'>
+								<g:Label>Mon compte</g:Label>
+							</g:customHeader>
+							<g:VerticalPanel>
+								<g:Label ui:field="modifierDonneesLabel">Modifier mes données</g:Label>
+								<g:Label ui:field="preferenceLabel">Préférences</g:Label>
+								<g:Label ui:field="confidentialiteLabel">Confidentialité</g:Label>
+							</g:VerticalPanel>
+						</g:stack>
+					</g:StackLayoutPanel>
+				</g:layer>
+			</g:LayoutPanel>
+		</g:west>
+		<!-- <g:east size='80' styleName='{style.border}'> -->
+		<!-- <g:VerticalPanel styleName='{style.border}'> -->
+		<!-- <g:Label>East</g:Label> -->
+		<!-- </g:VerticalPanel> -->
+		<!-- </g:east> -->
+
+	</g:SplitLayoutPanel>
+
+
+</ui:UiBinder> 

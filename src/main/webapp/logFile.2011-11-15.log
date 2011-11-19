@@ -1,0 +1,1563 @@
+540  [btpool0-0] INFO  o.hibernate.cfg.annotations.Version - Hibernate Annotations 3.4.0.GA
+682  [btpool0-2] INFO  org.hibernate.cfg.Environment - Hibernate 3.3.2.GA
+687  [btpool0-2] INFO  org.hibernate.cfg.Environment - hibernate.properties not found
+694  [btpool0-2] INFO  org.hibernate.cfg.Environment - Bytecode provider name : javassist
+700  [btpool0-2] INFO  org.hibernate.cfg.Environment - using JDK 1.4 java.sql.Timestamp handling
+978  [btpool0-0] INFO  o.h.annotations.common.Version - Hibernate Commons Annotations 3.1.0.GA
+1332 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.CantonEntity
+1332 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.CantonEntity
+1393 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.CantonEntity on table canton
+1393 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.CantonEntity on table canton
+1466 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ContactEntity
+1466 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ContactEntity
+1466 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ContactEntity on table ContactEntity.java
+1467 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ContactEntity on table ContactEntity.java
+1470 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.InteretEntity
+1471 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.InteretEntity on table interet
+1473 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MessageStatutEntity
+1475 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.InteretEntity
+1476 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MessageStatutEntity on table messageStatut
+1476 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.InteretEntity on table interet
+1479 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MessageStatutEntity
+1479 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MessageStatutEntity on table messageStatut
+1518 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MusiqueEntity
+1518 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MusiqueEntity
+1519 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MusiqueEntity on table musique
+1519 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MusiqueEntity on table musique
+1521 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PaysEntity
+1521 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PaysEntity
+1521 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PaysEntity on table pays
+1522 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PaysEntity on table pays
+1523 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PreferenceEntity
+1523 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PreferenceEntity
+1524 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PreferenceEntity on table preference
+1524 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PreferenceEntity on table preference
+1525 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ProfessionEntity
+1526 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ProfessionEntity
+1526 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ProfessionEntity on table profession
+1526 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ProfessionEntity on table profession
+1527 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ReligionEntity
+1528 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ReligionEntity
+1528 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ReligionEntity on table religion
+1528 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ReligionEntity on table religion
+1530 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SexeEntity
+1530 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SexeEntity on table sexe
+1531 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SexeEntity
+1531 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SexeEntity on table sexe
+1532 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SportEntity
+1532 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SportEntity on table sport
+1532 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SportEntity
+1533 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SportEntity on table sport
+1534 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.TraductionEntity
+1534 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.TraductionEntity
+1534 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.TraductionEntity on table traduction
+1534 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.TraductionEntity on table traduction
+1536 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAdressEntity
+1536 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAdressEntity
+1536 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAdressEntity on table usrAdress
+1537 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAdressEntity on table usrAdress
+1538 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAmiEntity
+1538 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAmiEntity on table usrAmi
+1538 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAmiEntity
+1539 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAmiEntity on table usrAmi
+1540 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserConnectionEntity
+1540 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserConnectionEntity on table usrConnection
+1540 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserConnectionEntity
+1541 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserConnectionEntity on table usrConnection
+1541 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserContactEntity
+1542 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserContactEntity on table usrContact
+1543 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserCoquinEntity
+1543 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserContactEntity
+1543 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserCoquinEntity on table usrProfil
+1543 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserContactEntity on table usrContact
+1545 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserEntity
+1545 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserCoquinEntity
+1545 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserEntity on table usr
+1545 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserCoquinEntity on table usrProfil
+1547 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserEntity
+1548 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserEntity on table usr
+1571 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserInteretEntity
+1571 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserInteretEntity
+1571 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserInteretEntity on table usrInteret
+1572 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserInteretEntity on table usrInteret
+1575 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageEntity
+1575 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageEntity
+1575 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageEntity on table usrMessage
+1575 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageEntity on table usrMessage
+1578 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageStatutEntity
+1578 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageStatutEntity
+1578 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageStatutEntity on table usrMessageStatut
+1578 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageStatutEntity on table usrMessageStatut
+1580 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMusiqueEntity
+1580 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMusiqueEntity
+1580 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMusiqueEntity on table usrMusique
+1581 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMusiqueEntity on table usrMusique
+1585 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhotoEntity
+1585 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhotoEntity
+1586 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhotoEntity on table usrPhoto
+1586 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhotoEntity on table usrPhoto
+1587 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhysiqueEntity
+1588 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhysiqueEntity
+1588 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhysiqueEntity on table usrPhysique
+1588 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhysiqueEntity on table usrPhysique
+1590 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPreferenceEntity
+1590 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPreferenceEntity
+1590 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPreferenceEntity on table usrPreference
+1590 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPreferenceEntity on table usrPreference
+1591 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserProfileEntity
+1591 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserProfileEntity on table usrProfile
+1592 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserProfileEntity
+1592 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserProfileEntity on table usrProfile
+1594 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserReligionEntity
+1594 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserReligionEntity on table usrReligion
+1594 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserReligionEntity
+1595 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserReligionEntity on table usrReligion
+1596 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserSportEntity
+1596 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserSportEntity
+1596 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserSportEntity on table usrSport
+1596 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserSportEntity on table usrSport
+1597 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserStatutEntity
+1598 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserStatutEntity
+1598 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserStatutEntity on table usrStatut
+1598 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserStatutEntity on table usrStatut
+2033 [btpool0-2] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserMessageEntity.messageStatuts -> usrMessageStatut
+2035 [btpool0-2] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userSports -> usrSport
+2035 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserMessageEntity.messageStatuts -> usrMessageStatut
+2035 [btpool0-2] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userReligions -> usrReligion
+2035 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userSports -> usrSport
+2035 [btpool0-2] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userPhotos -> usrPhoto
+2036 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userReligions -> usrReligion
+2036 [btpool0-2] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userInterets -> usrInteret
+2036 [btpool0-2] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userContacts -> usrContact
+2037 [btpool0-2] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAmis -> usrAmi
+2037 [btpool0-2] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAdresses -> usrAdress
+2036 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userPhotos -> usrPhoto
+2037 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userInterets -> usrInteret
+2038 [btpool0-2] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userProfil -> usrProfile
+2038 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userContacts -> usrContact
+2038 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAmis -> usrAmi
+2038 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAdresses -> usrAdress
+2039 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userProfil -> usrProfile
+2127 [btpool0-2] INFO  o.h.cfg.AnnotationConfiguration - Hibernate Validator not found: ignoring
+2148 [btpool0-0] INFO  o.h.cfg.AnnotationConfiguration - Hibernate Validator not found: ignoring
+2154 [btpool0-0] INFO  o.h.c.s.HibernateSearchEventListenerRegister - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2155 [btpool0-2] INFO  o.h.c.s.HibernateSearchEventListenerRegister - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2246 [btpool0-2] INFO  o.h.c.ConnectionProviderFactory - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2246 [btpool0-0] INFO  o.h.c.ConnectionProviderFactory - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2473 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - RDBMS: MySQL, version: 5.5.10
+2473 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - RDBMS: MySQL, version: 5.5.10
+2473 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.15 ( Revision: ${bzr.revision-id} )
+2473 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.15 ( Revision: ${bzr.revision-id} )
+2532 [btpool0-0] INFO  org.hibernate.dialect.Dialect - Using dialect: org.hibernate.dialect.MySQL5Dialect
+2532 [btpool0-2] INFO  org.hibernate.dialect.Dialect - Using dialect: org.hibernate.dialect.MySQL5Dialect
+2537 [btpool0-2] INFO  o.h.t.TransactionFactoryFactory - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2538 [btpool0-0] INFO  o.h.t.TransactionFactoryFactory - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2538 [btpool0-2] INFO  o.h.t.TransactionManagerLookupFactory - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2538 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Automatic flush during beforeCompletion(): disabled
+2539 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Automatic session close at end of transaction: disabled
+2539 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch size: 20
+2539 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch updates for versioned data: disabled
+2538 [btpool0-0] INFO  o.h.t.TransactionManagerLookupFactory - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2540 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Automatic flush during beforeCompletion(): disabled
+2540 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Automatic session close at end of transaction: disabled
+2540 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Scrollable result sets: enabled
+2540 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - JDBC3 getGeneratedKeys(): enabled
+2540 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch size: 20
+2541 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Connection release mode: auto
+2541 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch updates for versioned data: disabled
+2541 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Scrollable result sets: enabled
+2541 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - JDBC3 getGeneratedKeys(): enabled
+2541 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Connection release mode: auto
+2551 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Maximum outer join fetch depth: 3
+2552 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Default batch fetch size: 1
+2551 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Maximum outer join fetch depth: 3
+2552 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Generate SQL with comments: disabled
+2552 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Default batch fetch size: 1
+2552 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Order SQL updates by primary key: disabled
+2553 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Generate SQL with comments: disabled
+2553 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Order SQL inserts for batching: disabled
+2553 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2553 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Order SQL updates by primary key: disabled
+2554 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Order SQL inserts for batching: disabled
+2554 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2555 [btpool0-0] INFO  o.h.h.ast.ASTQueryTranslatorFactory - Using ASTQueryTranslatorFactory
+2555 [btpool0-2] INFO  o.h.h.ast.ASTQueryTranslatorFactory - Using ASTQueryTranslatorFactory
+2556 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Query language substitutions: {false='N', true='Y'}
+2556 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Query language substitutions: {false='N', true='Y'}
+2556 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - JPA-QL strict compliance: disabled
+2556 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Second-level cache: disabled
+2556 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Query cache: disabled
+2556 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - JPA-QL strict compliance: disabled
+2557 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2557 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Second-level cache: disabled
+2557 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Query cache: disabled
+2557 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Optimize cache for minimal puts: disabled
+2557 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2558 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Structured second-level cache entries: disabled
+2558 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Optimize cache for minimal puts: disabled
+2558 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Structured second-level cache entries: disabled
+2561 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Echoing all SQL to stdout
+2561 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Echoing all SQL to stdout
+2561 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Statistics: disabled
+2561 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Statistics: disabled
+2562 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
+2562 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Default entity-mode: pojo
+2562 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Named query checking : enabled
+2562 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
+2563 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Default entity-mode: pojo
+2563 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Named query checking : enabled
+2627 [btpool0-2] INFO  o.hibernate.impl.SessionFactoryImpl - building session factory
+2627 [btpool0-0] INFO  o.hibernate.impl.SessionFactoryImpl - building session factory
+2985 [btpool0-0] INFO  o.h.i.SessionFactoryObjectFactory - Not binding factory to JNDI, no JNDI name configured
+2985 [btpool0-2] INFO  o.h.i.SessionFactoryObjectFactory - Not binding factory to JNDI, no JNDI name configured
+3515 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.CantonEntity
+3516 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.CantonEntity on table canton
+3517 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ContactEntity
+3517 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ContactEntity on table ContactEntity.java
+3518 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.InteretEntity
+3518 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.InteretEntity on table interet
+3519 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MessageStatutEntity
+3519 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MessageStatutEntity on table messageStatut
+3520 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MusiqueEntity
+3521 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MusiqueEntity on table musique
+3521 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PaysEntity
+3522 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PaysEntity on table pays
+3522 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PreferenceEntity
+3523 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PreferenceEntity on table preference
+3523 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ProfessionEntity
+3524 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ProfessionEntity on table profession
+3524 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ReligionEntity
+3525 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ReligionEntity on table religion
+3525 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SexeEntity
+3526 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SexeEntity on table sexe
+3527 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SportEntity
+3527 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SportEntity on table sport
+3528 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.TraductionEntity
+3528 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.TraductionEntity on table traduction
+3529 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAdressEntity
+3529 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAdressEntity on table usrAdress
+3530 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAmiEntity
+3530 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAmiEntity on table usrAmi
+3531 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserConnectionEntity
+3531 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserConnectionEntity on table usrConnection
+3532 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserContactEntity
+3533 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserContactEntity on table usrContact
+3533 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserCoquinEntity
+3534 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserCoquinEntity on table usrProfil
+3534 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserEntity
+3535 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserEntity on table usr
+3538 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserInteretEntity
+3539 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserInteretEntity on table usrInteret
+3540 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageEntity
+3540 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageEntity on table usrMessage
+3542 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageStatutEntity
+3542 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageStatutEntity on table usrMessageStatut
+3543 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMusiqueEntity
+3543 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMusiqueEntity on table usrMusique
+3544 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhotoEntity
+3544 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhotoEntity on table usrPhoto
+3545 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhysiqueEntity
+3546 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhysiqueEntity on table usrPhysique
+3547 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPreferenceEntity
+3547 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPreferenceEntity on table usrPreference
+3547 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserProfileEntity
+3548 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserProfileEntity on table usrProfile
+3549 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserReligionEntity
+3549 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserReligionEntity on table usrReligion
+3566 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserSportEntity
+3567 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserSportEntity on table usrSport
+3568 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserStatutEntity
+3568 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserStatutEntity on table usrStatut
+3569 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserMessageEntity.messageStatuts -> usrMessageStatut
+3569 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userSports -> usrSport
+3573 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userReligions -> usrReligion
+3573 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userPhotos -> usrPhoto
+3573 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userInterets -> usrInteret
+3574 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userContacts -> usrContact
+3574 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAmis -> usrAmi
+3574 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAdresses -> usrAdress
+3574 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userProfil -> usrProfile
+3627 [btpool0-0] INFO  o.h.cfg.AnnotationConfiguration - Hibernate Validator not found: ignoring
+3650 [btpool0-0] INFO  o.h.c.s.HibernateSearchEventListenerRegister - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+3694 [btpool0-0] INFO  o.h.c.ConnectionProviderFactory - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+3702 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - RDBMS: MySQL, version: 5.5.10
+3703 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.15 ( Revision: ${bzr.revision-id} )
+3719 [btpool0-0] INFO  org.hibernate.dialect.Dialect - Using dialect: org.hibernate.dialect.MySQL5Dialect
+3720 [btpool0-0] INFO  o.h.t.TransactionFactoryFactory - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+3720 [btpool0-0] INFO  o.h.t.TransactionManagerLookupFactory - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+3721 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Automatic flush during beforeCompletion(): disabled
+3721 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Automatic session close at end of transaction: disabled
+3721 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch size: 20
+3721 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch updates for versioned data: disabled
+3721 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Scrollable result sets: enabled
+3722 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - JDBC3 getGeneratedKeys(): enabled
+3722 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Connection release mode: auto
+3722 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Maximum outer join fetch depth: 3
+3722 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Default batch fetch size: 1
+3722 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Generate SQL with comments: disabled
+3722 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Order SQL updates by primary key: disabled
+3723 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Order SQL inserts for batching: disabled
+3723 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+3740 [btpool0-0] INFO  o.h.h.ast.ASTQueryTranslatorFactory - Using ASTQueryTranslatorFactory
+3740 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Query language substitutions: {false='N', true='Y'}
+3740 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - JPA-QL strict compliance: disabled
+3741 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Second-level cache: disabled
+3741 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Query cache: disabled
+3741 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+3742 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Optimize cache for minimal puts: disabled
+3742 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Structured second-level cache entries: disabled
+3742 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Echoing all SQL to stdout
+3742 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Statistics: disabled
+3743 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
+3743 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Default entity-mode: pojo
+3743 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Named query checking : enabled
+3769 [btpool0-0] INFO  o.hibernate.impl.SessionFactoryImpl - building session factory
+3871 [btpool0-0] INFO  o.h.i.SessionFactoryObjectFactory - Not binding factory to JNDI, no JNDI name configured
+4964 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.CantonEntity
+4965 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.CantonEntity on table canton
+4966 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ContactEntity
+4967 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ContactEntity on table ContactEntity.java
+4968 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.InteretEntity
+4968 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.InteretEntity on table interet
+4969 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MessageStatutEntity
+4970 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MessageStatutEntity on table messageStatut
+4971 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MusiqueEntity
+4971 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MusiqueEntity on table musique
+4972 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PaysEntity
+4973 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PaysEntity on table pays
+4974 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PreferenceEntity
+4974 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PreferenceEntity on table preference
+4975 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ProfessionEntity
+4976 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ProfessionEntity on table profession
+4977 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ReligionEntity
+4977 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ReligionEntity on table religion
+4978 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SexeEntity
+4978 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SexeEntity on table sexe
+4980 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SportEntity
+4980 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SportEntity on table sport
+4981 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.TraductionEntity
+4981 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.TraductionEntity on table traduction
+4983 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAdressEntity
+4983 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAdressEntity on table usrAdress
+4984 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAmiEntity
+4985 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAmiEntity on table usrAmi
+4986 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserConnectionEntity
+4986 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserConnectionEntity on table usrConnection
+4987 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserContactEntity
+4987 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserContactEntity on table usrContact
+4988 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserCoquinEntity
+4989 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserCoquinEntity on table usrProfil
+4990 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserEntity
+4991 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserEntity on table usr
+4996 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserInteretEntity
+4996 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserInteretEntity on table usrInteret
+4998 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageEntity
+4998 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageEntity on table usrMessage
+5000 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageStatutEntity
+5000 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageStatutEntity on table usrMessageStatut
+5001 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMusiqueEntity
+5002 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMusiqueEntity on table usrMusique
+5003 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhotoEntity
+5003 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhotoEntity on table usrPhoto
+5004 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhysiqueEntity
+5005 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhysiqueEntity on table usrPhysique
+5006 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPreferenceEntity
+5006 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPreferenceEntity on table usrPreference
+5007 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserProfileEntity
+5007 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserProfileEntity on table usrProfile
+5009 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserReligionEntity
+5009 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserReligionEntity on table usrReligion
+5010 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserSportEntity
+5011 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserSportEntity on table usrSport
+5012 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserStatutEntity
+5012 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserStatutEntity on table usrStatut
+5014 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserMessageEntity.messageStatuts -> usrMessageStatut
+5014 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userSports -> usrSport
+5015 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userReligions -> usrReligion
+5015 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userPhotos -> usrPhoto
+5015 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userInterets -> usrInteret
+5016 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userContacts -> usrContact
+5016 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAmis -> usrAmi
+5016 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAdresses -> usrAdress
+5017 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userProfil -> usrProfile
+5086 [btpool0-0] INFO  o.h.cfg.AnnotationConfiguration - Hibernate Validator not found: ignoring
+5091 [btpool0-0] INFO  o.h.c.s.HibernateSearchEventListenerRegister - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+5155 [btpool0-0] INFO  o.h.c.ConnectionProviderFactory - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+5166 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - RDBMS: MySQL, version: 5.5.10
+5166 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.15 ( Revision: ${bzr.revision-id} )
+5167 [btpool0-0] INFO  org.hibernate.dialect.Dialect - Using dialect: org.hibernate.dialect.MySQL5Dialect
+5168 [btpool0-0] INFO  o.h.t.TransactionFactoryFactory - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+5169 [btpool0-0] INFO  o.h.t.TransactionManagerLookupFactory - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+5169 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Automatic flush during beforeCompletion(): disabled
+5169 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Automatic session close at end of transaction: disabled
+5169 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch size: 20
+5170 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch updates for versioned data: disabled
+5170 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Scrollable result sets: enabled
+5170 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - JDBC3 getGeneratedKeys(): enabled
+5171 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Connection release mode: auto
+5171 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Maximum outer join fetch depth: 3
+5171 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Default batch fetch size: 1
+5172 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Generate SQL with comments: disabled
+5172 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Order SQL updates by primary key: disabled
+5172 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Order SQL inserts for batching: disabled
+5172 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+5173 [btpool0-0] INFO  o.h.h.ast.ASTQueryTranslatorFactory - Using ASTQueryTranslatorFactory
+5173 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Query language substitutions: {false='N', true='Y'}
+5173 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - JPA-QL strict compliance: disabled
+5174 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Second-level cache: disabled
+5174 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Query cache: disabled
+5174 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+5174 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Optimize cache for minimal puts: disabled
+5175 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Structured second-level cache entries: disabled
+5175 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Echoing all SQL to stdout
+5175 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Statistics: disabled
+5175 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
+5176 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Default entity-mode: pojo
+5176 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Named query checking : enabled
+5181 [btpool0-0] INFO  o.hibernate.impl.SessionFactoryImpl - building session factory
+5239 [btpool0-0] INFO  o.h.i.SessionFactoryObjectFactory - Not binding factory to JNDI, no JNDI name configured
+5351 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.CantonEntity
+5352 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.CantonEntity on table canton
+5354 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ContactEntity
+5355 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ContactEntity on table ContactEntity.java
+5356 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.InteretEntity
+5357 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.InteretEntity on table interet
+5358 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MessageStatutEntity
+5359 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MessageStatutEntity on table messageStatut
+5361 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MusiqueEntity
+5361 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MusiqueEntity on table musique
+5362 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PaysEntity
+5363 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PaysEntity on table pays
+5364 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PreferenceEntity
+5365 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PreferenceEntity on table preference
+5367 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ProfessionEntity
+5367 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ProfessionEntity on table profession
+5368 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ReligionEntity
+5368 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ReligionEntity on table religion
+5369 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SexeEntity
+5369 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SexeEntity on table sexe
+5370 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SportEntity
+5370 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SportEntity on table sport
+5372 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.TraductionEntity
+5372 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.TraductionEntity on table traduction
+5374 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAdressEntity
+5374 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAdressEntity on table usrAdress
+5376 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAmiEntity
+5376 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAmiEntity on table usrAmi
+5378 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserConnectionEntity
+5378 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserConnectionEntity on table usrConnection
+5380 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserContactEntity
+5380 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserContactEntity on table usrContact
+5382 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserCoquinEntity
+5383 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserCoquinEntity on table usrProfil
+5384 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserEntity
+5385 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserEntity on table usr
+5391 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserInteretEntity
+5392 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserInteretEntity on table usrInteret
+5394 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageEntity
+5394 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageEntity on table usrMessage
+5396 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageStatutEntity
+5397 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageStatutEntity on table usrMessageStatut
+5398 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMusiqueEntity
+5399 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMusiqueEntity on table usrMusique
+5400 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhotoEntity
+5401 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhotoEntity on table usrPhoto
+5402 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhysiqueEntity
+5404 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhysiqueEntity on table usrPhysique
+5405 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPreferenceEntity
+5406 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPreferenceEntity on table usrPreference
+5407 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserProfileEntity
+5408 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserProfileEntity on table usrProfile
+5410 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserReligionEntity
+5412 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserReligionEntity on table usrReligion
+5415 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserSportEntity
+5421 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserSportEntity on table usrSport
+5422 [btpool0-2] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserStatutEntity
+5423 [btpool0-2] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserStatutEntity on table usrStatut
+5426 [btpool0-2] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserMessageEntity.messageStatuts -> usrMessageStatut
+5427 [btpool0-2] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userSports -> usrSport
+5427 [btpool0-2] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userReligions -> usrReligion
+5428 [btpool0-2] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userPhotos -> usrPhoto
+5428 [btpool0-2] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userInterets -> usrInteret
+5429 [btpool0-2] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userContacts -> usrContact
+5430 [btpool0-2] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAmis -> usrAmi
+5430 [btpool0-2] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAdresses -> usrAdress
+5431 [btpool0-2] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userProfil -> usrProfile
+5476 [btpool0-2] INFO  o.h.cfg.AnnotationConfiguration - Hibernate Validator not found: ignoring
+5480 [btpool0-2] INFO  o.h.c.s.HibernateSearchEventListenerRegister - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+5522 [btpool0-2] INFO  o.h.c.ConnectionProviderFactory - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+5528 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - RDBMS: MySQL, version: 5.5.10
+5528 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.15 ( Revision: ${bzr.revision-id} )
+5529 [btpool0-2] INFO  org.hibernate.dialect.Dialect - Using dialect: org.hibernate.dialect.MySQL5Dialect
+5530 [btpool0-2] INFO  o.h.t.TransactionFactoryFactory - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+5530 [btpool0-2] INFO  o.h.t.TransactionManagerLookupFactory - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+5531 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Automatic flush during beforeCompletion(): disabled
+5531 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Automatic session close at end of transaction: disabled
+5531 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch size: 20
+5531 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch updates for versioned data: disabled
+5532 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Scrollable result sets: enabled
+5532 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - JDBC3 getGeneratedKeys(): enabled
+5532 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Connection release mode: auto
+5533 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Maximum outer join fetch depth: 3
+5533 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Default batch fetch size: 1
+5533 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Generate SQL with comments: disabled
+5533 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Order SQL updates by primary key: disabled
+5534 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Order SQL inserts for batching: disabled
+5534 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+5534 [btpool0-2] INFO  o.h.h.ast.ASTQueryTranslatorFactory - Using ASTQueryTranslatorFactory
+5534 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Query language substitutions: {false='N', true='Y'}
+5535 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - JPA-QL strict compliance: disabled
+5535 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Second-level cache: disabled
+5535 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Query cache: disabled
+5535 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+5535 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Optimize cache for minimal puts: disabled
+5536 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Structured second-level cache entries: disabled
+5536 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Echoing all SQL to stdout
+5536 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Statistics: disabled
+5536 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
+5536 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Default entity-mode: pojo
+5536 [btpool0-2] INFO  org.hibernate.cfg.SettingsFactory - Named query checking : enabled
+5540 [btpool0-2] INFO  o.hibernate.impl.SessionFactoryImpl - building session factory
+5587 [btpool0-2] INFO  o.h.i.SessionFactoryObjectFactory - Not binding factory to JNDI, no JNDI name configured
+188  [btpool0-5] INFO  o.hibernate.cfg.annotations.Version - Hibernate Annotations 3.4.0.GA
+216  [btpool0-5] INFO  org.hibernate.cfg.Environment - Hibernate 3.3.2.GA
+219  [btpool0-5] INFO  org.hibernate.cfg.Environment - hibernate.properties not found
+221  [btpool0-5] INFO  org.hibernate.cfg.Environment - Bytecode provider name : javassist
+224  [btpool0-5] INFO  org.hibernate.cfg.Environment - using JDK 1.4 java.sql.Timestamp handling
+427  [btpool0-5] INFO  o.h.annotations.common.Version - Hibernate Commons Annotations 3.1.0.GA
+517  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.CantonEntity
+539  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.CantonEntity
+555  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.CantonEntity on table canton
+555  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.CantonEntity on table canton
+582  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ContactEntity
+582  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ContactEntity
+582  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ContactEntity on table ContactEntity.java
+583  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ContactEntity on table ContactEntity.java
+584  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.InteretEntity
+584  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.InteretEntity
+584  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.InteretEntity on table interet
+585  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.InteretEntity on table interet
+586  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MessageStatutEntity
+586  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MessageStatutEntity
+587  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MessageStatutEntity on table messageStatut
+620  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MessageStatutEntity on table messageStatut
+641  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MusiqueEntity
+641  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MusiqueEntity
+641  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MusiqueEntity on table musique
+642  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MusiqueEntity on table musique
+643  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PaysEntity
+643  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PaysEntity
+643  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PaysEntity on table pays
+643  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PaysEntity on table pays
+644  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PreferenceEntity
+645  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PreferenceEntity on table preference
+645  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PreferenceEntity
+645  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PreferenceEntity on table preference
+646  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ProfessionEntity
+646  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ProfessionEntity on table profession
+646  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ProfessionEntity
+647  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ProfessionEntity on table profession
+647  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ReligionEntity
+648  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ReligionEntity on table religion
+648  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ReligionEntity
+649  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ReligionEntity on table religion
+649  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SexeEntity
+649  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SexeEntity on table sexe
+650  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SexeEntity
+650  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SexeEntity on table sexe
+650  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SportEntity
+651  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SportEntity on table sport
+651  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SportEntity
+651  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SportEntity on table sport
+652  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.TraductionEntity
+652  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.TraductionEntity on table traduction
+652  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.TraductionEntity
+653  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.TraductionEntity on table traduction
+654  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAdressEntity
+654  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAdressEntity on table usrAdress
+654  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAdressEntity
+654  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAdressEntity on table usrAdress
+655  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAmiEntity
+655  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAmiEntity on table usrAmi
+656  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAmiEntity
+656  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAmiEntity on table usrAmi
+657  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserConnectionEntity
+657  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserConnectionEntity
+657  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserConnectionEntity on table usrConnection
+657  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserConnectionEntity on table usrConnection
+658  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserContactEntity
+659  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserContactEntity on table usrContact
+659  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserContactEntity
+659  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserContactEntity on table usrContact
+660  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserCoquinEntity
+660  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserCoquinEntity on table usrProfil
+661  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserCoquinEntity
+661  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserCoquinEntity on table usrProfil
+662  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserEntity
+662  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserEntity on table usr
+662  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserEntity
+662  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserEntity on table usr
+682  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserInteretEntity
+682  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserInteretEntity
+683  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserInteretEntity on table usrInteret
+683  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserInteretEntity on table usrInteret
+686  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageEntity
+686  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageEntity
+686  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageEntity on table usrMessage
+686  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageEntity on table usrMessage
+688  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageStatutEntity
+689  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageStatutEntity on table usrMessageStatut
+689  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageStatutEntity
+689  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageStatutEntity on table usrMessageStatut
+691  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMusiqueEntity
+691  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMusiqueEntity
+691  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMusiqueEntity on table usrMusique
+691  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMusiqueEntity on table usrMusique
+696  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhotoEntity
+696  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhotoEntity
+697  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhotoEntity on table usrPhoto
+697  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhotoEntity on table usrPhoto
+698  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhysiqueEntity
+698  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhysiqueEntity
+698  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhysiqueEntity on table usrPhysique
+699  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhysiqueEntity on table usrPhysique
+700  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPreferenceEntity
+700  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPreferenceEntity
+700  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPreferenceEntity on table usrPreference
+700  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPreferenceEntity on table usrPreference
+702  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserProfileEntity
+702  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserProfileEntity
+702  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserProfileEntity on table usrProfile
+702  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserProfileEntity on table usrProfile
+704  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserReligionEntity
+704  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserReligionEntity
+704  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserReligionEntity on table usrReligion
+705  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserReligionEntity on table usrReligion
+706  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserSportEntity
+706  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserSportEntity
+706  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserSportEntity on table usrSport
+706  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserSportEntity on table usrSport
+707  [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserStatutEntity
+707  [btpool0-5] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserStatutEntity
+707  [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserStatutEntity on table usrStatut
+708  [btpool0-5] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserStatutEntity on table usrStatut
+1092 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserMessageEntity.messageStatuts -> usrMessageStatut
+1092 [btpool0-5] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserMessageEntity.messageStatuts -> usrMessageStatut
+1094 [btpool0-5] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userSports -> usrSport
+1094 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userSports -> usrSport
+1094 [btpool0-5] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userReligions -> usrReligion
+1094 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userReligions -> usrReligion
+1094 [btpool0-5] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userPhotos -> usrPhoto
+1095 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userPhotos -> usrPhoto
+1095 [btpool0-5] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userInterets -> usrInteret
+1095 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userInterets -> usrInteret
+1095 [btpool0-5] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userContacts -> usrContact
+1096 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userContacts -> usrContact
+1096 [btpool0-5] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAmis -> usrAmi
+1096 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAmis -> usrAmi
+1096 [btpool0-5] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAdresses -> usrAdress
+1097 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAdresses -> usrAdress
+1097 [btpool0-5] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userProfil -> usrProfile
+1097 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userProfil -> usrProfile
+1172 [btpool0-4] INFO  o.h.cfg.AnnotationConfiguration - Hibernate Validator not found: ignoring
+1195 [btpool0-5] INFO  o.h.cfg.AnnotationConfiguration - Hibernate Validator not found: ignoring
+1200 [btpool0-4] INFO  o.h.c.s.HibernateSearchEventListenerRegister - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+1242 [btpool0-5] INFO  o.h.c.s.HibernateSearchEventListenerRegister - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+1249 [btpool0-4] INFO  o.h.c.ConnectionProviderFactory - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+1304 [btpool0-5] INFO  o.h.c.ConnectionProviderFactory - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+1476 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - RDBMS: MySQL, version: 5.5.10
+1477 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.15 ( Revision: ${bzr.revision-id} )
+1478 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - RDBMS: MySQL, version: 5.5.10
+1479 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.15 ( Revision: ${bzr.revision-id} )
+1503 [btpool0-5] INFO  org.hibernate.dialect.Dialect - Using dialect: org.hibernate.dialect.MySQL5Dialect
+1503 [btpool0-4] INFO  org.hibernate.dialect.Dialect - Using dialect: org.hibernate.dialect.MySQL5Dialect
+1506 [btpool0-5] INFO  o.h.t.TransactionFactoryFactory - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+1506 [btpool0-4] INFO  o.h.t.TransactionFactoryFactory - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+1508 [btpool0-5] INFO  o.h.t.TransactionManagerLookupFactory - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+1508 [btpool0-4] INFO  o.h.t.TransactionManagerLookupFactory - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+1508 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - Automatic flush during beforeCompletion(): disabled
+1508 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Automatic flush during beforeCompletion(): disabled
+1508 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Automatic session close at end of transaction: disabled
+1508 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - Automatic session close at end of transaction: disabled
+1509 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch size: 20
+1509 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch size: 20
+1509 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch updates for versioned data: disabled
+1509 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch updates for versioned data: disabled
+1510 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Scrollable result sets: enabled
+1510 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - Scrollable result sets: enabled
+1510 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - JDBC3 getGeneratedKeys(): enabled
+1510 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - JDBC3 getGeneratedKeys(): enabled
+1510 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Connection release mode: auto
+1510 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - Connection release mode: auto
+1521 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Maximum outer join fetch depth: 3
+1521 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - Maximum outer join fetch depth: 3
+1522 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Default batch fetch size: 1
+1522 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Generate SQL with comments: disabled
+1522 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - Default batch fetch size: 1
+1522 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Order SQL updates by primary key: disabled
+1522 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - Generate SQL with comments: disabled
+1522 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Order SQL inserts for batching: disabled
+1523 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - Order SQL updates by primary key: disabled
+1523 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+1523 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - Order SQL inserts for batching: disabled
+1523 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+1524 [btpool0-5] INFO  o.h.h.ast.ASTQueryTranslatorFactory - Using ASTQueryTranslatorFactory
+1524 [btpool0-4] INFO  o.h.h.ast.ASTQueryTranslatorFactory - Using ASTQueryTranslatorFactory
+1525 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - Query language substitutions: {false='N', true='Y'}
+1525 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Query language substitutions: {false='N', true='Y'}
+1525 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - JPA-QL strict compliance: disabled
+1525 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - JPA-QL strict compliance: disabled
+1525 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - Second-level cache: disabled
+1526 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - Query cache: disabled
+1525 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Second-level cache: disabled
+1526 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+1526 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Query cache: disabled
+1526 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - Optimize cache for minimal puts: disabled
+1527 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+1527 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - Structured second-level cache entries: disabled
+1527 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Optimize cache for minimal puts: disabled
+1527 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Structured second-level cache entries: disabled
+1529 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - Echoing all SQL to stdout
+1529 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Echoing all SQL to stdout
+1530 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - Statistics: disabled
+1530 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
+1531 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - Default entity-mode: pojo
+1531 [btpool0-5] INFO  org.hibernate.cfg.SettingsFactory - Named query checking : enabled
+1533 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Statistics: disabled
+1533 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
+1534 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Default entity-mode: pojo
+1534 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Named query checking : enabled
+1577 [btpool0-5] INFO  o.hibernate.impl.SessionFactoryImpl - building session factory
+1577 [btpool0-4] INFO  o.hibernate.impl.SessionFactoryImpl - building session factory
+1871 [btpool0-5] INFO  o.h.i.SessionFactoryObjectFactory - Not binding factory to JNDI, no JNDI name configured
+1871 [btpool0-4] INFO  o.h.i.SessionFactoryObjectFactory - Not binding factory to JNDI, no JNDI name configured
+2804 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.CantonEntity
+2804 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.CantonEntity on table canton
+2806 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ContactEntity
+2807 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ContactEntity on table ContactEntity.java
+2808 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.InteretEntity
+2808 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.InteretEntity on table interet
+2809 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MessageStatutEntity
+2810 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MessageStatutEntity on table messageStatut
+2811 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MusiqueEntity
+2811 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MusiqueEntity on table musique
+2812 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PaysEntity
+2813 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PaysEntity on table pays
+2814 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PreferenceEntity
+2814 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PreferenceEntity on table preference
+2815 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ProfessionEntity
+2816 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ProfessionEntity on table profession
+2817 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ReligionEntity
+2818 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ReligionEntity on table religion
+2819 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SexeEntity
+2820 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SexeEntity on table sexe
+2821 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SportEntity
+2821 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SportEntity on table sport
+2823 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.TraductionEntity
+2823 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.TraductionEntity on table traduction
+2824 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAdressEntity
+2825 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAdressEntity on table usrAdress
+2826 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAmiEntity
+2826 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAmiEntity on table usrAmi
+2827 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserConnectionEntity
+2827 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserConnectionEntity on table usrConnection
+2828 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserContactEntity
+2829 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserContactEntity on table usrContact
+2829 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserCoquinEntity
+2830 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserCoquinEntity on table usrProfil
+2831 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserEntity
+2831 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserEntity on table usr
+2834 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserInteretEntity
+2835 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserInteretEntity on table usrInteret
+2836 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageEntity
+2836 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageEntity on table usrMessage
+2838 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageStatutEntity
+2838 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageStatutEntity on table usrMessageStatut
+2840 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMusiqueEntity
+2841 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMusiqueEntity on table usrMusique
+2842 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhotoEntity
+2843 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhotoEntity on table usrPhoto
+2844 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhysiqueEntity
+2844 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhysiqueEntity on table usrPhysique
+2846 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPreferenceEntity
+2846 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPreferenceEntity on table usrPreference
+2847 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserProfileEntity
+2847 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserProfileEntity on table usrProfile
+2849 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserReligionEntity
+2850 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserReligionEntity on table usrReligion
+2851 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserSportEntity
+2851 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserSportEntity on table usrSport
+2852 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserStatutEntity
+2852 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserStatutEntity on table usrStatut
+2855 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserMessageEntity.messageStatuts -> usrMessageStatut
+2855 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userSports -> usrSport
+2856 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userReligions -> usrReligion
+2856 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userPhotos -> usrPhoto
+2856 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userInterets -> usrInteret
+2856 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userContacts -> usrContact
+2857 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAmis -> usrAmi
+2857 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAdresses -> usrAdress
+2858 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userProfil -> usrProfile
+2911 [btpool0-4] INFO  o.h.cfg.AnnotationConfiguration - Hibernate Validator not found: ignoring
+2916 [btpool0-4] INFO  o.h.c.s.HibernateSearchEventListenerRegister - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2982 [btpool0-4] INFO  o.h.c.ConnectionProviderFactory - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2989 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - RDBMS: MySQL, version: 5.5.10
+2989 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.15 ( Revision: ${bzr.revision-id} )
+2990 [btpool0-4] INFO  org.hibernate.dialect.Dialect - Using dialect: org.hibernate.dialect.MySQL5Dialect
+2990 [btpool0-4] INFO  o.h.t.TransactionFactoryFactory - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2991 [btpool0-4] INFO  o.h.t.TransactionManagerLookupFactory - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2991 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Automatic flush during beforeCompletion(): disabled
+2991 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Automatic session close at end of transaction: disabled
+2991 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch size: 20
+2991 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch updates for versioned data: disabled
+2992 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Scrollable result sets: enabled
+2992 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - JDBC3 getGeneratedKeys(): enabled
+2992 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Connection release mode: auto
+2992 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Maximum outer join fetch depth: 3
+2993 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Default batch fetch size: 1
+2993 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Generate SQL with comments: disabled
+2993 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Order SQL updates by primary key: disabled
+2993 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Order SQL inserts for batching: disabled
+2994 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2994 [btpool0-4] INFO  o.h.h.ast.ASTQueryTranslatorFactory - Using ASTQueryTranslatorFactory
+2994 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Query language substitutions: {false='N', true='Y'}
+2994 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - JPA-QL strict compliance: disabled
+2995 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Second-level cache: disabled
+2995 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Query cache: disabled
+2995 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2995 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Optimize cache for minimal puts: disabled
+2996 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Structured second-level cache entries: disabled
+2996 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Echoing all SQL to stdout
+2996 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Statistics: disabled
+2996 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
+2997 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Default entity-mode: pojo
+2997 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Named query checking : enabled
+3002 [btpool0-4] INFO  o.hibernate.impl.SessionFactoryImpl - building session factory
+3057 [btpool0-4] INFO  o.h.i.SessionFactoryObjectFactory - Not binding factory to JNDI, no JNDI name configured
+3820 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.CantonEntity
+3821 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.CantonEntity on table canton
+3822 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ContactEntity
+3823 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ContactEntity on table ContactEntity.java
+3824 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.InteretEntity
+3824 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.InteretEntity on table interet
+3825 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MessageStatutEntity
+3826 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MessageStatutEntity on table messageStatut
+3827 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MusiqueEntity
+3828 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MusiqueEntity on table musique
+3829 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PaysEntity
+3829 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PaysEntity on table pays
+3830 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PreferenceEntity
+3830 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PreferenceEntity on table preference
+3831 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ProfessionEntity
+3832 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ProfessionEntity on table profession
+3832 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ReligionEntity
+3833 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ReligionEntity on table religion
+3834 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SexeEntity
+3834 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SexeEntity on table sexe
+3835 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SportEntity
+3836 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SportEntity on table sport
+3837 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.TraductionEntity
+3837 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.TraductionEntity on table traduction
+3838 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAdressEntity
+3839 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAdressEntity on table usrAdress
+3840 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAmiEntity
+3841 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAmiEntity on table usrAmi
+3842 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserConnectionEntity
+3842 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserConnectionEntity on table usrConnection
+3844 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserContactEntity
+3844 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserContactEntity on table usrContact
+3845 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserCoquinEntity
+3845 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserCoquinEntity on table usrProfil
+3847 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserEntity
+3847 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserEntity on table usr
+3852 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserInteretEntity
+3852 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserInteretEntity on table usrInteret
+3854 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageEntity
+3854 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageEntity on table usrMessage
+3856 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageStatutEntity
+3857 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageStatutEntity on table usrMessageStatut
+3858 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMusiqueEntity
+3858 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMusiqueEntity on table usrMusique
+3859 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhotoEntity
+3860 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhotoEntity on table usrPhoto
+3861 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhysiqueEntity
+3861 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhysiqueEntity on table usrPhysique
+3862 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPreferenceEntity
+3863 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPreferenceEntity on table usrPreference
+3864 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserProfileEntity
+3864 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserProfileEntity on table usrProfile
+3866 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserReligionEntity
+3866 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserReligionEntity on table usrReligion
+3867 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserSportEntity
+3868 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserSportEntity on table usrSport
+3868 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserStatutEntity
+3869 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserStatutEntity on table usrStatut
+3870 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserMessageEntity.messageStatuts -> usrMessageStatut
+3871 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userSports -> usrSport
+3871 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userReligions -> usrReligion
+3872 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userPhotos -> usrPhoto
+3872 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userInterets -> usrInteret
+3872 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userContacts -> usrContact
+3872 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAmis -> usrAmi
+3873 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAdresses -> usrAdress
+3873 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userProfil -> usrProfile
+3931 [btpool0-4] INFO  o.h.cfg.AnnotationConfiguration - Hibernate Validator not found: ignoring
+3937 [btpool0-4] INFO  o.h.c.s.HibernateSearchEventListenerRegister - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+3998 [btpool0-4] INFO  o.h.c.ConnectionProviderFactory - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+4005 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - RDBMS: MySQL, version: 5.5.10
+4005 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.15 ( Revision: ${bzr.revision-id} )
+4005 [btpool0-4] INFO  org.hibernate.dialect.Dialect - Using dialect: org.hibernate.dialect.MySQL5Dialect
+4006 [btpool0-4] INFO  o.h.t.TransactionFactoryFactory - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+4007 [btpool0-4] INFO  o.h.t.TransactionManagerLookupFactory - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+4007 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Automatic flush during beforeCompletion(): disabled
+4007 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Automatic session close at end of transaction: disabled
+4007 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch size: 20
+4008 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch updates for versioned data: disabled
+4008 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Scrollable result sets: enabled
+4008 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - JDBC3 getGeneratedKeys(): enabled
+4008 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Connection release mode: auto
+4009 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Maximum outer join fetch depth: 3
+4009 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Default batch fetch size: 1
+4009 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Generate SQL with comments: disabled
+4009 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Order SQL updates by primary key: disabled
+4010 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Order SQL inserts for batching: disabled
+4010 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+4010 [btpool0-4] INFO  o.h.h.ast.ASTQueryTranslatorFactory - Using ASTQueryTranslatorFactory
+4010 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Query language substitutions: {false='N', true='Y'}
+4011 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - JPA-QL strict compliance: disabled
+4011 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Second-level cache: disabled
+4011 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Query cache: disabled
+4011 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+4012 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Optimize cache for minimal puts: disabled
+4012 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Structured second-level cache entries: disabled
+4012 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Echoing all SQL to stdout
+4012 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Statistics: disabled
+4013 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
+4013 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Default entity-mode: pojo
+4013 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Named query checking : enabled
+4018 [btpool0-4] INFO  o.hibernate.impl.SessionFactoryImpl - building session factory
+4070 [btpool0-4] INFO  o.h.i.SessionFactoryObjectFactory - Not binding factory to JNDI, no JNDI name configured
+933666 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.CantonEntity
+933667 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.CantonEntity on table canton
+933668 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ContactEntity
+933668 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ContactEntity on table ContactEntity.java
+933669 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.InteretEntity
+933669 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.InteretEntity on table interet
+933670 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MessageStatutEntity
+933670 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MessageStatutEntity on table messageStatut
+933671 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MusiqueEntity
+933671 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MusiqueEntity on table musique
+933672 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PaysEntity
+933672 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PaysEntity on table pays
+933673 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PreferenceEntity
+933673 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PreferenceEntity on table preference
+933674 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ProfessionEntity
+933674 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ProfessionEntity on table profession
+933675 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ReligionEntity
+933675 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ReligionEntity on table religion
+933676 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SexeEntity
+933676 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SexeEntity on table sexe
+933677 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SportEntity
+933677 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SportEntity on table sport
+933678 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.TraductionEntity
+933678 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.TraductionEntity on table traduction
+933679 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAdressEntity
+933679 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAdressEntity on table usrAdress
+933680 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAmiEntity
+933680 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAmiEntity on table usrAmi
+933681 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserConnectionEntity
+933681 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserConnectionEntity on table usrConnection
+933682 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserContactEntity
+933682 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserContactEntity on table usrContact
+933682 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserCoquinEntity
+933683 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserCoquinEntity on table usrProfil
+933683 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserEntity
+933684 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserEntity on table usr
+933687 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserInteretEntity
+933687 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserInteretEntity on table usrInteret
+933688 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageEntity
+933688 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageEntity on table usrMessage
+933689 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageStatutEntity
+933690 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageStatutEntity on table usrMessageStatut
+933690 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMusiqueEntity
+933691 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMusiqueEntity on table usrMusique
+933691 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhotoEntity
+933692 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhotoEntity on table usrPhoto
+933692 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhysiqueEntity
+933693 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhysiqueEntity on table usrPhysique
+933693 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPreferenceEntity
+933694 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPreferenceEntity on table usrPreference
+933694 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserProfileEntity
+933694 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserProfileEntity on table usrProfile
+933696 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserReligionEntity
+933696 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserReligionEntity on table usrReligion
+933697 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserSportEntity
+933697 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserSportEntity on table usrSport
+933698 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserStatutEntity
+933698 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserStatutEntity on table usrStatut
+933699 [btpool0-11] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserMessageEntity.messageStatuts -> usrMessageStatut
+933700 [btpool0-11] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userSports -> usrSport
+933700 [btpool0-11] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userReligions -> usrReligion
+933700 [btpool0-11] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userPhotos -> usrPhoto
+933700 [btpool0-11] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userInterets -> usrInteret
+933701 [btpool0-11] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userContacts -> usrContact
+933701 [btpool0-11] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAmis -> usrAmi
+933701 [btpool0-11] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAdresses -> usrAdress
+933701 [btpool0-11] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userProfil -> usrProfile
+933744 [btpool0-11] INFO  o.h.cfg.AnnotationConfiguration - Hibernate Validator not found: ignoring
+933747 [btpool0-11] INFO  o.h.c.s.HibernateSearchEventListenerRegister - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+933789 [btpool0-11] INFO  o.h.c.ConnectionProviderFactory - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+933795 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - RDBMS: MySQL, version: 5.5.10
+933795 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.15 ( Revision: ${bzr.revision-id} )
+933795 [btpool0-11] INFO  org.hibernate.dialect.Dialect - Using dialect: org.hibernate.dialect.MySQL5Dialect
+933796 [btpool0-11] INFO  o.h.t.TransactionFactoryFactory - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+933796 [btpool0-11] INFO  o.h.t.TransactionManagerLookupFactory - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+933797 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Automatic flush during beforeCompletion(): disabled
+933797 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Automatic session close at end of transaction: disabled
+933797 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch size: 20
+933797 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch updates for versioned data: disabled
+933798 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Scrollable result sets: enabled
+933798 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - JDBC3 getGeneratedKeys(): enabled
+933798 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Connection release mode: auto
+933799 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Maximum outer join fetch depth: 3
+933799 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Default batch fetch size: 1
+933799 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Generate SQL with comments: disabled
+933799 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Order SQL updates by primary key: disabled
+933800 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Order SQL inserts for batching: disabled
+933800 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+933800 [btpool0-11] INFO  o.h.h.ast.ASTQueryTranslatorFactory - Using ASTQueryTranslatorFactory
+933800 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Query language substitutions: {false='N', true='Y'}
+933801 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - JPA-QL strict compliance: disabled
+933801 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Second-level cache: disabled
+933801 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Query cache: disabled
+933802 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+933802 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Optimize cache for minimal puts: disabled
+933802 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Structured second-level cache entries: disabled
+933803 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Echoing all SQL to stdout
+933803 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Statistics: disabled
+933803 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
+933803 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Default entity-mode: pojo
+933803 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Named query checking : enabled
+933808 [btpool0-11] INFO  o.hibernate.impl.SessionFactoryImpl - building session factory
+933841 [btpool0-11] INFO  o.h.i.SessionFactoryObjectFactory - Not binding factory to JNDI, no JNDI name configured
+938562 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.CantonEntity
+938562 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.CantonEntity on table canton
+938564 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ContactEntity
+938564 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ContactEntity on table ContactEntity.java
+938565 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.InteretEntity
+938565 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.InteretEntity on table interet
+938566 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MessageStatutEntity
+938566 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MessageStatutEntity on table messageStatut
+938567 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MusiqueEntity
+938567 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MusiqueEntity on table musique
+938568 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PaysEntity
+938568 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PaysEntity on table pays
+938569 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PreferenceEntity
+938569 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PreferenceEntity on table preference
+938569 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ProfessionEntity
+938570 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ProfessionEntity on table profession
+938570 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ReligionEntity
+938571 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ReligionEntity on table religion
+938571 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SexeEntity
+938572 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SexeEntity on table sexe
+938572 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SportEntity
+938572 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SportEntity on table sport
+938573 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.TraductionEntity
+938573 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.TraductionEntity on table traduction
+938574 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAdressEntity
+938574 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAdressEntity on table usrAdress
+938575 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAmiEntity
+938575 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAmiEntity on table usrAmi
+938576 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserConnectionEntity
+938576 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserConnectionEntity on table usrConnection
+938577 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserContactEntity
+938577 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserContactEntity on table usrContact
+938578 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserCoquinEntity
+938578 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserCoquinEntity on table usrProfil
+938579 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserEntity
+938579 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserEntity on table usr
+938582 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserInteretEntity
+938583 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserInteretEntity on table usrInteret
+938583 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageEntity
+938584 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageEntity on table usrMessage
+938585 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageStatutEntity
+938585 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageStatutEntity on table usrMessageStatut
+938586 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMusiqueEntity
+938586 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMusiqueEntity on table usrMusique
+938586 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhotoEntity
+938587 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhotoEntity on table usrPhoto
+938587 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhysiqueEntity
+938588 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhysiqueEntity on table usrPhysique
+938588 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPreferenceEntity
+938589 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPreferenceEntity on table usrPreference
+938589 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserProfileEntity
+938589 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserProfileEntity on table usrProfile
+938590 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserReligionEntity
+938591 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserReligionEntity on table usrReligion
+938591 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserSportEntity
+938592 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserSportEntity on table usrSport
+938592 [btpool0-11] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserStatutEntity
+938592 [btpool0-11] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserStatutEntity on table usrStatut
+938594 [btpool0-11] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserMessageEntity.messageStatuts -> usrMessageStatut
+938594 [btpool0-11] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userSports -> usrSport
+938594 [btpool0-11] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userReligions -> usrReligion
+938594 [btpool0-11] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userPhotos -> usrPhoto
+938595 [btpool0-11] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userInterets -> usrInteret
+938595 [btpool0-11] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userContacts -> usrContact
+938595 [btpool0-11] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAmis -> usrAmi
+938595 [btpool0-11] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAdresses -> usrAdress
+938596 [btpool0-11] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userProfil -> usrProfile
+938651 [btpool0-11] INFO  o.h.cfg.AnnotationConfiguration - Hibernate Validator not found: ignoring
+938654 [btpool0-11] INFO  o.h.c.s.HibernateSearchEventListenerRegister - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+938699 [btpool0-11] INFO  o.h.c.ConnectionProviderFactory - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+938704 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - RDBMS: MySQL, version: 5.5.10
+938704 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.15 ( Revision: ${bzr.revision-id} )
+938704 [btpool0-11] INFO  org.hibernate.dialect.Dialect - Using dialect: org.hibernate.dialect.MySQL5Dialect
+938705 [btpool0-11] INFO  o.h.t.TransactionFactoryFactory - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+938705 [btpool0-11] INFO  o.h.t.TransactionManagerLookupFactory - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+938706 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Automatic flush during beforeCompletion(): disabled
+938706 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Automatic session close at end of transaction: disabled
+938706 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch size: 20
+938706 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch updates for versioned data: disabled
+938706 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Scrollable result sets: enabled
+938707 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - JDBC3 getGeneratedKeys(): enabled
+938707 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Connection release mode: auto
+938707 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Maximum outer join fetch depth: 3
+938707 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Default batch fetch size: 1
+938707 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Generate SQL with comments: disabled
+938708 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Order SQL updates by primary key: disabled
+938708 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Order SQL inserts for batching: disabled
+938708 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+938708 [btpool0-11] INFO  o.h.h.ast.ASTQueryTranslatorFactory - Using ASTQueryTranslatorFactory
+938708 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Query language substitutions: {false='N', true='Y'}
+938709 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - JPA-QL strict compliance: disabled
+938709 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Second-level cache: disabled
+938709 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Query cache: disabled
+938709 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+938710 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Optimize cache for minimal puts: disabled
+938710 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Structured second-level cache entries: disabled
+938710 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Echoing all SQL to stdout
+938710 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Statistics: disabled
+938710 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
+938711 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Default entity-mode: pojo
+938711 [btpool0-11] INFO  org.hibernate.cfg.SettingsFactory - Named query checking : enabled
+938714 [btpool0-11] INFO  o.hibernate.impl.SessionFactoryImpl - building session factory
+938750 [btpool0-11] INFO  o.h.i.SessionFactoryObjectFactory - Not binding factory to JNDI, no JNDI name configured
+181  [btpool0-0] INFO  o.hibernate.cfg.annotations.Version - Hibernate Annotations 3.4.0.GA
+225  [btpool0-0] INFO  org.hibernate.cfg.Environment - Hibernate 3.3.2.GA
+228  [btpool0-0] INFO  org.hibernate.cfg.Environment - hibernate.properties not found
+232  [btpool0-0] INFO  org.hibernate.cfg.Environment - Bytecode provider name : javassist
+236  [btpool0-0] INFO  org.hibernate.cfg.Environment - using JDK 1.4 java.sql.Timestamp handling
+457  [btpool0-0] INFO  o.h.annotations.common.Version - Hibernate Commons Annotations 3.1.0.GA
+528  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.CantonEntity
+551  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.CantonEntity on table canton
+885  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ContactEntity
+886  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ContactEntity on table ContactEntity.java
+889  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.InteretEntity
+890  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.InteretEntity on table interet
+892  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MessageStatutEntity
+898  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MessageStatutEntity on table messageStatut
+921  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MusiqueEntity
+922  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MusiqueEntity on table musique
+923  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PaysEntity
+923  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PaysEntity on table pays
+924  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PreferenceEntity
+925  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PreferenceEntity on table preference
+926  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ProfessionEntity
+926  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ProfessionEntity on table profession
+927  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ReligionEntity
+928  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ReligionEntity on table religion
+929  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SexeEntity
+929  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SexeEntity on table sexe
+930  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SportEntity
+930  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SportEntity on table sport
+932  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.TraductionEntity
+932  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.TraductionEntity on table traduction
+933  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAdressEntity
+934  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAdressEntity on table usrAdress
+935  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAmiEntity
+935  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAmiEntity on table usrAmi
+936  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserConnectionEntity
+937  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserConnectionEntity on table usrConnection
+938  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserContactEntity
+938  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserContactEntity on table usrContact
+939  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserCoquinEntity
+940  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserCoquinEntity on table usrProfil
+941  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserEntity
+941  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserEntity on table usr
+962  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserInteretEntity
+962  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserInteretEntity on table usrInteret
+965  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageEntity
+966  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageEntity on table usrMessage
+967  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageStatutEntity
+968  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageStatutEntity on table usrMessageStatut
+969  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMusiqueEntity
+970  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMusiqueEntity on table usrMusique
+972  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhotoEntity
+973  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhotoEntity on table usrPhoto
+974  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhysiqueEntity
+974  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhysiqueEntity on table usrPhysique
+975  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPreferenceEntity
+975  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPreferenceEntity on table usrPreference
+976  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserProfileEntity
+976  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserProfileEntity on table usrProfile
+978  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserReligionEntity
+978  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserReligionEntity on table usrReligion
+979  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserSportEntity
+980  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserSportEntity on table usrSport
+980  [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserStatutEntity
+981  [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserStatutEntity on table usrStatut
+1038 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserMessageEntity.messageStatuts -> usrMessageStatut
+1040 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userSports -> usrSport
+1040 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userReligions -> usrReligion
+1040 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userPhotos -> usrPhoto
+1040 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userInterets -> usrInteret
+1041 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userContacts -> usrContact
+1041 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAmis -> usrAmi
+1041 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAdresses -> usrAdress
+1043 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userProfil -> usrProfile
+1106 [btpool0-0] INFO  o.h.cfg.AnnotationConfiguration - Hibernate Validator not found: ignoring
+1113 [btpool0-0] INFO  o.h.c.s.HibernateSearchEventListenerRegister - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+1180 [btpool0-0] INFO  o.h.c.ConnectionProviderFactory - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+1211 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.CantonEntity
+1214 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.CantonEntity on table canton
+1216 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ContactEntity
+1216 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ContactEntity on table ContactEntity.java
+1217 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.InteretEntity
+1218 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.InteretEntity on table interet
+1219 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MessageStatutEntity
+1220 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MessageStatutEntity on table messageStatut
+1221 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MusiqueEntity
+1222 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MusiqueEntity on table musique
+1223 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PaysEntity
+1223 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PaysEntity on table pays
+1224 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PreferenceEntity
+1225 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PreferenceEntity on table preference
+1226 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ProfessionEntity
+1226 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ProfessionEntity on table profession
+1228 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ReligionEntity
+1228 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ReligionEntity on table religion
+1230 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SexeEntity
+1230 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SexeEntity on table sexe
+1231 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SportEntity
+1232 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SportEntity on table sport
+1232 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.TraductionEntity
+1233 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.TraductionEntity on table traduction
+1234 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAdressEntity
+1234 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAdressEntity on table usrAdress
+1235 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAmiEntity
+1235 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAmiEntity on table usrAmi
+1236 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserConnectionEntity
+1237 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserConnectionEntity on table usrConnection
+1238 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserContactEntity
+1238 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserContactEntity on table usrContact
+1239 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserCoquinEntity
+1239 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserCoquinEntity on table usrProfil
+1241 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserEntity
+1241 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserEntity on table usr
+1248 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserInteretEntity
+1248 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserInteretEntity on table usrInteret
+1250 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageEntity
+1250 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageEntity on table usrMessage
+1252 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageStatutEntity
+1253 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageStatutEntity on table usrMessageStatut
+1254 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMusiqueEntity
+1255 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMusiqueEntity on table usrMusique
+1256 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhotoEntity
+1257 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhotoEntity on table usrPhoto
+1258 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhysiqueEntity
+1258 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhysiqueEntity on table usrPhysique
+1259 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPreferenceEntity
+1260 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPreferenceEntity on table usrPreference
+1261 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserProfileEntity
+1261 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserProfileEntity on table usrProfile
+1263 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserReligionEntity
+1264 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserReligionEntity on table usrReligion
+1265 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserSportEntity
+1265 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserSportEntity on table usrSport
+1266 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserStatutEntity
+1267 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserStatutEntity on table usrStatut
+1269 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserMessageEntity.messageStatuts -> usrMessageStatut
+1269 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userSports -> usrSport
+1270 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userReligions -> usrReligion
+1270 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userPhotos -> usrPhoto
+1270 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userInterets -> usrInteret
+1271 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userContacts -> usrContact
+1271 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAmis -> usrAmi
+1271 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAdresses -> usrAdress
+1272 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userProfil -> usrProfile
+1317 [btpool0-4] INFO  o.h.cfg.AnnotationConfiguration - Hibernate Validator not found: ignoring
+1323 [btpool0-4] INFO  o.h.c.s.HibernateSearchEventListenerRegister - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+1376 [btpool0-4] INFO  o.h.c.ConnectionProviderFactory - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+1483 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - RDBMS: MySQL, version: 5.5.10
+1483 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - RDBMS: MySQL, version: 5.5.10
+1483 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.15 ( Revision: ${bzr.revision-id} )
+1483 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.15 ( Revision: ${bzr.revision-id} )
+1511 [btpool0-4] INFO  org.hibernate.dialect.Dialect - Using dialect: org.hibernate.dialect.MySQL5Dialect
+1511 [btpool0-0] INFO  org.hibernate.dialect.Dialect - Using dialect: org.hibernate.dialect.MySQL5Dialect
+1515 [btpool0-4] INFO  o.h.t.TransactionFactoryFactory - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+1515 [btpool0-0] INFO  o.h.t.TransactionFactoryFactory - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+1516 [btpool0-4] INFO  o.h.t.TransactionManagerLookupFactory - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+1516 [btpool0-0] INFO  o.h.t.TransactionManagerLookupFactory - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+1516 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Automatic flush during beforeCompletion(): disabled
+1516 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Automatic session close at end of transaction: disabled
+1516 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch size: 20
+1517 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch updates for versioned data: disabled
+1516 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Automatic flush during beforeCompletion(): disabled
+1517 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Automatic session close at end of transaction: disabled
+1517 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Scrollable result sets: enabled
+1517 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch size: 20
+1517 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - JDBC3 getGeneratedKeys(): enabled
+1518 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Connection release mode: auto
+1518 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch updates for versioned data: disabled
+1518 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Scrollable result sets: enabled
+1518 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - JDBC3 getGeneratedKeys(): enabled
+1519 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Connection release mode: auto
+1529 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Maximum outer join fetch depth: 3
+1529 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Maximum outer join fetch depth: 3
+1530 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Default batch fetch size: 1
+1530 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Default batch fetch size: 1
+1530 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Generate SQL with comments: disabled
+1530 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Generate SQL with comments: disabled
+1530 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Order SQL updates by primary key: disabled
+1531 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Order SQL inserts for batching: disabled
+1531 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+1531 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Order SQL updates by primary key: disabled
+1531 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Order SQL inserts for batching: disabled
+1532 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+1532 [btpool0-0] INFO  o.h.h.ast.ASTQueryTranslatorFactory - Using ASTQueryTranslatorFactory
+1532 [btpool0-4] INFO  o.h.h.ast.ASTQueryTranslatorFactory - Using ASTQueryTranslatorFactory
+1533 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Query language substitutions: {false='N', true='Y'}
+1533 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - JPA-QL strict compliance: disabled
+1533 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Second-level cache: disabled
+1534 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Query cache: disabled
+1534 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+1535 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Optimize cache for minimal puts: disabled
+1535 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Structured second-level cache entries: disabled
+1533 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Query language substitutions: {false='N', true='Y'}
+1536 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - JPA-QL strict compliance: disabled
+1536 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Second-level cache: disabled
+1536 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Query cache: disabled
+1537 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+1537 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Optimize cache for minimal puts: disabled
+1537 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Structured second-level cache entries: disabled
+1538 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Echoing all SQL to stdout
+1538 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Echoing all SQL to stdout
+1538 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Statistics: disabled
+1538 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
+1538 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Statistics: disabled
+1539 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Default entity-mode: pojo
+1539 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
+1539 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Default entity-mode: pojo
+1539 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Named query checking : enabled
+1539 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Named query checking : enabled
+1586 [btpool0-0] INFO  o.hibernate.impl.SessionFactoryImpl - building session factory
+1586 [btpool0-4] INFO  o.hibernate.impl.SessionFactoryImpl - building session factory
+2218 [btpool0-0] INFO  o.h.i.SessionFactoryObjectFactory - Not binding factory to JNDI, no JNDI name configured
+2218 [btpool0-4] INFO  o.h.i.SessionFactoryObjectFactory - Not binding factory to JNDI, no JNDI name configured
+3624 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.CantonEntity
+3626 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.CantonEntity on table canton
+3628 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ContactEntity
+3629 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ContactEntity on table ContactEntity.java
+3630 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.InteretEntity
+3630 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.InteretEntity on table interet
+3632 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MessageStatutEntity
+3632 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MessageStatutEntity on table messageStatut
+3633 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MusiqueEntity
+3634 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MusiqueEntity on table musique
+3635 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PaysEntity
+3635 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PaysEntity on table pays
+3636 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PreferenceEntity
+3637 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PreferenceEntity on table preference
+3638 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ProfessionEntity
+3638 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ProfessionEntity on table profession
+3640 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ReligionEntity
+3640 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ReligionEntity on table religion
+3641 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SexeEntity
+3642 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SexeEntity on table sexe
+3643 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SportEntity
+3644 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SportEntity on table sport
+3646 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.TraductionEntity
+3646 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.TraductionEntity on table traduction
+3648 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAdressEntity
+3648 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAdressEntity on table usrAdress
+3650 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAmiEntity
+3650 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAmiEntity on table usrAmi
+3651 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserConnectionEntity
+3652 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserConnectionEntity on table usrConnection
+3653 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserContactEntity
+3653 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserContactEntity on table usrContact
+3654 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserCoquinEntity
+3655 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserCoquinEntity on table usrProfil
+3656 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserEntity
+3657 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserEntity on table usr
+3662 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserInteretEntity
+3663 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserInteretEntity on table usrInteret
+3664 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageEntity
+3664 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageEntity on table usrMessage
+3667 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageStatutEntity
+3667 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageStatutEntity on table usrMessageStatut
+3669 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMusiqueEntity
+3669 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMusiqueEntity on table usrMusique
+3671 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhotoEntity
+3671 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhotoEntity on table usrPhoto
+3672 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhysiqueEntity
+3673 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhysiqueEntity on table usrPhysique
+3674 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPreferenceEntity
+3674 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPreferenceEntity on table usrPreference
+3675 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserProfileEntity
+3676 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserProfileEntity on table usrProfile
+3677 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserReligionEntity
+3678 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserReligionEntity on table usrReligion
+3679 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserSportEntity
+3679 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserSportEntity on table usrSport
+3680 [btpool0-0] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserStatutEntity
+3680 [btpool0-0] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserStatutEntity on table usrStatut
+3682 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserMessageEntity.messageStatuts -> usrMessageStatut
+3683 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userSports -> usrSport
+3683 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userReligions -> usrReligion
+3683 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userPhotos -> usrPhoto
+3684 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userInterets -> usrInteret
+3684 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userContacts -> usrContact
+3684 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAmis -> usrAmi
+3685 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAdresses -> usrAdress
+3685 [btpool0-0] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userProfil -> usrProfile
+3742 [btpool0-0] INFO  o.h.cfg.AnnotationConfiguration - Hibernate Validator not found: ignoring
+3749 [btpool0-0] INFO  o.h.c.s.HibernateSearchEventListenerRegister - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+3809 [btpool0-0] INFO  o.h.c.ConnectionProviderFactory - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+3821 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - RDBMS: MySQL, version: 5.5.10
+3821 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.15 ( Revision: ${bzr.revision-id} )
+3821 [btpool0-0] INFO  org.hibernate.dialect.Dialect - Using dialect: org.hibernate.dialect.MySQL5Dialect
+3822 [btpool0-0] INFO  o.h.t.TransactionFactoryFactory - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+3823 [btpool0-0] INFO  o.h.t.TransactionManagerLookupFactory - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+3823 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Automatic flush during beforeCompletion(): disabled
+3823 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Automatic session close at end of transaction: disabled
+3824 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch size: 20
+3824 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch updates for versioned data: disabled
+3824 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Scrollable result sets: enabled
+3825 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - JDBC3 getGeneratedKeys(): enabled
+3825 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Connection release mode: auto
+3825 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Maximum outer join fetch depth: 3
+3826 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Default batch fetch size: 1
+3826 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Generate SQL with comments: disabled
+3826 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Order SQL updates by primary key: disabled
+3827 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Order SQL inserts for batching: disabled
+3827 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+3828 [btpool0-0] INFO  o.h.h.ast.ASTQueryTranslatorFactory - Using ASTQueryTranslatorFactory
+3828 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Query language substitutions: {false='N', true='Y'}
+3829 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - JPA-QL strict compliance: disabled
+3829 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Second-level cache: disabled
+3829 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Query cache: disabled
+3830 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+3830 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Optimize cache for minimal puts: disabled
+3830 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Structured second-level cache entries: disabled
+3831 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Echoing all SQL to stdout
+3831 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Statistics: disabled
+3831 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
+3832 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Default entity-mode: pojo
+3832 [btpool0-0] INFO  org.hibernate.cfg.SettingsFactory - Named query checking : enabled
+3837 [btpool0-0] INFO  o.hibernate.impl.SessionFactoryImpl - building session factory
+3846 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.CantonEntity
+3847 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.CantonEntity on table canton
+3848 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ContactEntity
+3848 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ContactEntity on table ContactEntity.java
+3849 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.InteretEntity
+3849 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.InteretEntity on table interet
+3850 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MessageStatutEntity
+3851 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MessageStatutEntity on table messageStatut
+3851 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.MusiqueEntity
+3852 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.MusiqueEntity on table musique
+3852 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PaysEntity
+3853 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PaysEntity on table pays
+3853 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.PreferenceEntity
+3854 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.PreferenceEntity on table preference
+3855 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ProfessionEntity
+3855 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ProfessionEntity on table profession
+3856 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.ReligionEntity
+3857 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.ReligionEntity on table religion
+3858 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SexeEntity
+3858 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SexeEntity on table sexe
+3859 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.SportEntity
+3859 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.SportEntity on table sport
+3860 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.TraductionEntity
+3860 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.TraductionEntity on table traduction
+3861 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAdressEntity
+3862 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAdressEntity on table usrAdress
+3862 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserAmiEntity
+3863 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserAmiEntity on table usrAmi
+3864 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserConnectionEntity
+3865 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserConnectionEntity on table usrConnection
+3866 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserContactEntity
+3866 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserContactEntity on table usrContact
+3867 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserCoquinEntity
+3868 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserCoquinEntity on table usrProfil
+3868 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserEntity
+3869 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserEntity on table usr
+3872 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserInteretEntity
+3872 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserInteretEntity on table usrInteret
+3874 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageEntity
+3874 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageEntity on table usrMessage
+3876 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMessageStatutEntity
+3877 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMessageStatutEntity on table usrMessageStatut
+3878 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserMusiqueEntity
+3878 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserMusiqueEntity on table usrMusique
+3879 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhotoEntity
+3880 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhotoEntity on table usrPhoto
+3881 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPhysiqueEntity
+3881 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPhysiqueEntity on table usrPhysique
+3882 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserPreferenceEntity
+3882 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserPreferenceEntity on table usrPreference
+3883 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserProfileEntity
+3883 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserProfileEntity on table usrProfile
+3884 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserReligionEntity
+3884 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserReligionEntity on table usrReligion
+3885 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserSportEntity
+3885 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserSportEntity on table usrSport
+3886 [btpool0-4] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ch.amaba.dao.model.UserStatutEntity
+3887 [btpool0-4] INFO  o.h.cfg.annotations.EntityBinder - Bind entity ch.amaba.dao.model.UserStatutEntity on table usrStatut
+3888 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserMessageEntity.messageStatuts -> usrMessageStatut
+3888 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userSports -> usrSport
+3889 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userReligions -> usrReligion
+3889 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userPhotos -> usrPhoto
+3889 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userInterets -> usrInteret
+3889 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userContacts -> usrContact
+3890 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAmis -> usrAmi
+3890 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userAdresses -> usrAdress
+3890 [btpool0-4] INFO  o.h.c.annotations.CollectionBinder - Mapping collection: ch.amaba.dao.model.UserEntity.userProfil -> usrProfile
+3896 [btpool0-0] INFO  o.h.i.SessionFactoryObjectFactory - Not binding factory to JNDI, no JNDI name configured
+3931 [btpool0-4] INFO  o.h.cfg.AnnotationConfiguration - Hibernate Validator not found: ignoring
+3936 [btpool0-4] INFO  o.h.c.s.HibernateSearchEventListenerRegister - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+3982 [btpool0-4] INFO  o.h.c.ConnectionProviderFactory - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+3989 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - RDBMS: MySQL, version: 5.5.10
+3989 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.15 ( Revision: ${bzr.revision-id} )
+3999 [btpool0-4] INFO  org.hibernate.dialect.Dialect - Using dialect: org.hibernate.dialect.MySQL5Dialect
+4000 [btpool0-4] INFO  o.h.t.TransactionFactoryFactory - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+4001 [btpool0-4] INFO  o.h.t.TransactionManagerLookupFactory - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+4001 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Automatic flush during beforeCompletion(): disabled
+4001 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Automatic session close at end of transaction: disabled
+4001 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch size: 20
+4002 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch updates for versioned data: disabled
+4002 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Scrollable result sets: enabled
+4002 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - JDBC3 getGeneratedKeys(): enabled
+4002 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Connection release mode: auto
+4003 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Maximum outer join fetch depth: 3
+4003 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Default batch fetch size: 1
+4003 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Generate SQL with comments: disabled
+4004 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Order SQL updates by primary key: disabled
+4004 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Order SQL inserts for batching: disabled
+4004 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+4004 [btpool0-4] INFO  o.h.h.ast.ASTQueryTranslatorFactory - Using ASTQueryTranslatorFactory
+4005 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Query language substitutions: {false='N', true='Y'}
+4005 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - JPA-QL strict compliance: disabled
+4005 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Second-level cache: disabled
+4005 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Query cache: disabled
+4006 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+4006 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Optimize cache for minimal puts: disabled
+4006 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Structured second-level cache entries: disabled
+4007 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Echoing all SQL to stdout
+4007 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Statistics: disabled
+4007 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
+4007 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Default entity-mode: pojo
+4008 [btpool0-4] INFO  org.hibernate.cfg.SettingsFactory - Named query checking : enabled
+4013 [btpool0-4] INFO  o.hibernate.impl.SessionFactoryImpl - building session factory
+4066 [btpool0-4] INFO  o.h.i.SessionFactoryObjectFactory - Not binding factory to JNDI, no JNDI name configured

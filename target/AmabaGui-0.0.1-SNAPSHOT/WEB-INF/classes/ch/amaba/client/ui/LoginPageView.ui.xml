@@ -1,0 +1,151 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:npui="urn:import:ch.amaba.client.ui.composite">
+
+	<ui:with type="ch.amaba.client.NameTokens"
+		field="nameTokens"></ui:with>
+	<ui:style>
+		.error {
+			background-color: red;
+			border: 1px solid red;
+			font-weight: bold;
+			color: white;
+			margin: 5px;
+			padding: 2px;
+		}
+	</ui:style>
+	<g:DecoratorPanel>
+		<g:HTMLPanel ui:field="htmlPanel">
+			<table border='0'>
+				<tr>
+					<td colspan='2'>
+						<g:Label text="Authentification"></g:Label>
+					</td>
+				</tr>
+				<tr>
+					<td colspan='2'>
+						<g:TextBox text="Email" ui:field="emailAuthTextBox"
+							maxLength="55" width="150px"></g:TextBox>
+					</td>
+				</tr>
+				<tr align='left'>
+					<td width='170px'>
+						<g:PasswordTextBox text="Password" ui:field="passwordAuthTextBox"
+							width="150px">123</g:PasswordTextBox>
+					</td>
+					<td>
+						<g:Button text="Connection" width="100px" ui:field="sendButton" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan='2'>
+						<g:Hyperlink text="Mot de passe oublié" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan='2'>
+						<g:VerticalPanel ui:field="errorPanel" visible="false"
+							styleName='{style.error}' />
+					</td>
+				</tr>
+				<tr>
+					<td colspan='2'>
+						<g:DisclosurePanel animationEnabled="true"
+							width="400px">
+							<g:customHeader>
+								<g:HorizontalPanel verticalAlignment="bottom"
+									height="40px">
+									<g:Image url="images/chef.png"></g:Image>
+									<g:Label title='Devenir membre'>S'inscrire / Devenir membre</g:Label>
+								</g:HorizontalPanel>
+							</g:customHeader>
+							<g:HTMLPanel>
+								<table cellpadding='0' cellspacing='0'>
+									<tr>
+										<td>
+											<g:VerticalPanel width="150px">
+												<g:Label>Je suis(*) </g:Label>
+												<g:ListBox ui:field="genreListBox">
+													<g:item value='-1'>-- - --</g:item>
+													<g:item value='1'>un Homme</g:item>
+													<g:item value='2'>une Femme</g:item>
+												</g:ListBox>
+											</g:VerticalPanel>
+										</td>
+										<td>
+											<g:VerticalPanel>
+												<g:Label>Date naissance (*)</g:Label>
+												<g:HorizontalPanel spacing="3">
+													<g:TextBox width="18px" maxLength="2" ui:field="jourTextBox"></g:TextBox>
+													<g:TextBox width="18px" maxLength="2" ui:field="moisTextBox"></g:TextBox>
+													<g:TextBox width="36px" maxLength="4" ui:field="anneeTextBox"></g:TextBox>
+												</g:HorizontalPanel>
+											</g:VerticalPanel>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<g:VerticalPanel>
+												<g:Label>Nom(*)</g:Label>
+												<g:TextBox ui:field="nomTextBox" maxLength="75" />
+											</g:VerticalPanel>
+										</td>
+										<td>
+											<g:VerticalPanel>
+												<g:Label>Prénom(*)</g:Label>
+												<g:TextBox ui:field="prenomTextBox" maxLength="75" />
+											</g:VerticalPanel>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<g:VerticalPanel>
+												<g:Label>Email(*)</g:Label>
+												<g:TextBox ui:field="emailTextBox" maxLength="100" />
+											</g:VerticalPanel>
+										</td>
+										<td>
+											<g:VerticalPanel>
+												<g:Label>Email confirmez(*)</g:Label>
+												<g:TextBox ui:field="emailRepeatTextBox"
+													maxLength="100" />
+											</g:VerticalPanel>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<g:VerticalPanel>
+												<g:Label>Password(*)</g:Label>
+												<g:PasswordTextBox ui:field="passwordTextBox"
+													maxLength="45" />
+											</g:VerticalPanel>
+										</td>
+										<td>
+											<g:VerticalPanel>
+												<g:Label>Password confirmez(*)</g:Label>
+												<g:PasswordTextBox ui:field="passwordRepeatTextBox"
+													maxLength="45" />
+											</g:VerticalPanel>
+										</td>
+									</tr>
+									<tr>
+										<td colspan='2'>
+											<g:HorizontalPanel verticalAlignment="bottom">
+												<g:VerticalPanel verticalAlignment="top">
+													<g:Label>Canton(*) </g:Label>
+													<g:ListBox ui:field="cantonListBox"></g:ListBox>
+												</g:VerticalPanel>
+												<g:Button text='Devenir membre' ui:field="devenirMembreButton" />
+											</g:HorizontalPanel>
+										</td>
+									</tr>
+								</table>
+							</g:HTMLPanel>
+
+						</g:DisclosurePanel>
+					</td>
+				</tr>
+			</table>
+		</g:HTMLPanel>
+	</g:DecoratorPanel>
+</ui:UiBinder> 

@@ -1,0 +1,49 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+
+	<g:HorizontalPanel width="160px"
+		height="110px">
+		<g:Image ui:field="image" />
+		<g:HTMLPanel height="100%">
+			<table>
+				<tr>
+					<td>
+						<g:Label ui:field="prenom" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<g:Label ui:field="age" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<g:Label ui:field="canton" />
+					</td>
+				</tr>
+				<tr valign='bottom' height='60px'>
+					<td>
+						<table height='100%'>
+							<tr valign='middle' height='20px'>
+								<td width='25px'>
+									<g:Image styleName="cursor" url="images/ajouter.png"
+										ui:field="ajouterImage" title="Ajouter à vos favoris" />
+								</td>
+								<td width='25px'>
+									<g:Image styleName="cursor" url="images/courrier.png"
+										ui:field="messagePriveImage" title="Envoyer un message privé" />
+								</td>
+								<td width='25px'>
+									<g:Image styleName="cursor" url="images/infos.png"
+										ui:field="infosImage" title="Afficher le profil détaillé" />
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</g:HTMLPanel>
+	</g:HorizontalPanel>
+</ui:UiBinder> 

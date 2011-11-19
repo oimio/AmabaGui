@@ -1,0 +1,181 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:npui="urn:import:ch.amaba.client.ui.composite">
+
+	<ui:style>
+		.small {
+			font-size: 9px;
+		}
+		
+		gwt-RadioButton {
+			font-size: 9px;
+		}
+	</ui:style>
+	<ui:with type="ch.amaba.client.NameTokens"
+		field="nameTokens"></ui:with>
+	<g:VerticalPanel styleName='{style.small}'>
+		<g:Label>RECHERCHE DETAILLEE</g:Label>
+		<g:DecoratorPanel>
+			<g:HTMLPanel>
+				<table>
+					<tr>
+						<td>
+							<g:VerticalPanel width='80px'>
+								<g:RadioButton ui:field="homme" name='sexeDet'>Homme</g:RadioButton>
+								<g:RadioButton ui:field="femme" name='sexeDet' value='true'>Femme</g:RadioButton>
+							</g:VerticalPanel>
+						</td>
+						<td>
+							<npui:AgePanel ui:field="agePanel"/>
+						</td>
+						<td colspan='2'>
+							<npui:MyVerticalPanel>
+								<g:Label> Genre </g:Label>
+								<g:ListBox ui:field="genreListBox">
+									<g:item value='1'>Hétérosexuel</g:item>
+									<g:item value='2'>Homosexuel</g:item>
+									<g:item value='3'>Bisexuel</g:item>
+								</g:ListBox>
+							</npui:MyVerticalPanel>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<g:HorizontalPanel width='80px'
+								verticalAlignment="middle">
+								<g:Label> Canton </g:Label>
+								<npui:CantonsListBoxPanel ui:field="cantonsListBoxPanel" />
+							</g:HorizontalPanel>
+						</td>
+						<td colspan='5'>
+							<g:HorizontalPanel width='80px'
+								verticalAlignment="middle">
+								<g:Label> Ville </g:Label>
+								<g:SuggestBox ui:field="suggestBox" width="180px">
+								</g:SuggestBox>
+							</g:HorizontalPanel>
+						</td>
+
+					</tr>
+					<tr>
+						<td>
+							<npui:MyVerticalPanel>
+								<g:Label>Célibataire</g:Label>
+								<g:ListBox title='Absolument pas marié?! Choisissez NON !'>
+									<g:item value='2'>Sans importance</g:item>
+									<g:item value='2'>Non</g:item>
+									<g:item value='2'>Oui</g:item>
+								</g:ListBox>
+							</npui:MyVerticalPanel>
+						</td>
+						<td>
+							<npui:MyVerticalPanel>
+								<g:Label>Marié</g:Label>
+								<g:ListBox title='Absolument pas marié?! Choisissez NON !' ui:field="marieListBox">
+									<g:item value='-1'>Sans importance</g:item>
+									<g:item value='0'>Non</g:item>
+									<g:item value='1'>Oui</g:item>
+								</g:ListBox>
+							</npui:MyVerticalPanel>
+						</td>
+						<td>
+							<npui:MyVerticalPanel>
+								<g:Label>Divorcé</g:Label>
+								<g:ListBox title='Absolument pas marié?! Choisissez NON !'>
+									<g:item value='2'>Sans importance</g:item>
+									<g:item value='2'>Non</g:item>
+									<g:item value='2'>Oui</g:item>
+								</g:ListBox>
+							</npui:MyVerticalPanel>
+						</td>
+						<td>
+							<npui:MyVerticalPanel>
+								<g:Label>Veuf</g:Label>
+								<g:ListBox title='Absolument pas marié?! Choisissez NON !'>
+									<g:item value='2'>Sans importance</g:item>
+									<g:item value='2'>Non</g:item>
+									<g:item value='2'>Oui</g:item>
+								</g:ListBox>
+							</npui:MyVerticalPanel>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<npui:MyVerticalPanel>
+								<g:Label> Intérêts </g:Label>
+								<g:ListBox selectedIndex="2" multipleSelect="true"
+									width="120px" title='Plusieures choix possibles' height="70px"
+									ui:field="interetListe">
+									<g:item value='-1'>Sans importance</g:item>
+									<g:item value='1'>Cinéma</g:item>
+									<g:item value='2'>Sport</g:item>
+								</g:ListBox>
+							</npui:MyVerticalPanel>
+						</td>
+						<td>
+							<npui:MyVerticalPanel>
+								<g:Label> Sports </g:Label>
+								<g:ListBox selectedIndex="2" multipleSelect="true"
+									width="120px" title='Plusieures choix possibles' height="70px"
+									ui:field="sportListe">
+									<g:item value='-1'>Sans importance</g:item>
+									<g:item value='1'>Cinéma</g:item>
+									<g:item value='2'>Sport</g:item>
+								</g:ListBox>
+							</npui:MyVerticalPanel>
+						</td>
+						<td>
+							<npui:MyVerticalPanel>
+								<g:Label> Musique </g:Label>
+								<g:ListBox selectedIndex="2" multipleSelect="true"
+									width="120px" title='Plusieures choix possibles' height="70px"
+									ui:field="musiqueListe">
+									<g:item value='-1'>Sans importance</g:item>
+									<g:item value='1'>Cinéma</g:item>
+									<g:item value='2'>Sport</g:item>
+								</g:ListBox>
+							</npui:MyVerticalPanel>
+						</td>
+						<td>
+							<npui:MyVerticalPanel>
+								<g:Label> Religion </g:Label>
+								<g:ListBox selectedIndex="2" multipleSelect="true"
+									width="120px" title='Plusieures choix possibles' height="70px"
+									ui:field="religionListe">
+									<g:item value='-1'>Sans importance</g:item>
+								</g:ListBox>
+							</npui:MyVerticalPanel>
+						</td>
+						<td>
+							<npui:MyVerticalPanel>
+								<g:Label> Profession </g:Label>
+								<g:ListBox selectedIndex="2" multipleSelect="true"
+									width="120px" title='Plusieures choix possibles' height="70px"
+									ui:field="professionListe">
+									<g:item value='-1'>Sans importance</g:item>
+									<g:item value='1'>Cinéma</g:item>
+									<g:item value='2'>Sport</g:item>
+								</g:ListBox>
+							</npui:MyVerticalPanel>
+						</td>
+					</tr>
+					<tr>
+						<td colspan='5'>
+							<g:HorizontalPanel spacing="5">
+								<g:Button ui:field="rechercheDetailleeButton" title='Lancer la recherche'>Rechercher</g:Button>
+								<g:Button enabled='false' title='Bientôt disponible'>Sauver ma recherche</g:Button>
+							</g:HorizontalPanel>
+						</td>
+					</tr>
+				</table>
+			</g:HTMLPanel>
+		</g:DecoratorPanel>
+
+
+
+
+	</g:VerticalPanel>
+
+</ui:UiBinder> 

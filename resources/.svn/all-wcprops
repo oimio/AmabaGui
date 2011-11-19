@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/21/retraites-populaires-gwt/resources
+END
+logback.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/29/retraites-populaires-gwt/resources/logback.xml
+END
+application-context.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/36/retraites-populaires-gwt/resources/application-context.xml
+END

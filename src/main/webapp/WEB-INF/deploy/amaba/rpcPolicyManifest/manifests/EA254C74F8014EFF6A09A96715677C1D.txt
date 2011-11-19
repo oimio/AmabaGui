@@ -1,0 +1,2 @@
+serviceClass: com.gwtplatform.dispatch.shared.DispatchService
+path: 2D621B44D9658BEC696C95529E3D4DFF.gwt.rpc

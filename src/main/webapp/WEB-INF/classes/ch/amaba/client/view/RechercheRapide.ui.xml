@@ -1,0 +1,46 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:npui="urn:import:ch.amaba.client.ui.composite">
+
+	<ui:style>
+		.small {
+			font-size: 9px;
+		}
+		
+		gwt-RadioButton {
+			font-size: 9px;
+		}
+	</ui:style>
+	<ui:with type="ch.amaba.client.NameTokens"
+		field="nameTokens"></ui:with>
+	<g:HTMLPanel>
+		<table>
+			<tr>
+				<td>
+					<g:VerticalPanel width="70px">
+						<g:RadioButton name='sexe' styleName='{style.small}'>Homme</g:RadioButton>
+						<g:RadioButton name='sexe' value="true">Femme</g:RadioButton>
+					</g:VerticalPanel>
+				</td>
+				<td>
+					<npui:AgePanel></npui:AgePanel>
+				</td>
+			
+				<td>
+					<g:VerticalPanel horizontalAlignment="center">
+						<g:Label> Canton </g:Label>
+						<g:ListBox>
+							<g:item value='VS'>Valais</g:item>
+							<g:item value='VD'>Vaud</g:item>
+						</g:ListBox>
+					</g:VerticalPanel>
+				</td>
+				<td valign='bottom'><g:Button height="20px">Go!</g:Button></td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+
+
+		
+		
+</ui:UiBinder> 

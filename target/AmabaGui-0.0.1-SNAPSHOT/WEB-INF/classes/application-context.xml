@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<!-- MySQL -->
+	<bean id="basicDataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/amaba" />
+		<property name="username" value="a2m0a1b2a_root" />
+		<property name="password" value="m2e0e1t2all" />
+
+	</bean>
+
+	<!-- Configuration de la sessionFactory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="configurationClass">
+			<value>org.hibernate.cfg.AnnotationConfiguration</value>
+		</property>
+		<property name="annotatedClasses">
+			<list>
+				<value>ch.amaba.dao.model.Audit</value>
+				<value>ch.amaba.dao.model.CantonEntity</value>
+				<value>ch.amaba.dao.model.ContactEntity</value>
+				<value>ch.amaba.dao.model.DefaultEntity</value>
+				<value>ch.amaba.dao.model.InteretEntity</value>
+				<value>ch.amaba.dao.model.MessageStatutEntity</value>
+				<value>ch.amaba.dao.model.MusiqueEntity</value>
+				<value>ch.amaba.dao.model.PaysEntity</value>
+				<value>ch.amaba.dao.model.PreferenceEntity</value>
+				<value>ch.amaba.dao.model.ProfessionEntity</value>
+				<value>ch.amaba.dao.model.ReligionEntity</value>
+				<value>ch.amaba.dao.model.SexeEntity</value>
+				<value>ch.amaba.dao.model.SportEntity</value>
+				<value>ch.amaba.dao.model.TraductionEntity</value>
+				<value>ch.amaba.dao.model.UserAdressEntity</value>
+				<value>ch.amaba.dao.model.UserAmiEntity</value>
+				<value>ch.amaba.dao.model.UserConnectionEntity</value>
+				<value>ch.amaba.dao.model.UserContactEntity</value>
+				<value>ch.amaba.dao.model.UserCoquinEntity</value>
+				<value>ch.amaba.dao.model.UserEntity</value>
+				<value>ch.amaba.dao.model.UserInteretEntity</value>
+				<value>ch.amaba.dao.model.UserMessageEntity</value>
+				<value>ch.amaba.dao.model.UserMessageStatutEntity</value>
+				<value>ch.amaba.dao.model.UserMusiqueEntity</value>
+				<value>ch.amaba.dao.model.UserPhysiqueEntity</value>
+				<value>ch.amaba.dao.model.UserPreferenceEntity</value>
+				<value>ch.amaba.dao.model.UserProfileEntity</value>
+				<value>ch.amaba.dao.model.UserReligionEntity</value>
+				<value>ch.amaba.dao.model.UserSportEntity</value>
+				<value>ch.amaba.dao.model.UserStatutEntity</value>
+			</list>
+		</property>
+
+		<property name="dataSource" ref="basicDataSource" />
+		<!-- <property name="mappingResources"> -->
+		<!-- <list> -->
+		<!-- <value>ch/amaba/server/model/StockEntity.hbm.xml -->
+		<!-- </value> -->
+		<!-- </list> -->
+		<!-- </property> -->
+		<!-- hibernate : propriétés -->
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.query.substitutions">true='Y', false='N'</prop>
+				<prop key="hibernate.cache.provider_class">org.hibernate.cache.HashtableCacheProvider</prop>
+				<prop key="hibernate.cache.use_second_level_cache">false</prop>
+				<prop key="hibernate.jdbc.batch_size">20</prop>
+				<prop key="hibernate.max_fetch_depth">3</prop>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				
+			</props>
+		</property>
+	</bean>
+
+	<!-- <bean id="abstractDao" abstract="true"> -->
+	<!-- <prop key="sessionFactory" ref="sessionFactory" /> -->
+	<!-- </bean> -->
+	<bean id="amabaDao" class="ch.amaba.dao.AmabaDao">
+		<!-- <prop key="sessionFactory" ref="sessionFactory" /> -->
+		<constructor-arg index="0" ref="sessionFactory" />
+	</bean>
+
+
+</beans>

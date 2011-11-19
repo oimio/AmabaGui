@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<!-- MySQL -->
+	<bean id="basicDataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/rp" />
+		<property name="username" value="rp" />
+		<property name="password" value="rp" />
+	</bean>
+
+	<!-- Configuration de la sessionFactory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="configurationClass">
+			<value>org.hibernate.cfg.AnnotationConfiguration</value>
+		</property>
+		<property name="annotatedClasses">
+         <list>
+            <value>ch.retraitespopulaires.dao.model.StockEntity</value>
+            <value>ch.retraitespopulaires.dao.model.UserEntity</value>
+            <value>ch.retraitespopulaires.dao.model.DefaultEntity</value>
+            <value>ch.retraitespopulaires.dao.model.AdressEntity</value>
+         </list>
+      </property>
+		
+		<property name="dataSource" ref="basicDataSource" />
+		<!-- <property name="mappingResources"> -->
+		<!-- <list> -->
+		<!-- <value>ch/retraitespopulaires/server/model/StockEntity.hbm.xml -->
+		<!-- </value> -->
+		<!-- </list> -->
+		<!-- </property> -->
+		<!-- hibernate : propriétés -->
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.query.substitutions">true='Y', false='N'</prop>
+				<prop key="hibernate.cache.provider_class">org.hibernate.cache.HashtableCacheProvider</prop>
+				<prop key="hibernate.cache.use_second_level_cache">false</prop>
+				<prop key="hibernate.jdbc.batch_size">20</prop>
+				<prop key="hibernate.max_fetch_depth">3</prop>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- <bean id="abstractDao" abstract="true"> -->
+	<!-- <property name="sessionFactory" ref="sessionFactory" /> -->
+	<!-- </bean> -->
+	<bean id="retraitesPopulairesDao" class="ch.retraitespopulaires.dao.RetraitesPopulairesDao">
+		<!-- <property name="sessionFactory" ref="sessionFactory" /> -->
+		<constructor-arg index="0" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="mapper" class="org.dozer.DozerBeanMapper">
+		<property name="mappingFiles">
+			<list>
+				<value>dozer-mapping.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="service"
+		class="ch.retraitespopulaires.pojo.impl.RetraitesPopulairesPojoService">
+		<property name="retraitesPopulairesDao" ref="retraitesPopulairesDao" />
+		<property name="mapper" ref="mapper" />
+	</bean>
+</beans>
