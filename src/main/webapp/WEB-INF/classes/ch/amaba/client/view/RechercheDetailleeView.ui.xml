@@ -89,60 +89,21 @@
 						<td>
 						</td>
 					</tr>
-					<tr>
+					<tr valign='top'>
 						<td>
-							<npui:MyVerticalPanel>
-								<g:Label> Intérêts </g:Label>
-								<g:ListBox selectedIndex="2" multipleSelect="true"
-									width="120px" title='Plusieures choix possibles' height="70px"
-									ui:field="interetListe"/>
-							</npui:MyVerticalPanel>
+							<npui:ChoixMultiplePanel ui:field="interetPanel"/>
 						</td>
 						<td>
-							<npui:MyVerticalPanel>
-								<g:Label> Sports </g:Label>
-								<g:ListBox selectedIndex="2" multipleSelect="true"
-									width="120px" title='Plusieures choix possibles' height="70px"
-									ui:field="sportListe">
-									<g:item value='-1'>Sans importance</g:item>
-									<g:item value='1'>Cinéma</g:item>
-									<g:item value='2'>Sport</g:item>
-								</g:ListBox>
-							</npui:MyVerticalPanel>
+							<npui:ChoixMultiplePanel ui:field="sportPanel"/>
 						</td>
 						<td>
-							<npui:MyVerticalPanel>
-								<g:Label> Musique </g:Label>
-								<g:ListBox selectedIndex="2" multipleSelect="true"
-									width="120px" title='Plusieures choix possibles' height="70px"
-									ui:field="musiqueListe">
-									<g:item value='-1'>Sans importance</g:item>
-									<g:item value='1'>Cinéma</g:item>
-									<g:item value='2'>Sport</g:item>
-								</g:ListBox>
-							</npui:MyVerticalPanel>
+							<npui:ChoixMultiplePanel ui:field="musicPanel"/>
 						</td>
 						<td>
-							<npui:MyVerticalPanel>
-								<g:Label> Religion </g:Label>
-								<g:ListBox selectedIndex="2" multipleSelect="true"
-									width="120px" title='Plusieures choix possibles' height="70px"
-									ui:field="religionListe">
-									<g:item value='-1'>Sans importance</g:item>
-								</g:ListBox>
-							</npui:MyVerticalPanel>
+							<npui:ChoixMultiplePanel ui:field="religionPanel"/>
 						</td>
 						<td>
-							<npui:MyVerticalPanel>
-								<g:Label> Profession </g:Label>
-								<g:ListBox selectedIndex="2" multipleSelect="true"
-									width="120px" title='Plusieures choix possibles' height="70px"
-									ui:field="professionListe">
-									<g:item value='-1'>Sans importance</g:item>
-									<g:item value='1'>Cinéma</g:item>
-									<g:item value='2'>Sport</g:item>
-								</g:ListBox>
-							</npui:MyVerticalPanel>
+							<npui:ChoixMultiplePanel ui:field="professionPanel"/>
 						</td>
 					</tr>
 					<tr>

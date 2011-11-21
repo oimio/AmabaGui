@@ -13,6 +13,12 @@ public interface IConstants {
 
 	public static final String ENUM_TYPE_INTERET = "INTERET";
 
+	public static final String ENUM_TYPE_MUSIC = "MUSIC";
+
+	public static final String ENUM_TYPE_PROFESSION = "PROFESSION";
+
+	public static final String ENUM_TYPE_RELIGION = "RELIGION";
+
 	public static final String ENUM_TYPE_SPORT = "SPORT";
 
 	public static final String ENUM_TYPE_CANTON = "CANTON";

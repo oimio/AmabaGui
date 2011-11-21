@@ -31,6 +31,7 @@ public class CantonUtils<T> {
 	}
 
 	public static void populate(final ListBox cantonsListBox, final String type) {
+		cantonsListBox.clear();
 		final Set<CantonDTO> cantons = CacheUtils.getCantons();
 		final Map<String, Map<String, String>> traductions = CacheUtils.getTraductions();
 		final Map<String, String> map = traductions.get(type);
