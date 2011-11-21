@@ -18,7 +18,6 @@ package ch.amaba.client.ui;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Set;
 
 import ch.amaba.client.context.ContextUI;
 import ch.amaba.client.presenter.LoginPagePresenter;
@@ -123,9 +122,8 @@ public class ModifierDonneesPageView extends ViewImpl implements ModifierDonnees
 			getMoisTextBox().setText(DateUtils.getMonth(dateNaissance));
 			getAnneeTextBox().setText(DateUtils.getYear(dateNaissance));
 			getCodeSexeListBox().setSelectedIndex(userCriteria.getIdSexe());
-			final Set<Integer> idSports = userCriteria.getIdSports();
 
-			for (final Integer idSport : idSports) {
+			for (final Integer idSport : userCriteria.getIdSports()) {
 				final TypeSportEnum enumById = TypeSportEnum.getEnumById(idSport);
 				choixMultiplePanel.ajouterPreference(enumById.name(), Integer.toString(enumById.getId()));
 			}
@@ -135,7 +133,7 @@ public class ModifierDonneesPageView extends ViewImpl implements ModifierDonnees
 		}
 	}
 
-	
+	@Override
 	public void setInSlot(Object slot, Widget content) {
 		if (slot == LoginPagePresenter.TYPE_SetMainContent) {
 			setMainContent(content);

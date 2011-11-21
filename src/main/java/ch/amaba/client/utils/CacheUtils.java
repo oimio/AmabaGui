@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+import ch.amaba.client.IConstants;
 import ch.amaba.model.bo.CantonDTO;
 import ch.amaba.model.bo.constants.TypeInteretEnum;
 import ch.amaba.model.bo.constants.TypeMusiqueEnum;
@@ -52,10 +53,12 @@ public class CacheUtils {
 	 * color=red>3</font>.
 	 * 
 	 * @param enum
-	 * @return l'id de l'enum. Si pas trouvé, return null;
+	 * @return l'id de l'enum. Retourne {@link IConstants.AUCUNE_SELECTION} si id
+	 *         non trouveé.
+	 * 
 	 * */
 	public static Integer getEnumId(Enum<?> obj) {
-		Integer id = null;
+		Integer id = Integer.valueOf(IConstants.AUCUNE_SELECTION);
 		if (CacheUtils.enumMap == null) {
 			CacheUtils.enumMap = new HashMap<String, Integer>();
 			final TypeInteretEnum[] values = TypeInteretEnum.values();

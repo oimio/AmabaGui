@@ -8,6 +8,12 @@ import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.Widget;
 
+/**
+ * Panel représentant une préférence utilisateur.
+ * 
+ * <br/>
+ * Il est définit par un text et un id.
+ */
 public class MySettingPanel extends Composite {
 
 	interface MySettingPanelUiBinder extends UiBinder<Widget, MySettingPanel> {
@@ -19,14 +25,29 @@ public class MySettingPanel extends Composite {
 	@UiField
 	Label label;
 
-	String id;
+	Integer id;
 
 	private static MySettingPanelUiBinder uiBinder = GWT.create(MySettingPanelUiBinder.class);
 
+	/**
+	 * Constructeur.
+	 * 
+	 * @param text
+	 * @param id
+	 */
 	public MySettingPanel(final String textPreference, String id) {
 		initWidget(MySettingPanel.uiBinder.createAndBindUi(this));
 		label.setText(textPreference);
-		this.id = id;
+		this.id = Integer.valueOf(id);
+	}
+
+	/**
+	 * Retourne l'id du setting.
+	 * 
+	 * @return id
+	 */
+	public Integer getId() {
+		return id;
 	}
 
 	public Image getFermerImage() {
@@ -37,7 +58,7 @@ public class MySettingPanel extends Composite {
 		return label;
 	}
 
-	
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -45,7 +66,7 @@ public class MySettingPanel extends Composite {
 		return result;
 	}
 
-	
+	@Override
 	public boolean equals(Object obj) {
 		if (this == obj) {
 			return true;

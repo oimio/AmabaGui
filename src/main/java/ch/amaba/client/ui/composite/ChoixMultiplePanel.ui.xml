@@ -28,10 +28,10 @@
 		}
 	</ui:style>
 	
-	<g:HorizontalPanel verticalAlignment="top"
+	<g:VerticalPanel verticalAlignment="top"
 		spacing='2' styleName='{style.border}'>
-		<npui:SportListBox ui:field="sportListBox"></npui:SportListBox>
+		<npui:ListBoxPanel ui:field="listBoxPanel"/>
 		<g:VerticalPanel ui:field="selectionHorizontalPanel" spacing="3"></g:VerticalPanel>
-	</g:HorizontalPanel>
+	</g:VerticalPanel>
 
 </ui:UiBinder> 

@@ -21,30 +21,19 @@ public class ListBoxUtils {
 	 * @param listBox
 	 * @param codeListe
 	 *          - la clée dans la map des traductions
+	 * @param codeTypeTraduction
+	 *          - lien dans la table de traduction
 	 * 
 	 * */
-	// public static void populerListBox(final ListBox listBox, String codeListe)
-	// {
-	// if (listBox != null) {
-	// // Vider la liste
-	// listBox.clear();
-	// final Map<String, String> map = Cache.getTraductions().get(codeListe);
-	// final Set<Entry<String, String>> entrySet = map.entrySet();
-	//
-	// for (final Entry<String, String> entry : entrySet) {
-	// listBox.addItem(entry.getValue(), entry.getKey());
-	// }
-	// }
-	// }
-
-	public static <T extends Enum<?>> void populate(final ListBox cantonsListBox, Class<? extends Enum> enumType, String type) {
+	public static <T extends Enum<?>> void populate(final ListBox listBox, Class<? extends Enum> enumType, String codeTypeTraduction) {
 		final Map<String, Map<String, String>> traductions = CacheUtils.getTraductions();
-		final Map<String, String> map = traductions.get(type);
-		cantonsListBox.addItem("-- - --", "-1");
+		final Map<String, String> map = traductions.get(codeTypeTraduction);
+		listBox.clear();
+		listBox.addItem("-- - --", IConstants.AUCUNE_SELECTION);
 		try {
 			for (final Enum t : enumType.getEnumConstants()) {
 				final String traduction = map.get(t.name());
-				cantonsListBox.addItem(traduction, t.name());
+				listBox.addItem(traduction, Integer.toString(CacheUtils.getEnumId(t)));
 			}
 		} catch (final Exception e) {
 			e.printStackTrace();
@@ -56,7 +45,6 @@ public class ListBoxUtils {
 		final Set<Integer> values = new HashSet<Integer>();
 		for (int i = 0; i < listBox.getItemCount(); i++) {
 			if (listBox.isItemSelected(i) && (listBox.getValue(i) != null) && !IConstants.AUCUNE_SELECTION.equals(listBox.getValue(i))) {
-				// listBox.getValue(i);
 				final Integer value = Integer.valueOf(listBox.getValue(i));
 				values.add(value);
 			}

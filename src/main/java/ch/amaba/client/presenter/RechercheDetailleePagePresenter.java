@@ -12,6 +12,10 @@ import ch.amaba.client.utils.ListBoxUtils;
 import ch.amaba.model.bo.CantonDTO;
 import ch.amaba.model.bo.UserCriteria;
 import ch.amaba.model.bo.constants.TypeInteretEnum;
+import ch.amaba.model.bo.constants.TypeMusiqueEnum;
+import ch.amaba.model.bo.constants.TypeProfessionEnum;
+import ch.amaba.model.bo.constants.TypeReligionEnum;
+import ch.amaba.model.bo.constants.TypeSportEnum;
 import ch.amaba.shared.LoadCantonsAction;
 import ch.amaba.shared.LoadCantonsResult;
 import ch.amaba.shared.RechercheDetailleeAction;
@@ -53,7 +57,6 @@ public class RechercheDetailleePagePresenter extends Presenter<RechercheDetaille
 	 * {@link RechercheDetailleePagePresenter}'s view.
 	 */
 	public interface MyView extends View {
-		ListBox getReligionListeBox();
 
 		Button getRechercheDetailleeButton();
 
@@ -62,7 +65,16 @@ public class RechercheDetailleePagePresenter extends Presenter<RechercheDetaille
 		/** Les données du formulaire. */
 		UserCriteria getRecherche();
 
-		ListBox getInteretListe();
+		ListBox getInteretListBox();
+
+		ListBox getMusicListBox();
+
+		ListBox getProfessionListBox();
+
+		ListBox getReligionListBox();
+
+		ListBox getSportListBox();
+
 	}
 
 	@Inject
@@ -117,12 +129,16 @@ public class RechercheDetailleePagePresenter extends Presenter<RechercheDetaille
 			getView().getCantonListBoxPanel().getCantonsListBox().clear();
 		}
 		CantonUtils.populate(getView().getCantonListBoxPanel().getCantonsListBox(), IConstants.ENUM_TYPE_CANTON);
+		ListBoxUtils.populate(getView().getInteretListBox(), TypeInteretEnum.class, IConstants.ENUM_TYPE_INTERET);
+		ListBoxUtils.populate(getView().getMusicListBox(), TypeMusiqueEnum.class, IConstants.ENUM_TYPE_MUSIC);
+		ListBoxUtils.populate(getView().getProfessionListBox(), TypeProfessionEnum.class, IConstants.ENUM_TYPE_PROFESSION);
+		ListBoxUtils.populate(getView().getReligionListBox(), TypeReligionEnum.class, IConstants.ENUM_TYPE_RELIGION);
+		ListBoxUtils.populate(getView().getSportListBox(), TypeSportEnum.class, IConstants.ENUM_TYPE_SPORT);
 	}
 
 	@Override
 	protected void onReset() {
 		super.onReset();
-		ListBoxUtils.populate(getView().getInteretListe(), TypeInteretEnum.class, IConstants.ENUM_TYPE_INTERET);
 	}
 
 	@Override

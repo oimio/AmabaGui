@@ -103,7 +103,6 @@ public class ModifierDonneesPagePresenter extends Presenter<ModifierDonneesPageP
 				// DevenirMembre.devenirMembre(getView(), dispatcher);
 			}
 		}));
-		getView().getCantonsListBoxPanel().getCantonsListBox().clear();
 		CantonUtils.populate(getView().getCantonsListBoxPanel().getCantonsListBox(), IConstants.ENUM_TYPE_CANTON);
 	}
 

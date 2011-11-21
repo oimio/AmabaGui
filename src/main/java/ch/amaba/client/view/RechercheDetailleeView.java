@@ -16,13 +16,20 @@
 
 package ch.amaba.client.view;
 
+import ch.amaba.client.IConstants;
 import ch.amaba.client.presenter.RechercheDetailleePagePresenter.MyView;
 import ch.amaba.client.ui.composite.AgePanel;
 import ch.amaba.client.ui.composite.CantonsListBoxPanel;
+import ch.amaba.client.ui.composite.ChoixMultiplePanel;
 import ch.amaba.client.utils.ListBoxUtils;
 import ch.amaba.model.bo.ProfileCriteria;
 import ch.amaba.model.bo.UserCriteria;
+import ch.amaba.model.bo.constants.TypeInteretEnum;
+import ch.amaba.model.bo.constants.TypeMusiqueEnum;
+import ch.amaba.model.bo.constants.TypeProfessionEnum;
+import ch.amaba.model.bo.constants.TypeReligionEnum;
 import ch.amaba.model.bo.constants.TypeSexeEnum;
+import ch.amaba.model.bo.constants.TypeSportEnum;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
@@ -61,44 +68,52 @@ public class RechercheDetailleeView extends ViewImpl implements MyView {
 	@UiField
 	ListBox genreListBox;
 
-	@UiField(provided = true)
-	ListBox religionListe;
-
-	@UiField
-	ListBox interetListe;
-
 	@UiField
 	CantonsListBoxPanel cantonsListBoxPanel;
 
 	@UiField
 	ListBox marieListBox;
 
+	@UiField(provided = true)
+	ChoixMultiplePanel interetPanel;
+
+	@UiField(provided = true)
+	ChoixMultiplePanel sportPanel;
+
+	@UiField(provided = true)
+	ChoixMultiplePanel musicPanel;
+
+	@UiField(provided = true)
+	ChoixMultiplePanel religionPanel;
+
+	@UiField(provided = true)
+	ChoixMultiplePanel professionPanel;
+
 	private static RechercheDetailleeViewUiBinder uiBinder = GWT.create(RechercheDetailleeViewUiBinder.class);
 	private final MultiWordSuggestOracle mySuggestions = new MultiWordSuggestOracle();
 	private final Widget widget;
 
 	public RechercheDetailleeView() {
+		interetPanel = new ChoixMultiplePanel(TypeInteretEnum.class, IConstants.ENUM_TYPE_INTERET);
+		musicPanel = new ChoixMultiplePanel(TypeMusiqueEnum.class, IConstants.ENUM_TYPE_MUSIC);
+		professionPanel = new ChoixMultiplePanel(TypeProfessionEnum.class, IConstants.ENUM_TYPE_PROFESSION);
+		religionPanel = new ChoixMultiplePanel(TypeReligionEnum.class, IConstants.ENUM_TYPE_RELIGION);
+		sportPanel = new ChoixMultiplePanel(TypeSportEnum.class, IConstants.ENUM_TYPE_SPORT);
+
 		// Provided : constructeur dans la classe avec init des datas.
 		// suggestBox = new SuggestBox(mySuggestions);
-		religionListe = new ListBox();
 		widget = RechercheDetailleeView.uiBinder.createAndBindUi(this);
 		mySuggestions.add("Cat");
 		mySuggestions.add("Dog");
 		mySuggestions.add("Avion");
 		mySuggestions.add("Argovie");
-
-		religionListe.addItem("Catholique", "0");
-
 	}
 
 	public Widget asWidget() {
 		return widget;
 	}
 
-	public ListBox getReligionListeBox() {
-		return religionListe;
-	}
-
+	/** Retourne le bouton de recherche détaillée. */
 	public Button getRechercheDetailleeButton() {
 		return rechercheDetailleeButton;
 	}
@@ -123,12 +138,33 @@ public class RechercheDetailleeView extends ViewImpl implements MyView {
 		profileCriteria.setGenre(Short.valueOf(genreListBox.getValue(genreListBox.getSelectedIndex())));
 		profileCriteria.setMarie(marieListBox.getSelectedIndex() == 0 ? null : Short.valueOf(marieListBox.getValue(marieListBox.getSelectedIndex())));
 		userCriteria.setProfileCriteria(profileCriteria);
-		// Interet
-		userCriteria.setIdCantons(ListBoxUtils.getValues(getInteretListe()));
+		// Interet - sport - music - religion - profession
+		userCriteria.setIdInterets(interetPanel.getValues());
+		userCriteria.setIdSports(sportPanel.getValues());
+		userCriteria.setIdProfessions(professionPanel.getValues());
+		userCriteria.setIdReligions(religionPanel.getValues());
+		userCriteria.setIdMusiques(musicPanel.getValues());
 		return userCriteria;
 	}
 
-	public ListBox getInteretListe() {
-		return interetListe;
+	public ListBox getInteretListBox() {
+		return interetPanel.getListBoxPanel().getListBox();
 	}
+
+	public ListBox getMusicListBox() {
+		return musicPanel.getListBoxPanel().getListBox();
+	}
+
+	public ListBox getProfessionListBox() {
+		return professionPanel.getListBoxPanel().getListBox();
+	}
+
+	public ListBox getReligionListBox() {
+		return religionPanel.getListBoxPanel().getListBox();
+	}
+
+	public ListBox getSportListBox() {
+		return sportPanel.getListBoxPanel().getListBox();
+	}
+
 }
