@@ -6,7 +6,7 @@
 		field="nameTokens"></ui:with>
 
 	<g:VerticalPanel verticalAlignment="middle" horizontalAlignment="center">
-		<g:Label title='Choisissez un ou plusieurs sports'>Sports </g:Label>
+		<g:Label ui:field="headerLabel"/>
 		<g:HorizontalPanel verticalAlignment="middle">
 			<g:ListBox ui:field="listBox" multipleSelect="false" visibleItemCount="5" />
 		</g:HorizontalPanel>

@@ -2,8 +2,7 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:npui="urn:import:ch.amaba.client.ui.composite">
 
-	<ui:with type="ch.amaba.client.NameTokens"
-		field="nameTokens"></ui:with>
+	<ui:with type="ch.amaba.client.NameTokens" field="nameTokens"></ui:with>
 	<ui:style>
 		.error {
 			background-color: red;
@@ -95,14 +94,21 @@
 							<td colspan='3'>
 								<g:DisclosurePanel animationEnabled="true"
 									open="false">
-																<g:customHeader>
-								<g:HorizontalPanel verticalAlignment="bottom"
-									height="40px">
-									<g:Image url="images/chef.png"></g:Image>
-									<g:Label title='Devenir membre'>Sports</g:Label>
-								</g:HorizontalPanel>
-							</g:customHeader>
-									<npui:ChoixMultiplePanel ui:field="choixMultiplePanel"></npui:ChoixMultiplePanel>
+									<g:customHeader>
+										<g:HorizontalPanel verticalAlignment="bottom"
+											height="40px">
+											<g:Image url="images/chef.png"></g:Image>
+											<g:Label title='Devenir membre'>Sports</g:Label>
+										</g:HorizontalPanel>
+									</g:customHeader>
+									<g:HorizontalPanel>
+										<npui:ChoixMultiplePanel ui:field="sportPanel" />
+										<npui:ChoixMultiplePanel ui:field="musicPanel" />
+										<npui:ChoixMultiplePanel ui:field="professionPanel" />
+										<npui:ChoixMultiplePanel ui:field="religionPanel" />
+										<npui:ChoixMultiplePanel ui:field="interetPanel" />
+										<npui:ChoixMultiplePanel ui:field="caracterePanel" />
+									</g:HorizontalPanel>
 								</g:DisclosurePanel>
 
 							</td>

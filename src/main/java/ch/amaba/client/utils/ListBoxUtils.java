@@ -11,7 +11,7 @@ import com.google.gwt.user.client.ui.ListBox;
 public class ListBoxUtils {
 
 	/**
-	 * Remplit la listeBox passée en paramètre.
+	 * Remplit la listeBox passée en paramètre avec les <b>traductions</b>.
 	 * 
 	 * <br/>
 	 * Ex:<br/>
@@ -25,7 +25,7 @@ public class ListBoxUtils {
 	 *          - lien dans la table de traduction
 	 * 
 	 * */
-	public static <T extends Enum<?>> void populate(final ListBox listBox, Class<? extends Enum> enumType, String codeTypeTraduction) {
+	public static <T extends Enum<?>> void populateAvecTraduction(final ListBox listBox, Class<? extends Enum> enumType, String codeTypeTraduction) {
 		final Map<String, Map<String, String>> traductions = CacheUtils.getTraductions();
 		final Map<String, String> map = traductions.get(codeTypeTraduction);
 		listBox.clear();

@@ -6,6 +6,7 @@ import java.util.Set;
 
 import ch.amaba.client.IConstants;
 import ch.amaba.model.bo.CantonDTO;
+import ch.amaba.model.bo.constants.TypeCaractereEnum;
 import ch.amaba.model.bo.constants.TypeInteretEnum;
 import ch.amaba.model.bo.constants.TypeMusiqueEnum;
 import ch.amaba.model.bo.constants.TypeProfessionEnum;
@@ -79,6 +80,10 @@ public class CacheUtils {
 			}
 			final TypeReligionEnum[] religion = TypeReligionEnum.values();
 			for (final TypeReligionEnum type : religion) {
+				CacheUtils.enumMap.put(type.getClass().getName() + type.name(), type.getId());
+			}
+			final TypeCaractereEnum[] caractere = TypeCaractereEnum.values();
+			for (final TypeCaractereEnum type : caractere) {
 				CacheUtils.enumMap.put(type.getClass().getName() + type.name(), type.getId());
 			}
 		}

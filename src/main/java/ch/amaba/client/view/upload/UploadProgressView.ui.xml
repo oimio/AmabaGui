@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<ui:UiBinder
+  xmlns:ui='urn:ui:com.google.gwt.uibinder'
+  xmlns:g='urn:import:com.google.gwt.user.client.ui'
+  xmlns:view='urn:import:ch.amaba.client.view.upload'>
+
+    <g:HTMLPanel>
+        <div class="Wrapper">
+            <div class="Container">
+                <div class="ContainerHead">
+                  Ajouter une photo    
+                </div>
+                <div class="ContainerBody">
+                    <view:FileSubmit ui:field='fileSubmit'/>               
+                    <view:UploadProgress ui:field='uploadProgress'/>  
+                </div>
+            </div>
+           
+            <div class="Container">
+                <div class="ContainerHead">
+                  Mes photos
+                </div>
+                <div class="ContainerBody">
+                    <view:FileList ui:field='fileList'/>
+                    <div class="Wrapper">
+                        <view:Paging ui:field='paging'/>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </g:HTMLPanel>
+</ui:UiBinder>

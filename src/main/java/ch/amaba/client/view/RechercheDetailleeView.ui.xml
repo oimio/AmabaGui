@@ -91,19 +91,25 @@
 					</tr>
 					<tr valign='top'>
 						<td>
-							<npui:ChoixMultiplePanel ui:field="interetPanel"/>
+							<npui:ChoixMultiplePanel ui:field="interetPanel" />
 						</td>
 						<td>
-							<npui:ChoixMultiplePanel ui:field="sportPanel"/>
+							<npui:ChoixMultiplePanel ui:field="sportPanel" />
 						</td>
 						<td>
-							<npui:ChoixMultiplePanel ui:field="musicPanel"/>
+							<npui:ChoixMultiplePanel ui:field="musicPanel" />
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<npui:ChoixMultiplePanel ui:field="religionPanel" />
 						</td>
 						<td>
-							<npui:ChoixMultiplePanel ui:field="religionPanel"/>
+							<npui:ChoixMultiplePanel ui:field="professionPanel" />
 						</td>
 						<td>
-							<npui:ChoixMultiplePanel ui:field="professionPanel"/>
+							<npui:ChoixMultiplePanel ui:field="caracterePanel" />
 						</td>
 					</tr>
 					<tr>

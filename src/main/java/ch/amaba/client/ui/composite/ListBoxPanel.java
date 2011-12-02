@@ -16,10 +16,13 @@
 
 package ch.amaba.client.ui.composite;
 
+import ch.amaba.client.IConstants;
+
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.Widget;
 
@@ -37,11 +40,19 @@ public class ListBoxPanel extends Composite {
 	@UiField
 	ListBox listBox;
 
+	@UiField
+	Label headerLabel;
+
 	public ListBoxPanel() {
 		initWidget(ListBoxPanel.uiBinder.createAndBindUi(this));
+		listBox.setWidth(IConstants.CHOIX_MULTIPLE_WIDTH);
 	}
 
 	public ListBox getListBox() {
 		return listBox;
+	}
+
+	public void setHeaderText(String text) {
+		headerLabel.setText(text);
 	}
 }

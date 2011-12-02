@@ -19,6 +19,7 @@ package ch.amaba.client.ui;
 import java.util.Date;
 import java.util.List;
 
+import ch.amaba.client.IConstants;
 import ch.amaba.client.context.ContextUI;
 import ch.amaba.client.presenter.LoginPagePresenter;
 import ch.amaba.client.presenter.ModifierDonneesPagePresenter;
@@ -27,6 +28,11 @@ import ch.amaba.client.ui.composite.ChoixMultiplePanel;
 import ch.amaba.client.utils.CantonUtils;
 import ch.amaba.client.utils.DateUtils;
 import ch.amaba.model.bo.UserCriteria;
+import ch.amaba.model.bo.constants.TypeCaractereEnum;
+import ch.amaba.model.bo.constants.TypeInteretEnum;
+import ch.amaba.model.bo.constants.TypeMusiqueEnum;
+import ch.amaba.model.bo.constants.TypeProfessionEnum;
+import ch.amaba.model.bo.constants.TypeReligionEnum;
 import ch.amaba.model.bo.constants.TypeSportEnum;
 
 import com.google.gwt.core.client.GWT;
@@ -89,19 +95,42 @@ public class ModifierDonneesPageView extends ViewImpl implements ModifierDonnees
 	@UiField
 	CantonsListBoxPanel cantonsListBoxPanel;
 
-	@UiField
-	ChoixMultiplePanel choixMultiplePanel;
+	@UiField(provided = true)
+	ChoixMultiplePanel interetPanel;
+
+	@UiField(provided = true)
+	ChoixMultiplePanel sportPanel;
+
+	@UiField(provided = true)
+	ChoixMultiplePanel musicPanel;
+
+	@UiField(provided = true)
+	ChoixMultiplePanel caracterePanel;
+
+	@UiField(provided = true)
+	ChoixMultiplePanel religionPanel;
+
+	@UiField(provided = true)
+	ChoixMultiplePanel professionPanel;
 
 	VerticalPanel errorPanel;
 
 	public ModifierDonneesPageView() {
+		interetPanel = new ChoixMultiplePanel(TypeInteretEnum.class, IConstants.ENUM_TYPE_INTERET, "Intérêts");
+		musicPanel = new ChoixMultiplePanel(TypeMusiqueEnum.class, IConstants.ENUM_TYPE_MUSIC, "Musique");
+		professionPanel = new ChoixMultiplePanel(TypeProfessionEnum.class, IConstants.ENUM_TYPE_PROFESSION, "Profession");
+		religionPanel = new ChoixMultiplePanel(TypeReligionEnum.class, IConstants.ENUM_TYPE_RELIGION, "Religion");
+		sportPanel = new ChoixMultiplePanel(TypeSportEnum.class, IConstants.ENUM_TYPE_SPORT, "Sport");
+		caracterePanel = new ChoixMultiplePanel(TypeCaractereEnum.class, IConstants.ENUM_TYPE_CARACTERE, "Caractère");
 		widget = ModifierDonneesPageView.uiBinder.createAndBindUi(this);
 	}
 
+	@Override
 	public Widget asWidget() {
 		return widget;
 	}
 
+	@Override
 	public void setError(List<String> messages) {
 		errorPanel.clear();
 		for (final String message : messages) {
@@ -111,6 +140,7 @@ public class ModifierDonneesPageView extends ViewImpl implements ModifierDonnees
 		}
 	}
 
+	@Override
 	public void resetAndFocus() {
 		final UserCriteria userCriteria = ContextUI.get().getUserCourant();
 		if (userCriteria != null) {
@@ -123,9 +153,41 @@ public class ModifierDonneesPageView extends ViewImpl implements ModifierDonnees
 			getAnneeTextBox().setText(DateUtils.getYear(dateNaissance));
 			getCodeSexeListBox().setSelectedIndex(userCriteria.getIdSexe());
 
-			for (final Integer idSport : userCriteria.getIdSports()) {
-				final TypeSportEnum enumById = TypeSportEnum.getEnumById(idSport);
-				choixMultiplePanel.ajouterPreference(enumById.name(), Integer.toString(enumById.getId()));
+			if (userCriteria.getIdSports() != null) {
+				for (final Integer idSport : userCriteria.getIdSports()) {
+					final TypeSportEnum enumById = TypeSportEnum.getEnumById(idSport);
+					sportPanel.ajouterPreference(enumById.name(), Integer.toString(enumById.getId()));
+				}
+			}
+			if (userCriteria.getIdReligions() != null) {
+				for (final Integer id : userCriteria.getIdReligions()) {
+					final TypeReligionEnum enumById = TypeReligionEnum.getEnumById(id);
+					religionPanel.ajouterPreference(enumById.name(), Integer.toString(enumById.getId()));
+				}
+			}
+			if (userCriteria.getIdInterets() != null) {
+				for (final Integer id : userCriteria.getIdInterets()) {
+					final TypeInteretEnum enumById = TypeInteretEnum.getEnumById(id);
+					interetPanel.ajouterPreference(enumById.name(), Integer.toString(enumById.getId()));
+				}
+			}
+			if (userCriteria.getIdProfessions() != null) {
+				for (final Integer id : userCriteria.getIdProfessions()) {
+					final TypeProfessionEnum enumById = TypeProfessionEnum.getEnumById(id);
+					professionPanel.ajouterPreference(enumById.name(), Integer.toString(enumById.getId()));
+				}
+			}
+			if (userCriteria.getIdMusiques() != null) {
+				for (final Integer id : userCriteria.getIdMusiques()) {
+					final TypeMusiqueEnum enumById = TypeMusiqueEnum.getEnumById(id);
+					musicPanel.ajouterPreference(enumById.name(), Integer.toString(enumById.getId()));
+				}
+			}
+			if (userCriteria.getIdCaracteres() != null) {
+				for (final Integer idCaractere : userCriteria.getIdCaracteres()) {
+					final TypeCaractereEnum enumById = TypeCaractereEnum.getEnumById(idCaractere);
+					caracterePanel.ajouterPreference(enumById.name(), Integer.toString(enumById.getId()));
+				}
 			}
 			// Un user doit forcément avoir un idCanton.
 			final Integer idUserCanton = userCriteria.getIdCantons().iterator().next();
@@ -150,56 +212,68 @@ public class ModifierDonneesPageView extends ViewImpl implements ModifierDonnees
 		}
 	}
 
+	@Override
 	public CantonsListBoxPanel getCantonsListBoxPanel() {
 		return cantonsListBoxPanel;
 	}
 
+	@Override
 	public Button getModifierButton() {
 		return modifierButton;
 	}
 
+	@Override
 	public TextBox getPasswordTextBox() {
 		return passwordTextBox;
 	}
 
+	@Override
 	public TextBox getPasswordRepeatTextBox() {
 		return passwordRepeatTextBox;
 	}
 
+	@Override
 	public TextBox getNomTextBox() {
 		return nomTextBox;
 	}
 
+	@Override
 	public TextBox getPrenomTextBox() {
 		return prenomTextBox;
 	}
 
+	@Override
 	public TextBox getJourTextBox() {
 		return jourTextBox;
 	}
 
+	@Override
 	public TextBox getMoisTextBox() {
 		return moisTextBox;
 	}
 
+	@Override
 	public TextBox getAnneeTextBox() {
 		return anneeTextBox;
 	}
 
+	@Override
 	public ListBox getCodeSexeListBox() {
 		return codeSexeListBox;
 	}
 
+	@Override
 	public VerticalPanel getErrorPanel() {
 		return errorPanel;
 	}
 
+	@Override
 	public TextBox getPasswordAncienTextBox() {
 		return passwordAncienTextBox;
 	}
 
-	public ChoixMultiplePanel getChoixMultiplePanel() {
-		return choixMultiplePanel;
+	public ChoixMultiplePanel getSportPanel() {
+		return sportPanel;
 	}
 
 }

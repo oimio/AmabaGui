@@ -7,8 +7,6 @@ import ch.amaba.client.IConstants;
 import ch.amaba.client.utils.ListBoxUtils;
 
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.event.dom.client.ChangeEvent;
-import com.google.gwt.event.dom.client.ChangeHandler;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.uibinder.client.UiBinder;
@@ -38,16 +36,19 @@ public class ChoixMultiplePanel extends Composite {
 
 	private final Set<MySettingPanel> settings = new HashSet<MySettingPanel>();
 
-	public ChoixMultiplePanel(Class<? extends Enum<?>> enumClass, String type) {
+	public ChoixMultiplePanel(Class<? extends Enum<?>> enumClass, String type, String headerText) {
 		initWidget(ChoixMultiplePanel.uiBinder.createAndBindUi(this));
 		final ListBox listBox = getListBoxPanel().getListBox();
+		getListBoxPanel().setHeaderText(headerText);
 		// Populate listBox
-		ListBoxUtils.populate(listBox, enumClass, type);
+		ListBoxUtils.populateAvecTraduction(listBox, enumClass, type);
+		selectionHorizontalPanel.setWidth(IConstants.CHOIX_MULTIPLE_WIDTH);
 
-		getListBoxPanel().getListBox().addChangeHandler(new ChangeHandler() {
-			public void onChange(ChangeEvent event) {
+		getListBoxPanel().getListBox().addClickHandler(new ClickHandler() {
+			@Override
+			public void onClick(ClickEvent event) {
 				if (settings.size() >= IConstants.MAX_SELECTION) {
-					Window.alert("Vous pouvez ajouter jusque " + IConstants.MAX_SELECTION + " éléments.");
+					Window.alert("L'ajout est limité à " + IConstants.MAX_SELECTION + " éléments.");
 				} else {
 					final String text = listBox.getItemText(listBox.getSelectedIndex());
 					final String value = listBox.getValue(listBox.getSelectedIndex());
@@ -65,6 +66,7 @@ public class ChoixMultiplePanel extends Composite {
 		final MySettingPanel msp = new MySettingPanel(text, id);
 		msp.getFermerImage().addClickHandler(new ClickHandler() {
 
+			@Override
 			public void onClick(ClickEvent event) {
 				if (settings.remove(msp)) {
 					getSelectionHorizontalPanel().remove(msp);

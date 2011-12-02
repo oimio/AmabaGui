@@ -29,10 +29,10 @@ import com.gwtplatform.mvp.client.ViewImpl;
  */
 public class ConfidentialitePageView extends ViewImpl implements ConfidentialitePagePresenter.MyView {
 
-	interface MainPageViewUiBinder extends UiBinder<Widget, ConfidentialitePageView> {
+	interface ConfidentialiteViewUiBinder extends UiBinder<Widget, ConfidentialitePageView> {
 	}
 
-	private static MainPageViewUiBinder uiBinder = GWT.create(MainPageViewUiBinder.class);
+	private static ConfidentialiteViewUiBinder uiBinder = GWT.create(ConfidentialiteViewUiBinder.class);
 
 	public Widget widget;
 
@@ -40,11 +40,12 @@ public class ConfidentialitePageView extends ViewImpl implements Confidentialite
 		widget = ConfidentialitePageView.uiBinder.createAndBindUi(this);
 	}
 
+	@Override
 	public Widget asWidget() {
 		return widget;
 	}
 
-	
+	@Override
 	public void setInSlot(Object slot, Widget content) {
 		if (slot == LoginPagePresenter.TYPE_SetMainContent) {
 			setMainContent(content);

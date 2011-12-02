@@ -51,6 +51,7 @@
 				<value>ch.amaba.dao.model.UserPhotoEntity</value>
 				<value>ch.amaba.dao.model.UserPhysiqueEntity</value>
 				<value>ch.amaba.dao.model.UserPreferenceEntity</value>
+				<value>ch.amaba.dao.model.UserProfessionEntity</value>
 				<value>ch.amaba.dao.model.UserProfileEntity</value>
 				<value>ch.amaba.dao.model.UserReligionEntity</value>
 				<value>ch.amaba.dao.model.UserSportEntity</value>

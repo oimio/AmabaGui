@@ -11,6 +11,7 @@ import ch.amaba.client.utils.CantonUtils;
 import ch.amaba.client.utils.ListBoxUtils;
 import ch.amaba.model.bo.CantonDTO;
 import ch.amaba.model.bo.UserCriteria;
+import ch.amaba.model.bo.constants.TypeCaractereEnum;
 import ch.amaba.model.bo.constants.TypeInteretEnum;
 import ch.amaba.model.bo.constants.TypeMusiqueEnum;
 import ch.amaba.model.bo.constants.TypeProfessionEnum;
@@ -75,6 +76,8 @@ public class RechercheDetailleePagePresenter extends Presenter<RechercheDetaille
 
 		ListBox getSportListBox();
 
+		ListBox getCaractereListBox();
+
 	}
 
 	@Inject
@@ -91,16 +94,19 @@ public class RechercheDetailleePagePresenter extends Presenter<RechercheDetaille
 		super.onBind();
 		getView().getRechercheDetailleeButton().addClickHandler(new ClickHandler() {
 
+			@Override
 			public void onClick(ClickEvent event) {
 				getView().getRechercheDetailleeButton().setEnabled(false);
 				dispatcher.execute(new RechercheDetailleeAction(getView().getRecherche()), new AsyncCallback<RechercheDetailleeResult>() {
 
+					@Override
 					public void onFailure(Throwable caught) {
 						// getView().setServerResponse("An error occured: " +
 						// caught.getMessage());
 						getView().getRechercheDetailleeButton().setEnabled(true);
 					}
 
+					@Override
 					public void onSuccess(RechercheDetailleeResult result) {
 						getView().getRechercheDetailleeButton().setEnabled(true);
 						// Sauvegarde du résultat de la recherche
@@ -115,11 +121,13 @@ public class RechercheDetailleePagePresenter extends Presenter<RechercheDetaille
 		if (CacheUtils.getCantons() == null) {
 			dispatcher.execute(new LoadCantonsAction(false), new AsyncCallback<LoadCantonsResult>() {
 
+				@Override
 				public void onFailure(Throwable caught) {
 					// getView().setServerResponse("An error occured: " +
 					// caught.getMessage());
 				}
 
+				@Override
 				public void onSuccess(LoadCantonsResult result) {
 					final Set<CantonDTO> cantons = result.getCantons();
 					CacheUtils.setCantons(cantons);
@@ -129,11 +137,12 @@ public class RechercheDetailleePagePresenter extends Presenter<RechercheDetaille
 			getView().getCantonListBoxPanel().getCantonsListBox().clear();
 		}
 		CantonUtils.populate(getView().getCantonListBoxPanel().getCantonsListBox(), IConstants.ENUM_TYPE_CANTON);
-		ListBoxUtils.populate(getView().getInteretListBox(), TypeInteretEnum.class, IConstants.ENUM_TYPE_INTERET);
-		ListBoxUtils.populate(getView().getMusicListBox(), TypeMusiqueEnum.class, IConstants.ENUM_TYPE_MUSIC);
-		ListBoxUtils.populate(getView().getProfessionListBox(), TypeProfessionEnum.class, IConstants.ENUM_TYPE_PROFESSION);
-		ListBoxUtils.populate(getView().getReligionListBox(), TypeReligionEnum.class, IConstants.ENUM_TYPE_RELIGION);
-		ListBoxUtils.populate(getView().getSportListBox(), TypeSportEnum.class, IConstants.ENUM_TYPE_SPORT);
+		ListBoxUtils.populateAvecTraduction(getView().getInteretListBox(), TypeInteretEnum.class, IConstants.ENUM_TYPE_INTERET);
+		ListBoxUtils.populateAvecTraduction(getView().getMusicListBox(), TypeMusiqueEnum.class, IConstants.ENUM_TYPE_MUSIC);
+		ListBoxUtils.populateAvecTraduction(getView().getProfessionListBox(), TypeProfessionEnum.class, IConstants.ENUM_TYPE_PROFESSION);
+		ListBoxUtils.populateAvecTraduction(getView().getReligionListBox(), TypeReligionEnum.class, IConstants.ENUM_TYPE_RELIGION);
+		ListBoxUtils.populateAvecTraduction(getView().getSportListBox(), TypeSportEnum.class, IConstants.ENUM_TYPE_SPORT);
+		ListBoxUtils.populateAvecTraduction(getView().getCaractereListBox(), TypeCaractereEnum.class, IConstants.ENUM_TYPE_CARACTERE);
 	}
 
 	@Override

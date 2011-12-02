@@ -55,25 +55,25 @@ public class ConfidentialitePagePresenter extends Presenter<ConfidentialitePageP
 		this.dispatcher = dispatcher;
 	}
 
-	
+	@Override
 	protected void onBind() {
 		super.onBind();
 		// registerHandler(getView().getModifierButton().addClickHandler(new
 		// ClickHandler() {
-		// 
+		//
 		// public void onClick(ClickEvent event) {
 		// // DevenirMembre.devenirMembre(getView(), dispatcher);
 		// }
 		// }));
 	}
 
-	
+	@Override
 	protected void onReset() {
 		super.onReset();
 
 	}
 
-	
+	@Override
 	protected void revealInParent() {
 		RevealContentEvent.fire(this, DockLayoutPagePresenter.TYPE_SetMainContent, this);
 	}

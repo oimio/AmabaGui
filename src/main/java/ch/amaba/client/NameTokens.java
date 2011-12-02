@@ -33,6 +33,8 @@ public class NameTokens {
 
 	public static final String confidentialite = "!confidentialite";
 
+	public static final String mesPhotos = "!mesPhotos";
+
 	public static final String hitList = "!hitList";
 
 	public static final String login = "!login";

@@ -34,6 +34,9 @@ public class DockLayoutPageView extends ViewImpl implements DockLayoutPagePresen
 	Label modifierDonneesLabel;
 
 	@UiField
+	Label mesPhotosLabel;
+
+	@UiField
 	Label confidentialiteLabel;
 
 	@UiField
@@ -69,19 +72,23 @@ public class DockLayoutPageView extends ViewImpl implements DockLayoutPagePresen
 		// }
 	}
 
+	@Override
 	public Widget asWidget() {
 		return widget;
 	}
 
+	@Override
 	public Button getSendButton() {
 		// TODO Auto-generated method stub
 		return new Button();
 	}
 
+	@Override
 	public Label getRechercheDetaillee() {
 		return rechercheDetaillee;
 	}
 
+	@Override
 	public Label getBodyLabel() {
 		return bodyLabel;
 	}
@@ -90,15 +97,23 @@ public class DockLayoutPageView extends ViewImpl implements DockLayoutPagePresen
 		return bodyPanel;
 	}
 
+	@Override
 	public Label getModifierDonneesLabel() {
 		return modifierDonneesLabel;
 	}
 
+	@Override
 	public Label getConfidentialiteLabel() {
 		return confidentialiteLabel;
 	}
 
+	@Override
 	public ScrollPanel getFavorisPanel() {
 		return favorisPanel;
+	}
+
+	@Override
+	public Label getMesPhotosLabel() {
+		return mesPhotosLabel;
 	}
 }

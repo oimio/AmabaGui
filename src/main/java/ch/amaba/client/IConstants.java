@@ -5,7 +5,7 @@ public interface IConstants {
 	/** Valeur si aucun élément sélectionné dans un formulaire. */
 	static String AUCUNE_SELECTION = "-1";
 
-	public static int MAX_SELECTION = 5;
+	public static int MAX_SELECTION = 4;
 
 	public static final int OUI = 1;
 
@@ -21,5 +21,10 @@ public interface IConstants {
 
 	public static final String ENUM_TYPE_SPORT = "SPORT";
 
+	public static final String ENUM_TYPE_CARACTERE = "CARACTERE";
+
 	public static final String ENUM_TYPE_CANTON = "CANTON";
+
+	/** Technique */
+	public static final String CHOIX_MULTIPLE_WIDTH = "180px";
 }

@@ -24,6 +24,7 @@ import ch.amaba.client.ui.composite.ChoixMultiplePanel;
 import ch.amaba.client.utils.ListBoxUtils;
 import ch.amaba.model.bo.ProfileCriteria;
 import ch.amaba.model.bo.UserCriteria;
+import ch.amaba.model.bo.constants.TypeCaractereEnum;
 import ch.amaba.model.bo.constants.TypeInteretEnum;
 import ch.amaba.model.bo.constants.TypeMusiqueEnum;
 import ch.amaba.model.bo.constants.TypeProfessionEnum;
@@ -81,6 +82,9 @@ public class RechercheDetailleeView extends ViewImpl implements MyView {
 	ChoixMultiplePanel sportPanel;
 
 	@UiField(provided = true)
+	ChoixMultiplePanel caracterePanel;
+
+	@UiField(provided = true)
 	ChoixMultiplePanel musicPanel;
 
 	@UiField(provided = true)
@@ -94,11 +98,12 @@ public class RechercheDetailleeView extends ViewImpl implements MyView {
 	private final Widget widget;
 
 	public RechercheDetailleeView() {
-		interetPanel = new ChoixMultiplePanel(TypeInteretEnum.class, IConstants.ENUM_TYPE_INTERET);
-		musicPanel = new ChoixMultiplePanel(TypeMusiqueEnum.class, IConstants.ENUM_TYPE_MUSIC);
-		professionPanel = new ChoixMultiplePanel(TypeProfessionEnum.class, IConstants.ENUM_TYPE_PROFESSION);
-		religionPanel = new ChoixMultiplePanel(TypeReligionEnum.class, IConstants.ENUM_TYPE_RELIGION);
-		sportPanel = new ChoixMultiplePanel(TypeSportEnum.class, IConstants.ENUM_TYPE_SPORT);
+		interetPanel = new ChoixMultiplePanel(TypeInteretEnum.class, IConstants.ENUM_TYPE_INTERET, "Intérêts");
+		musicPanel = new ChoixMultiplePanel(TypeMusiqueEnum.class, IConstants.ENUM_TYPE_MUSIC, "Musique");
+		professionPanel = new ChoixMultiplePanel(TypeProfessionEnum.class, IConstants.ENUM_TYPE_PROFESSION, "Profession");
+		religionPanel = new ChoixMultiplePanel(TypeReligionEnum.class, IConstants.ENUM_TYPE_RELIGION, "Religion");
+		sportPanel = new ChoixMultiplePanel(TypeSportEnum.class, IConstants.ENUM_TYPE_SPORT, "Sport");
+		caracterePanel = new ChoixMultiplePanel(TypeCaractereEnum.class, IConstants.ENUM_TYPE_CARACTERE, "Caractère");
 
 		// Provided : constructeur dans la classe avec init des datas.
 		// suggestBox = new SuggestBox(mySuggestions);
@@ -109,15 +114,18 @@ public class RechercheDetailleeView extends ViewImpl implements MyView {
 		mySuggestions.add("Argovie");
 	}
 
+	@Override
 	public Widget asWidget() {
 		return widget;
 	}
 
 	/** Retourne le bouton de recherche détaillée. */
+	@Override
 	public Button getRechercheDetailleeButton() {
 		return rechercheDetailleeButton;
 	}
 
+	@Override
 	public CantonsListBoxPanel getCantonListBoxPanel() {
 		return cantonsListBoxPanel;
 	}
@@ -127,6 +135,7 @@ public class RechercheDetailleeView extends ViewImpl implements MyView {
 	 * 
 	 * @return UserCriteria - le contenu de la recherche.
 	 */
+	@Override
 	public UserCriteria getRecherche() {
 		final UserCriteria userCriteria = new UserCriteria();
 		userCriteria.setIdSexe(homme.getValue() ? TypeSexeEnum.MASCULIN.getId() : TypeSexeEnum.FEMININ.getId());
@@ -144,27 +153,38 @@ public class RechercheDetailleeView extends ViewImpl implements MyView {
 		userCriteria.setIdProfessions(professionPanel.getValues());
 		userCriteria.setIdReligions(religionPanel.getValues());
 		userCriteria.setIdMusiques(musicPanel.getValues());
+		userCriteria.setIdCaracteres(caracterePanel.getValues());
 		return userCriteria;
 	}
 
+	@Override
 	public ListBox getInteretListBox() {
 		return interetPanel.getListBoxPanel().getListBox();
 	}
 
+	@Override
 	public ListBox getMusicListBox() {
 		return musicPanel.getListBoxPanel().getListBox();
 	}
 
+	@Override
 	public ListBox getProfessionListBox() {
 		return professionPanel.getListBoxPanel().getListBox();
 	}
 
+	@Override
 	public ListBox getReligionListBox() {
 		return religionPanel.getListBoxPanel().getListBox();
 	}
 
+	@Override
 	public ListBox getSportListBox() {
 		return sportPanel.getListBoxPanel().getListBox();
+	}
+
+	@Override
+	public ListBox getCaractereListBox() {
+		return caracterePanel.getListBoxPanel().getListBox();
 	}
 
 }
