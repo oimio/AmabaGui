@@ -4,6 +4,8 @@
 
 	<ui:with type="ch.amaba.client.NameTokens"
 		field="nameTokens"></ui:with>
+	<ui:with type="ch.amaba.client.utils.CssUtils"
+		field="css"></ui:with>
 
 	<ui:style>
 		.redBox {
@@ -61,38 +63,38 @@
 					<g:StackLayoutPanel unit='PX' animationDuration="0">
 						<g:stack>
 							<g:customHeader size='25'>
-								<g:Label>Recherche</g:Label>
+								<g:Label styleName='{css.getCss.menuHeader}'>Recherche</g:Label>
 							</g:customHeader>
 							<g:VerticalPanel width="100%">
-								<g:Label ui:field="rechercheDetaillee">Recherche détaillée</g:Label>
-								<g:Label>Mes recherches</g:Label>
+								<g:Label ui:field="rechercheDetaillee" styleName='{css.getCss.menu}'>Recherche détaillée</g:Label>
+								<g:Label styleName='{css.getCss.menu}'>Mes recherches</g:Label>
 							</g:VerticalPanel>
 						</g:stack>
 						<g:stack>
 							<g:customHeader size='25'>
-								<g:Label>Favoris / Amis</g:Label>
+								<g:Label styleName='{css.getCss.menuHeader}'>Favoris / Amis</g:Label>
 							</g:customHeader>
 							<g:ScrollPanel ui:field="favorisPanel"/>
 						</g:stack>
 						<g:stack>
 							<g:customHeader size='25'>
-								<g:Label>Messages</g:Label>
+								<g:Label styleName='{css.getCss.menuHeader}'>Messages</g:Label>
 							</g:customHeader>
 							<g:VerticalPanel>
-								<g:Label ui:field="messagesLabel">Messages reçus</g:Label>
-								<g:Label>Messages envoyés</g:Label>
-								<g:Label>Messages supprimés</g:Label>
+								<g:Label ui:field="messagesLabel" styleName='{css.getCss.menu}'>Messages reçus</g:Label>
+								<g:Label ui:field="messagesEnvoyesLabel" styleName='{css.getCss.menu}'>Messages envoyés</g:Label>
+								<g:Label ui:field="messagesSupprimesLabel" styleName='{css.getCss.menu}'>Messages supprimés</g:Label>
 							</g:VerticalPanel>
 						</g:stack>
 						<g:stack>
 							<g:customHeader size='25'>
-								<g:Label>Mon compte</g:Label>
+								<g:Label styleName='{css.getCss.menuHeader}'>Mon compte</g:Label>
 							</g:customHeader>
 							<g:VerticalPanel>
-								<g:Label ui:field="modifierDonneesLabel">Modifier mes données</g:Label>
-								<g:Label ui:field="mesPhotosLabel">Mes photos</g:Label>
-								<g:Label ui:field="preferenceLabel">Préférences</g:Label>
-								<g:Label ui:field="confidentialiteLabel">Confidentialité</g:Label>
+								<g:Label ui:field="modifierDonneesLabel" styleName='{css.getCss.menu}'>Modifier mes données</g:Label>
+								<g:Label ui:field="mesPhotosLabel" styleName='{css.getCss.menu}'>Mes photos</g:Label>
+								<g:Label ui:field="preferenceLabel" styleName='{css.getCss.menu}'>Préférences</g:Label>
+								<g:Label ui:field="confidentialiteLabel" styleName='{css.getCss.menu}'>Confidentialité</g:Label>
 							</g:VerticalPanel>
 						</g:stack>
 					</g:StackLayoutPanel>

@@ -2,25 +2,30 @@
 
 
 <module rename-to='amaba'>
-  <inherits name='com.google.gwt.user.User'/>
-  <inherits name="com.googlecode.gwtx.Java"/>
-  <inherits name="com.google.gwt.uibinder.GinUiBinder" />
-  <inherits name="com.google.gwt.inject.Inject" />
-  <inherits name="ch.amaba.model.AmabaModel"/>
-  <inherits name='com.google.gwt.user.theme.standard.Standard'/>
-  <!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
-  <!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/>     -->
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name="com.googlecode.gwtx.Java" />
+	<inherits name="com.google.gwt.uibinder.GinUiBinder" />
+	<inherits name="com.google.gwt.inject.Inject" />
 
-  <entry-point class='ch.amaba.client.Amaba'/>
-	
-  <inherits name='com.gwtplatform.dispatch.Dispatch' />
-  <inherits name='com.gwtplatform.mvp.Mvp' />
-	
-  <source path='client'/>
-  <source path='shared'/>
+	<!-- amaba-bo -->
+	<inherits name="ch.amaba.model.AmabaModel" />
+	<inherits name='com.google.gwt.user.theme.standard.Standard' />
+	<!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
+	<!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/> -->
 
-  <define-configuration-property name="gin.ginjector" is-multi-valued="false" />
-  <set-configuration-property name="gin.ginjector" 
-      value="ch.amaba.client.MyGinjector" />
+	<inherits name="com.google.gwt.resources.Resources" />
+
+	<entry-point class='ch.amaba.client.Amaba' />
+
+	<inherits name='com.gwtplatform.dispatch.Dispatch' />
+	<inherits name='com.gwtplatform.mvp.Mvp' />
+
+	<source path='client' />
+	<source path='shared' />
+
+	<define-configuration-property name="gin.ginjector"
+		is-multi-valued="false" />
+	<set-configuration-property name="gin.ginjector"
+		value="ch.amaba.client.MyGinjector" />
 
 </module>
