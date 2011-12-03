@@ -5,6 +5,7 @@ import ch.amaba.client.presenter.DockLayoutPagePresenter;
 import ch.amaba.client.presenter.HitListPresenter;
 import ch.amaba.client.presenter.LoginPagePresenter;
 import ch.amaba.client.presenter.MesPhotosPresenter;
+import ch.amaba.client.presenter.MessagesPresenter;
 import ch.amaba.client.presenter.ModifierDonneesPagePresenter;
 import ch.amaba.client.presenter.RechercheDetailleePagePresenter;
 import ch.amaba.client.presenter.ResponsePresenter;
@@ -12,6 +13,7 @@ import ch.amaba.client.ui.ConfidentialitePageView;
 import ch.amaba.client.ui.LoginPageView;
 import ch.amaba.client.ui.MesPhotosView;
 import ch.amaba.client.ui.ModifierDonneesPageView;
+import ch.amaba.client.ui.message.MessagesView;
 import ch.amaba.client.view.DockLayoutPageView;
 import ch.amaba.client.view.HitListView;
 import ch.amaba.client.view.RechercheDetailleeView;
@@ -42,5 +44,7 @@ public class MyModule extends AbstractPresenterModule {
 		bindPresenter(ConfidentialitePagePresenter.class, ConfidentialitePagePresenter.MyView.class, ConfidentialitePageView.class,
 		    ConfidentialitePagePresenter.MyProxy.class);
 		bindPresenter(MesPhotosPresenter.class, MesPhotosPresenter.MyView.class, MesPhotosView.class, MesPhotosPresenter.MyProxy.class);
+
+		bindPresenter(MessagesPresenter.class, MessagesPresenter.MyView.class, MessagesView.class, MessagesPresenter.MyProxy.class);
 	}
 }

@@ -61,6 +61,8 @@ public class DockLayoutPagePresenter extends Presenter<DockLayoutPagePresenter.M
 
 		Label getMesPhotosLabel();
 
+		Label getMessagesLabel();
+
 		Label getConfidentialiteLabel();
 
 		ScrollPanel getFavorisPanel();
@@ -105,6 +107,13 @@ public class DockLayoutPagePresenter extends Presenter<DockLayoutPagePresenter.M
 			@Override
 			public void onClick(ClickEvent event) {
 				final PlaceRequest myRequest = new PlaceRequest(NameTokens.mesPhotos);
+				placeManager.revealPlace(myRequest);
+			}
+		}));
+		registerHandler(getView().getMessagesLabel().addClickHandler(new ClickHandler() {
+			@Override
+			public void onClick(ClickEvent event) {
+				final PlaceRequest myRequest = new PlaceRequest(NameTokens.messages);
 				placeManager.revealPlace(myRequest);
 			}
 		}));

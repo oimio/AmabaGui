@@ -1,19 +1,3 @@
-/**
- * Copyright 2011 ArcBees Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not
- * use this file except in compliance with the License. You may obtain a copy of
- * the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations under
- * the License.
- */
-
 package ch.amaba.client.presenter;
 
 import java.util.List;
@@ -133,18 +117,21 @@ public class LoginPagePresenter extends Presenter<LoginPagePresenter.MyView, Log
 
 		registerHandler(getView().getDevenirMembreButton().addClickHandler(new ClickHandler() {
 
+			@Override
 			public void onClick(ClickEvent event) {
 				DevenirMembre.devenirMembre(getView(), dispatcher);
 			}
 		}));
 		registerHandler(getView().getSendButton().addClickHandler(new ClickHandler() {
 
+			@Override
 			public void onClick(ClickEvent event) {
 				Authentification.authentification(dispatcher, getView(), placeManager);
 			}
 		}));
 		registerHandler(getView().getEmailTextBox().addFocusHandler(new FocusHandler() {
 
+			@Override
 			public void onFocus(FocusEvent event) {
 				if (getView().getEmailTextBox().getText().indexOf("@") == -1) {
 					getView().getEmailTextBox().setText("");
@@ -154,11 +141,13 @@ public class LoginPagePresenter extends Presenter<LoginPagePresenter.MyView, Log
 		if (CacheUtils.getTraductions() == null) {
 			dispatcher.execute(new LoadTraductionsAction(false), new AsyncCallback<LoadTraductionsResult>() {
 
+				@Override
 				public void onFailure(Throwable caught) {
 					// getView().setServerResponse("An error occured: " +
 					// caught.getMessage());
 				}
 
+				@Override
 				public void onSuccess(LoadTraductionsResult result) {
 					CacheUtils.setTraductions(result.getTraductions());
 					loadCantons();
@@ -172,11 +161,13 @@ public class LoginPagePresenter extends Presenter<LoginPagePresenter.MyView, Log
 		if (CacheUtils.getCantons() == null) {
 			dispatcher.execute(new LoadCantonsAction(false), new AsyncCallback<LoadCantonsResult>() {
 
+				@Override
 				public void onFailure(Throwable caught) {
 					// getView().setServerResponse("An error occured: " +
 					// caught.getMessage());
 				}
 
+				@Override
 				public void onSuccess(LoadCantonsResult result) {
 					final Set<CantonDTO> cantons = result.getCantons();
 					CacheUtils.setCantons(cantons);

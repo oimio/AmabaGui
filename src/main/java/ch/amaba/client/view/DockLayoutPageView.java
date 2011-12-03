@@ -40,6 +40,9 @@ public class DockLayoutPageView extends ViewImpl implements DockLayoutPagePresen
 	Label confidentialiteLabel;
 
 	@UiField
+	Label messagesLabel;
+
+	@UiField
 	Label bodyLabel;
 
 	@UiField
@@ -115,5 +118,10 @@ public class DockLayoutPageView extends ViewImpl implements DockLayoutPagePresen
 	@Override
 	public Label getMesPhotosLabel() {
 		return mesPhotosLabel;
+	}
+
+	@Override
+	public Label getMessagesLabel() {
+		return messagesLabel;
 	}
 }

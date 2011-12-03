@@ -79,7 +79,7 @@
 								<g:Label>Messages</g:Label>
 							</g:customHeader>
 							<g:VerticalPanel>
-								<g:Label>Messages reçus</g:Label>
+								<g:Label ui:field="messagesLabel">Messages reçus</g:Label>
 								<g:Label>Messages envoyés</g:Label>
 								<g:Label>Messages supprimés</g:Label>
 							</g:VerticalPanel>

@@ -101,14 +101,19 @@
 											<g:Label title='Devenir membre'>Sports</g:Label>
 										</g:HorizontalPanel>
 									</g:customHeader>
+									<g:VerticalPanel>
 									<g:HorizontalPanel>
 										<npui:ChoixMultiplePanel ui:field="sportPanel" />
 										<npui:ChoixMultiplePanel ui:field="musicPanel" />
+										<npui:ChoixMultiplePanel ui:field="interetPanel" />
+									</g:HorizontalPanel>
+									<g:HorizontalPanel>
 										<npui:ChoixMultiplePanel ui:field="professionPanel" />
 										<npui:ChoixMultiplePanel ui:field="religionPanel" />
-										<npui:ChoixMultiplePanel ui:field="interetPanel" />
 										<npui:ChoixMultiplePanel ui:field="caracterePanel" />
 									</g:HorizontalPanel>
+									</g:VerticalPanel>
+									
 								</g:DisclosurePanel>
 
 							</td>

@@ -7,24 +7,31 @@
 	<packaging>war</packaging>
 	<build>
 		<plugins>
-		<plugin>            
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-war-plugin</artifactId>
-  <configuration>
-    <webXml>war\WEB-INF\web.xml</webXml>        
-  </configuration>
-</plugin>
-<!-- 			<plugin> -->
-<!-- 				<groupId>org.codehaus.mojo</groupId> -->
-<!-- 				<artifactId>gwt-maven-plugin</artifactId> -->
-<!-- 				<configuration> -->
-<!-- 					<server>com.google.appengine.tools.development.gwt.AppEngineLauncher</server> -->
-<!-- 					<hostedWebapp>${webappDirectory}</hostedWebapp> -->
-<!-- 					<copyWebapp>true</copyWebapp> -->
-<!-- 					<runTarget>Amaba.html</runTarget> -->
-<!-- 					<module>ch.amaba.Amaba</module> -->
-<!-- 				</configuration> -->
-<!-- 			</plugin> -->
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<webXml>war\WEB-INF\web.xml</webXml>
+				</configuration>
+			</plugin>
+			<!-- <plugin> -->
+			<!-- <groupId>org.codehaus.mojo</groupId> -->
+			<!-- <artifactId>gwt-maven-plugin</artifactId> -->
+			<!-- <configuration> -->
+			<!-- <server>com.google.appengine.tools.development.gwt.AppEngineLauncher</server> -->
+			<!-- <hostedWebapp>${webappDirectory}</hostedWebapp> -->
+			<!-- <copyWebapp>true</copyWebapp> -->
+			<!-- <runTarget>Amaba.html</runTarget> -->
+			<!-- <module>ch.amaba.Amaba</module> -->
+			<!-- </configuration> -->
+			<!-- </plugin> -->
 		</plugins>
 		<outputDirectory>src/main/webapp/WEB-INF/classes</outputDirectory>
 		<sourceDirectory>src/main/java</sourceDirectory>
@@ -258,5 +265,42 @@
 			<version>3.8.2</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gwtx</groupId>
+			<artifactId>gwtx</artifactId>
+			<version>1.5.3</version>
+		</dependency>
+
 	</dependencies>
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jxr-maven-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<configuration>
+					<targetJdk>1.6</targetJdk>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>findbugs-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</reporting>
 </project>

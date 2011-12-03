@@ -1,5 +1,5 @@
 /**
- * Copyright 2011 ArcBees Inc.
+ * Copyright 2011 Amaba.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -38,6 +38,8 @@ public class NameTokens {
 	public static final String hitList = "!hitList";
 
 	public static final String login = "!login";
+
+	public static final String messages = "!messages";
 
 	public static String getLoginPage() {
 		return NameTokens.login;

@@ -1,5 +1,5 @@
 /**
- * Copyright 2011 ArcBees Inc.
+ * Copyright 2011 Amaba.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -42,7 +42,7 @@ public class DeconnectionAction extends UnsecuredActionImpl<DeconnectionResult> 
 	}
 
 	/**
-	 * Renvoie true si le cache doit être vidé.
+	 * Renvoie true si le cache doit ï¿½tre vidï¿½.
 	 * */
 	public boolean isClearCache() {
 		return clearCache;
