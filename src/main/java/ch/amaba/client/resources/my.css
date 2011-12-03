@@ -1,0 +1,18 @@
+.header {
+	font-weight: bold;
+	color: #0174DF;
+	text-align: center;
+}
+
+.menu {
+	font: bold 12px tahoma, arial, verdana, sans-serif;
+	color: #0174DF;
+	cursor: pointer;
+	margin: 2px;
+	padding: 2px;
+}
+
+.menuHeader {
+	font: bold 13px tahoma, arial, verdana, sans-serif;
+	color: #0174DF;
+}

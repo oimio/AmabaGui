@@ -1,0 +1,22 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:npui="urn:import:ch.amaba.client.ui.composite">
+
+	<ui:with type="ch.amaba.client.NameTokens" field="nameTokens"></ui:with>
+	<ui:style>
+		.error {
+			background-color: red;
+			border: 1px solid red;
+			font-weight: bold;
+			color: white;
+			margin: 5px;
+			padding: 2px;
+		}
+	</ui:style>
+	<g:DecoratorPanel>
+		<g:VerticalPanel ui:field="htmlPanel" spacing="1">
+			<g:FlexTable ui:field="messagesTable" />
+
+		</g:VerticalPanel>
+	</g:DecoratorPanel>
+</ui:UiBinder> 
