@@ -1,19 +1,3 @@
-/**
- * Copyright 2011 ArcBees Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not
- * use this file except in compliance with the License. You may obtain a copy of
- * the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations under
- * the License.
- */
-
 package ch.amaba.client.presenter;
 
 import java.util.Set;
@@ -93,37 +77,41 @@ public class HitListPresenter extends Presenter<HitListPresenter.MyView, HitList
 
 		/** Le rÃ©sultat de la recherche. */
 		final Set<UserCriteria> searchResult = ContextUI.get().getSearchResult();
+		if ((searchResult != null) && !searchResult.isEmpty()) {
+			final FlexTable table = getView().getHitListFlowPanel();
+			int row = 0;
+			int col = 0;
+			for (final UserCriteria userCriteria : searchResult) {
+				final ProfilPanel pp = new ProfilPanel();
+				pp.getImage().setUrl("images/012.jpg");
+				pp.getPrenom().setText(userCriteria.getPrenom());
+				pp.getAge().setText(DateUtils.getAge(userCriteria.getDateNaissance()) + " ans");
+				pp.getCanton().setText(CantonUtils.getCantonTraduction(userCriteria.getIdCantons()));
+				pp.getAjouterImage().addClickHandler(new ClickHandler() {
+					@Override
+					public void onClick(ClickEvent event) {
+						dispatcher.execute(new AjouterFavorisAction(userCriteria.getIdUser()), new AsyncCallback<AjouterFavorisResult>() {
 
-		final FlexTable table = getView().getHitListFlowPanel();
-		int row = 0;
-		int col = 0;
-		for (final UserCriteria userCriteria : searchResult) {
-			final ProfilPanel pp = new ProfilPanel();
-			pp.getImage().setUrl("images/012.jpg");
-			pp.getPrenom().setText(userCriteria.getPrenom());
-			pp.getAge().setText(DateUtils.getAge(userCriteria.getDateNaissance()) + " ans");
-			pp.getCanton().setText(CantonUtils.getCantonTraduction(userCriteria.getIdCantons()));
-			pp.getAjouterImage().addClickHandler(new ClickHandler() {
-				public void onClick(ClickEvent event) {
-					dispatcher.execute(new AjouterFavorisAction(userCriteria.getIdUser()), new AsyncCallback<AjouterFavorisResult>() {
+							@Override
+							public void onFailure(Throwable caught) {
+								Window.alert(caught.getMessage());
+							}
 
-						public void onFailure(Throwable caught) {
-							Window.alert(caught.getMessage());
-						}
+							@Override
+							public void onSuccess(AjouterFavorisResult result) {
+								Window.alert("Vous pourrez dï¿½sormais retrouver facilement ce profil dans votre liste de favoris.");
+							}
+						});
 
-						public void onSuccess(AjouterFavorisResult result) {
-							Window.alert("Vous pourrez désormais retrouver facilement ce profil dans votre liste de favoris.");
-						}
-					});
+					}
+				});
 
+				table.setWidget(row, col, pp);
+				col++;
+				if (col % 6 == 0) {
+					row++;
+					col = 0;
 				}
-			});
-
-			table.setWidget(row, col, pp);
-			col++;
-			if (col % 6 == 0) {
-				row++;
-				col = 0;
 			}
 		}
 	}

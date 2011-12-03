@@ -59,6 +59,10 @@ public class DockLayoutPagePresenter extends Presenter<DockLayoutPagePresenter.M
 
 		Label getModifierDonneesLabel();
 
+		Label getMesPhotosLabel();
+
+		Label getMessagesLabel();
+
 		Label getConfidentialiteLabel();
 
 		ScrollPanel getFavorisPanel();
@@ -81,6 +85,7 @@ public class DockLayoutPagePresenter extends Presenter<DockLayoutPagePresenter.M
 		super.onBind();
 		registerHandler(getView().getRechercheDetaillee().addClickHandler(new ClickHandler() {
 
+			@Override
 			public void onClick(ClickEvent event) {
 				// RevealContentEvent.fire(DockLayoutPagePresenter.this,
 				// DockLayoutPagePresenter.TYPE_SetMainContent,
@@ -92,26 +97,43 @@ public class DockLayoutPagePresenter extends Presenter<DockLayoutPagePresenter.M
 			}
 		}));
 		registerHandler(getView().getConfidentialiteLabel().addClickHandler(new ClickHandler() {
-
+			@Override
 			public void onClick(ClickEvent event) {
 				final PlaceRequest myRequest = new PlaceRequest(NameTokens.confidentialite);
 				placeManager.revealPlace(myRequest);
 			}
 		}));
+		registerHandler(getView().getMesPhotosLabel().addClickHandler(new ClickHandler() {
+			@Override
+			public void onClick(ClickEvent event) {
+				final PlaceRequest myRequest = new PlaceRequest(NameTokens.mesPhotos);
+				placeManager.revealPlace(myRequest);
+			}
+		}));
+		registerHandler(getView().getMessagesLabel().addClickHandler(new ClickHandler() {
+			@Override
+			public void onClick(ClickEvent event) {
+				final PlaceRequest myRequest = new PlaceRequest(NameTokens.messages);
+				placeManager.revealPlace(myRequest);
+			}
+		}));
 		registerHandler(getView().getModifierDonneesLabel().addClickHandler(new ClickHandler() {
 
+			@Override
 			public void onClick(ClickEvent event) {
 				// final PlaceRequest myRequest = new
 				// PlaceRequest(NameTokens.modifierDonnees);
 				// placeManager.revealPlace(myRequest);
 				dispatcher.execute(new LoadFullUserAction(false), new AsyncCallback<LoadFullUserResult>() {
 
+					@Override
 					public void onFailure(Throwable caught) {
 						// getView().setServerResponse("An error occured: " +
 						// caught.getMessage());
 						Window.alert(caught.getMessage());
 					}
 
+					@Override
 					public void onSuccess(LoadFullUserResult result) {
 						// Après modification, mise à jour des données du user modifié.
 						ContextUI.get().setUserCourant(result.getUserCriteria());

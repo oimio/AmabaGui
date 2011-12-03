@@ -1,17 +1,20 @@
 /**
- * Copyright 2011 ArcBees Inc.
  *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not
- * use this file except in compliance with the License. You may obtain a copy of
- * the License at
+ *  Amaba (C) 2011  <name of author>
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *  Amaba is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details.
  *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations under
- * the License.
+ *   You should have received a copy of the GNU General Public License
+ *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * 
  */
 
 package ch.amaba.client.ui;
@@ -107,10 +110,12 @@ public class LoginPageView extends ViewImpl implements LoginPagePresenter.MyView
 		getPasswordAuthTextBox().setText("123");
 	}
 
+	@Override
 	public Widget asWidget() {
 		return widget;
 	}
 
+	@Override
 	public void setError(List<String> messages) {
 		errorPanel.clear();
 		for (final String message : messages) {
@@ -120,20 +125,23 @@ public class LoginPageView extends ViewImpl implements LoginPagePresenter.MyView
 		}
 	}
 
+	@Override
 	public TextBox getEmailTextBox() {
 		return emailTextBox;
 	}
 
+	@Override
 	public Button getSendButton() {
 		return sendButton;
 	}
 
+	@Override
 	public void resetAndFocus() {
 		// TODO Auto-generated method stub
 
 	}
 
-	
+	@Override
 	public void setInSlot(Object slot, Widget content) {
 		if (slot == LoginPagePresenter.TYPE_SetMainContent) {
 			setMainContent(content);
@@ -150,58 +158,72 @@ public class LoginPageView extends ViewImpl implements LoginPagePresenter.MyView
 		}
 	}
 
+	@Override
 	public ListBox getCantonListBox() {
 		return cantonListBox;
 	}
 
+	@Override
 	public Button getDevenirMembreButton() {
 		return devenirMembreButton;
 	}
 
+	@Override
 	public TextBox getEmailRepeatTextBox() {
 		return emailRepeatTextBox;
 	}
 
+	@Override
 	public TextBox getPasswordTextBox() {
 		return passwordTextBox;
 	}
 
+	@Override
 	public TextBox getPasswordRepeatTextBox() {
 		return passwordRepeatTextBox;
 	}
 
+	@Override
 	public TextBox getNomTextBox() {
 		return nomTextBox;
 	}
 
+	@Override
 	public TextBox getPrenomTextBox() {
 		return prenomTextBox;
 	}
 
+	@Override
 	public TextBox getJourTextBox() {
 		return jourTextBox;
 	}
 
+	@Override
 	public TextBox getMoisTextBox() {
 		return moisTextBox;
 	}
 
+	@Override
 	public TextBox getAnneeTextBox() {
 		return anneeTextBox;
 	}
 
+	@Override
 	public ListBox getGenreListBox() {
 		return genreListBox;
 	}
 
+	@Override
 	public VerticalPanel getErrorPanel() {
 		return errorPanel;
 	}
 
+	@Override
 	public TextBox getEmailAuthTextBox() {
 		return emailAuthTextBox;
 	}
 
+	@Override
 	public PasswordTextBox getPasswordAuthTextBox() {
 		return passwordAuthTextBox;
 	}

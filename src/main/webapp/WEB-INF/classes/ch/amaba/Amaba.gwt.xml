@@ -3,6 +3,7 @@
 
 <module rename-to='amaba'>
   <inherits name='com.google.gwt.user.User'/>
+  <inherits name="com.googlecode.gwtx.Java"/>
   <inherits name="com.google.gwt.uibinder.GinUiBinder" />
   <inherits name="com.google.gwt.inject.Inject" />
   <inherits name="ch.amaba.model.AmabaModel"/>

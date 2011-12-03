@@ -4,6 +4,8 @@ import ch.amaba.client.presenter.ConfidentialitePagePresenter;
 import ch.amaba.client.presenter.DockLayoutPagePresenter;
 import ch.amaba.client.presenter.HitListPresenter;
 import ch.amaba.client.presenter.LoginPagePresenter;
+import ch.amaba.client.presenter.MesPhotosPresenter;
+import ch.amaba.client.presenter.MessagesPresenter;
 import ch.amaba.client.presenter.ModifierDonneesPagePresenter;
 import ch.amaba.client.presenter.RechercheDetailleePagePresenter;
 import ch.amaba.client.presenter.ResponsePresenter;
@@ -46,5 +48,9 @@ public interface MyGinjector extends Ginjector {
 	Provider<ModifierDonneesPagePresenter> getModifierDonneesPresenter();
 
 	Provider<ConfidentialitePagePresenter> getConfidentialitePresenter();
+
+	Provider<MesPhotosPresenter> getMesPhotosPresenter();
+
+	Provider<MessagesPresenter> getMessagesPresenter();
 
 }

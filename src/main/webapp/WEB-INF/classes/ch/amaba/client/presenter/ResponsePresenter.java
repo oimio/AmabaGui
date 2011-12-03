@@ -1,19 +1,3 @@
-/**
- * Copyright 2011 ArcBees Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not
- * use this file except in compliance with the License. You may obtain a copy of
- * the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations under
- * the License.
- */
-
 package ch.amaba.client.presenter;
 
 import ch.amaba.client.NameTokens;
@@ -72,24 +56,25 @@ public class ResponsePresenter extends Presenter<ResponsePresenter.MyView, Respo
 		this.dispatcher = dispatcher;
 	}
 
-	
+	@Override
 	public void prepareFromRequest(PlaceRequest request) {
 		super.prepareFromRequest(request);
 		textToServer = request.getParameter(ResponsePresenter.textToServerParam, null);
 	}
 
-	
+	@Override
 	protected void onBind() {
 		super.onBind();
 		registerHandler(getView().getCloseButton().addClickHandler(new ClickHandler() {
 
+			@Override
 			public void onClick(ClickEvent event) {
 				placeManager.revealPlace(new PlaceRequest(NameTokens.login));
 			}
 		}));
 	}
 
-	
+	@Override
 	protected void onReset() {
 		super.onReset();
 		getView().setTextToServer(textToServer);
@@ -97,7 +82,7 @@ public class ResponsePresenter extends Presenter<ResponsePresenter.MyView, Respo
 
 	}
 
-	
+	@Override
 	protected void revealInParent() {
 		final PlaceRequest myRequest = new PlaceRequest(DockLayoutPagePresenter.nameToken);
 		// If needed, add URL parameters in this way:

@@ -8,6 +8,7 @@ import ch.amaba.shared.ListeFavorisAction;
 import ch.amaba.shared.LoadCantonsAction;
 import ch.amaba.shared.LoadFullUserAction;
 import ch.amaba.shared.LoadTraductionsAction;
+import ch.amaba.shared.MessagesAction;
 import ch.amaba.shared.RechercheDetailleeAction;
 
 import com.gwtplatform.dispatch.server.guice.HandlerModule;
@@ -30,5 +31,7 @@ public class ServerModule extends HandlerModule {
 		bindHandler(LoadFullUserAction.class, LoadFullUserHandler.class);
 		bindHandler(RechercheDetailleeAction.class, RechercheDetailleeHandler.class);
 		bindHandler(ListeFavorisAction.class, ListeFavorisHandler.class);
+
+		bindHandler(MessagesAction.class, MessagesHandler.class);
 	}
 }

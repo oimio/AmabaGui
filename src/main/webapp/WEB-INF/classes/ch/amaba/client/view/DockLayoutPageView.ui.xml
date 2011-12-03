@@ -79,7 +79,7 @@
 								<g:Label>Messages</g:Label>
 							</g:customHeader>
 							<g:VerticalPanel>
-								<g:Label>Messages reçus</g:Label>
+								<g:Label ui:field="messagesLabel">Messages reçus</g:Label>
 								<g:Label>Messages envoyés</g:Label>
 								<g:Label>Messages supprimés</g:Label>
 							</g:VerticalPanel>
@@ -90,6 +90,7 @@
 							</g:customHeader>
 							<g:VerticalPanel>
 								<g:Label ui:field="modifierDonneesLabel">Modifier mes données</g:Label>
+								<g:Label ui:field="mesPhotosLabel">Mes photos</g:Label>
 								<g:Label ui:field="preferenceLabel">Préférences</g:Label>
 								<g:Label ui:field="confidentialiteLabel">Confidentialité</g:Label>
 							</g:VerticalPanel>
