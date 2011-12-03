@@ -60,21 +60,6 @@ public class HitListPresenter extends Presenter<HitListPresenter.MyView, HitList
 	@Override
 	protected void onBind() {
 		super.onBind();
-		// getView().getRechercheDetailleeButton().addClickHandler(new
-		// ClickHandler() {
-		//
-		//
-		// public void onClick(ClickEvent event) {
-		// getView().getRechercheDetailleeButton().setEnabled(false);
-		//
-		// }
-		// });
-	}
-
-	@Override
-	protected void onReset() {
-		super.onReset();
-
 		/** Le résultat de la recherche. */
 		final Set<UserCriteria> searchResult = ContextUI.get().getSearchResult();
 		if ((searchResult != null) && !searchResult.isEmpty()) {
@@ -114,6 +99,12 @@ public class HitListPresenter extends Presenter<HitListPresenter.MyView, HitList
 				}
 			}
 		}
+	}
+
+	@Override
+	protected void onReset() {
+		super.onReset();
+
 	}
 
 	@Override

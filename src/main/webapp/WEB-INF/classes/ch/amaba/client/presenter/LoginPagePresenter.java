@@ -182,7 +182,6 @@ public class LoginPagePresenter extends Presenter<LoginPagePresenter.MyView, Log
 	protected void onReset() {
 		super.onReset();
 		getView().resetAndFocus();
-
 	}
 
 	@Override
