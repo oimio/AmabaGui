@@ -26,7 +26,7 @@ public class LoadTraductionsAction extends UnsecuredActionImpl<LoadTraductionsRe
 	}
 
 	/**
-	 * Renvoie true si le cache doit être vidé.
+	 * Renvoie true si le
 	 * */
 	public boolean isClearCache() {
 		return clearCache;

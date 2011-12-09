@@ -1,9 +1,10 @@
 package ch.amaba.client.view.upload;
 
 import java.util.List;
+import java.util.Set;
 
+import ch.amaba.model.bo.PhotoDTO;
 import ch.amaba.shared.upload.Event;
-import ch.amaba.shared.upload.FileDto;
 
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
@@ -15,7 +16,7 @@ public interface UploadProgressService extends RemoteService {
 
 	int countFiles();
 
-	List<FileDto> readFiles(int page, int pageSize);
+	Set<PhotoDTO> readFiles(int page, int pageSize);
 
 	List<Event> getEvents();
 }

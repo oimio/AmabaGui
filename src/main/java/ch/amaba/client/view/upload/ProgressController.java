@@ -1,10 +1,11 @@
 package ch.amaba.client.view.upload;
 
 import java.util.List;
+import java.util.Set;
 
 import ch.amaba.client.view.upload.state.UploadProgressState;
+import ch.amaba.model.bo.PhotoDTO;
 import ch.amaba.shared.upload.Event;
-import ch.amaba.shared.upload.FileDto;
 import ch.amaba.shared.upload.UploadProgressChangeEvent;
 
 import com.google.gwt.core.client.GWT;
@@ -18,7 +19,7 @@ public final class ProgressController extends AbstractController {
 	}
 
 	public void findFiles(final int page, final int pageSize) {
-		AbstractController.SERVICE.readFiles(page, pageSize, new AsyncCallback<List<FileDto>>() {
+		AbstractController.SERVICE.readFiles(page, pageSize, new AsyncCallback<Set<PhotoDTO>>() {
 
 			@Override
 			public void onFailure(final Throwable t) {
@@ -26,7 +27,7 @@ public final class ProgressController extends AbstractController {
 			}
 
 			@Override
-			public void onSuccess(final List<FileDto> files) {
+			public void onSuccess(final Set<PhotoDTO> files) {
 				UploadProgressState.INSTANCE.setFiles(files);
 			}
 		});

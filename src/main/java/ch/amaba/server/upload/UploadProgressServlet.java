@@ -1,90 +1,63 @@
 package ch.amaba.server.upload;
 
 import java.io.File;
-import java.io.FileFilter;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
-import java.util.Properties;
+import java.util.Set;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpSession;
 
-import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.web.HttpSessionRequiredException;
 
 import ch.amaba.client.view.upload.UploadProgressService;
+import ch.amaba.dao.AmabaDao;
+import ch.amaba.model.bo.PhotoDTO;
+import ch.amaba.server.utils.SessionUtils;
+import ch.amaba.server.utils.SpringFactory;
 import ch.amaba.shared.upload.Event;
-import ch.amaba.shared.upload.FileDto;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
 public final class UploadProgressServlet extends RemoteServiceServlet implements UploadProgressService {
 
+	private final Logger logger = LoggerFactory.getLogger(AmabaDao.class);
 	private static final long serialVersionUID = 1L;
 	private static final int EVENT_WAIT = 30 * 1000;
-	private static final String PROPERTIES_FILE = "WEB-INF/classes/uploadprogress.properties";
 	private static final Logger LOGGER = LoggerFactory.getLogger(UploadProgressServlet.class);
-	private String uploadDirectory;
 
 	@Override
 	public void init() throws ServletException {
-		final Properties properties = new Properties();
-		InputStream fi = null;
-		try {
-			final File file = new File(UploadProgressServlet.PROPERTIES_FILE);
-			fi = new FileInputStream(file);
-			properties.load(fi);
-		} catch (final IOException ioe) {
-			throw new ServletException(ioe);
-		} finally {
-			IOUtils.closeQuietly(fi);
-		}
-
-		uploadDirectory = properties.getProperty("upload.directory", "target");
 	}
 
 	@Override
 	public void initialise() {
-		getThreadLocalRequest().getSession(true);
+		// getThreadLocalRequest().getSession(false);
 	}
 
 	@Override
-	public List<FileDto> readFiles(final int page, final int pageSize) {
-
-		final File[] listFiles = readFiles(uploadDirectory);
-		sortFiles(listFiles);
-
-		final int firstFile = pageSize * (page - 1);
-		int lastFile = firstFile + pageSize;
-
-		final int fileCount = listFiles.length;
-		if (fileCount < lastFile) {
-			lastFile = fileCount;
-		}
-
-		if (firstFile < fileCount) {
-			final List<FileDto> files = new ArrayList<FileDto>();
-
-			for (int i = firstFile; i < lastFile; i++) {
-
-				final File file = listFiles[i];
-				final FileDto fileDto = new FileDto();
-				fileDto.setFilename(file.getName());
-				fileDto.setDateUploaded(new Date(file.lastModified()));
-				files.add(fileDto);
+	public Set<PhotoDTO> readFiles(final int page, final int pageSize) {
+		Set<PhotoDTO> listFiles = null;
+		final Set<PhotoDTO> photoExistsOnDisk = new HashSet<PhotoDTO>();
+		// File[] listFiles;
+		try {
+			listFiles = SpringFactory.get().getDao().loadPhotosByUser(SessionUtils.get().getUserSessionId(getThreadLocalRequest()));
+			for (final PhotoDTO photoDTO : listFiles) {
+				if (new File(SessionUtils.get().getUserPhotoDirectory(getThreadLocalRequest()), photoDTO.getFileName()).exists()) {
+					// existe en DB mais pas dans la base
+					photoExistsOnDisk.add(photoDTO);
+				} else {
+					logger.warn("Le fichier " + SessionUtils.get().getUserPhotoDirectory(getThreadLocalRequest()) + File.separator + photoDTO.getFileName()
+					    + " existe en base mais pas sur le disk.");
+				}
 			}
-			return files;
-		} else {
-			return Collections.EMPTY_LIST;
+		} catch (final HttpSessionRequiredException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+		return photoExistsOnDisk;
 	}
 
 	@Override
@@ -117,27 +90,15 @@ public final class UploadProgressServlet extends RemoteServiceServlet implements
 
 	@Override
 	public int countFiles() {
-		return readFiles(uploadDirectory).length;
-	}
-
-	private File[] readFiles(final String directory) {
-		final File uploadDirectory = new File(directory);
-		return uploadDirectory.listFiles(new FileFilter() {
-
-			@Override
-			public boolean accept(final File file) {
-				return null == file ? false : file.isFile();
-			}
-		});
-	}
-
-	private void sortFiles(final File[] listFiles) {
-		Arrays.sort(listFiles, new Comparator<File>() {
-
-			@Override
-			public int compare(final File f1, final File f2) {
-				return Long.valueOf(f2.lastModified()).compareTo(f1.lastModified());
-			}
-		});
+		int count = 0;
+		try {
+			final Set<PhotoDTO> loadPhotosByUser = SpringFactory.get().getDao().loadPhotosByUser(SessionUtils.get().getUserSessionId(getThreadLocalRequest()));
+			count = loadPhotosByUser.size();
+			// count =
+			// readFiles(SessionUtils.get().getUserPhotoDirectory(getThreadLocalRequest())).length;
+		} catch (final HttpSessionRequiredException e) {
+			e.printStackTrace();
+		}
+		return count;
 	}
 }

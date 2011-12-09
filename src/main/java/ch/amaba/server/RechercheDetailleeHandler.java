@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import ch.amaba.dao.model.UserEntity;
 import ch.amaba.model.bo.UserCriteria;
+import ch.amaba.server.utils.SpringFactory;
 import ch.amaba.shared.RechercheDetailleeAction;
 import ch.amaba.shared.RechercheDetailleeResult;
 
@@ -38,7 +39,7 @@ public class RechercheDetailleeHandler extends AbstractHandler implements Action
 		final RechercheDetailleeResult result = new RechercheDetailleeResult(matches);
 		final UserCriteria userCriteria = action.getRecherche();
 		try {
-			final Set<UserEntity> findUserBycriteria = AbstractHandler.dao.findUserBycriteria(userCriteria);
+			final Set<UserEntity> findUserBycriteria = SpringFactory.get().getDao().findUserBycriteria(userCriteria);
 			for (final UserEntity userEntity : findUserBycriteria) {
 				// On devra filter les donnees à remonter en fonction
 				// de la confidentialité du user.

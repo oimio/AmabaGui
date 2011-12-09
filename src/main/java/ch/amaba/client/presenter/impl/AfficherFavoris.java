@@ -21,12 +21,14 @@ public class AfficherFavoris {
 	public static void process(DispatchAsync dispatcher, final DockLayoutPagePresenter.MyView view) {
 		dispatcher.execute(new ListeFavorisAction(ContextUI.get().getUserCourant().getIdUser()), new AsyncCallback<ListeFavorisResult>() {
 
+			@Override
 			public void onFailure(Throwable caught) {
 				// getView().setServerResponse("An error occured: " +
 				// caught.getMessage());
 				Window.alert(caught.getMessage());
 			}
 
+			@Override
 			public void onSuccess(ListeFavorisResult result) {
 				final ScrollPanel favorisPanel = view.getFavorisPanel();
 				final FlexTable t = new FlexTable();
@@ -36,7 +38,7 @@ public class AfficherFavoris {
 				final Set<UserCriteria> listeFavoris = result.getListeFavoris();
 				for (final UserCriteria userCriteria : listeFavoris) {
 					final FavorisPanel userPanel = new FavorisPanel(userCriteria.getPrenom(), DateUtils.getAge(userCriteria.getDateNaissance()), userCriteria
-					    .getIdCantons().iterator().next(), Long.toString(userCriteria.getIdUser()));
+					    .getIdCantons().iterator().next(), Long.toString(userCriteria.getIdUser()), null);
 					t.setWidget(row, col, userPanel);
 					col++;
 					if ((col) % 2 == 0) {

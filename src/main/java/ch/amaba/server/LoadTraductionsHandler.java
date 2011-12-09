@@ -6,6 +6,7 @@ import java.util.Map;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 
+import ch.amaba.server.utils.SpringFactory;
 import ch.amaba.shared.LoadTraductionsAction;
 import ch.amaba.shared.LoadTraductionsResult;
 
@@ -30,7 +31,7 @@ public class LoadTraductionsHandler extends AbstractHandler implements ActionHan
 		try {
 			final Locale locale = requestProvider.get().getLocale();
 			final String langue = locale.getLanguage().toUpperCase();
-			traductions = AbstractHandler.dao.loadTraductions(langue);
+			traductions = SpringFactory.get().getDao().loadTraductions(langue);
 		} catch (final Exception e) {
 			e.printStackTrace();
 		}

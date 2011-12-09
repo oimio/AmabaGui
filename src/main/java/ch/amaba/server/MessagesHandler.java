@@ -6,6 +6,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 
 import ch.amaba.model.bo.MessageDTO;
+import ch.amaba.server.utils.SpringFactory;
 import ch.amaba.shared.MessagesAction;
 import ch.amaba.shared.MessagesResult;
 
@@ -28,7 +29,7 @@ public class MessagesHandler extends AbstractHandler implements ActionHandler<Me
 	@Override
 	public MessagesResult execute(MessagesAction action, ExecutionContext context) throws ActionException {
 
-		final Set<MessageDTO> messagesEnvoyes = AbstractHandler.dao.getMessagesEnvoyes(getUserCriteriaSession().getIdUser());
+		final Set<MessageDTO> messagesEnvoyes = SpringFactory.get().getDao().getMessagesEnvoyes(getUserCriteriaSession().getIdUser());
 
 		return new MessagesResult(messagesEnvoyes);
 	}

@@ -1,11 +1,8 @@
 package ch.amaba.server.upload;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.Properties;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -23,29 +20,21 @@ import org.apache.commons.fileupload.util.Streams;
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.web.HttpSessionRequiredException;
+
+import ch.amaba.server.utils.ImageUtils;
+import ch.amaba.server.utils.SessionUtils;
+import ch.amaba.server.utils.SpringFactory;
 
 public final class UploadServlet extends HttpServlet {
 
-	private static final String PROPERTIES_FILE = "WEB-INF/classes/uploadprogress.properties";
+	private static final long serialVersionUID = 1L;
 	private static final Logger LOGGER = LoggerFactory.getLogger(UploadServlet.class);
 	private static final String FILE_SEPERATOR = System.getProperty("file.separator");
-	private String uploadDirectory;
 
 	@Override
 	public void init() throws ServletException {
-		final Properties properties = new Properties();
-		InputStream fi = null;
-		try {
-			final File file = new File(UploadServlet.PROPERTIES_FILE);
-			fi = new FileInputStream(file);
-			properties.load(fi);
-		} catch (final IOException ioe) {
-			throw new ServletException(ioe);
-		} finally {
-			IOUtils.closeQuietly(fi);
-		}
 
-		uploadDirectory = properties.getProperty("upload.directory", "target");
 	}
 
 	@Override
@@ -57,7 +46,7 @@ public final class UploadServlet extends HttpServlet {
 		}
 	}
 
-	private void uploadFile(final HttpServletRequest request) throws FileUploadException, IOException {
+	private void uploadFile(final HttpServletRequest request) throws FileUploadException, IOException, HttpSessionRequiredException {
 
 		if (!ServletFileUpload.isMultipartContent(request)) {
 			throw new FileUploadException("error multipart request not found");
@@ -77,16 +66,37 @@ public final class UploadServlet extends HttpServlet {
 			final String filePath = fileItemStream.getName();
 			final String fileName = filePath.substring(filePath.lastIndexOf(UploadServlet.FILE_SEPERATOR) + 1);
 
+			System.out.println(filePath);
+			System.out.println(fileName);
+
 			final UploadProgressListener uploadProgressListener = new UploadProgressListener(fileName, uploadProgress);
 
 			final UploadProgressInputStream inputStream = new UploadProgressInputStream(fileItemStream.openStream(), request.getContentLength());
 			inputStream.addListener(uploadProgressListener);
+			final String userPhotoDirectory = SessionUtils.get().getUserPhotoDirectory(request);
 
-			final File file = new File(uploadDirectory, fileName);
+			final File file = new File(userPhotoDirectory, fileName);
+			if (!file.exists()) {
+				file.createNewFile();
+			}
+			FileOutputStream fo = null;
+			try {
+				fo = new FileOutputStream(file);
+				Streams.copy(inputStream, fo, true);
+				// Resizer l'image
+				ImageUtils.resize(file, file, 480, 1f);
+				// Creer le thumbnail - un thumnail commence par "_"
+				ImageUtils.resize(file, new File(userPhotoDirectory, "_" + fileName), 60, 1f);
 
-			Streams.copy(inputStream, new FileOutputStream(file), true);
+				SpringFactory.get().getDao().savePhotos(SessionUtils.get().getUserSessionId(request), new String[] { fileName });
 
-			UploadServlet.LOGGER.info(String.format("uploaded file %s", file.getAbsolutePath()));
+				UploadServlet.LOGGER.info(String.format("uploaded file %s", file.getAbsolutePath()));
+			} catch (final Exception e) {
+				e.printStackTrace();
+			} finally {
+				IOUtils.closeQuietly(fo);
+			}
+
 		}
 	}
 }

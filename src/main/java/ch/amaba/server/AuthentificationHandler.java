@@ -16,11 +16,16 @@
 
 package ch.amaba.server;
 
+import java.io.File;
+
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.lang.SerializationUtils;
+
 import ch.amaba.model.bo.UserCriteria;
 import ch.amaba.model.bo.exception.LoginFailedException;
+import ch.amaba.server.utils.SpringFactory;
 import ch.amaba.shared.AuthentificationAction;
 import ch.amaba.shared.AuthentificationResult;
 
@@ -40,29 +45,36 @@ public class AuthentificationHandler extends AbstractHandler implements ActionHa
 		super(servletContext, requestProvider);
 	}
 
-	
+	@Override
 	public AuthentificationResult execute(AuthentificationAction request, ExecutionContext context) throws ActionException {
 		final UserCriteria userCriteria;
 		try {
-			userCriteria = AbstractHandler.dao.authentification(request.getEmail(), request.getPassword());
+			userCriteria = SpringFactory.get().getDao().authentification(request.getEmail(), request.getPassword());
+			// Création du répertoire du user
+			final File file = new File("d:/data" + File.separator + userCriteria.getIdUser());
+			if (!file.exists()) {
+				file.mkdirs();
+			}
+			// Sauvegarde dans la session du userCriteria avec TOUTES les infos
+			final UserCriteria complet = (UserCriteria) SerializationUtils.clone(userCriteria);
+			complet.setEmail(request.getEmail());
+			saveUserCriteriaSession(complet);
 			// Ces données vont être envoyées au client, on purge donc les données
 			// sensibles
 			userCriteria.setPassword(null);
 			userCriteria.setEmail(null);
-			// Sauvegarde dans la session du userCriteria.
-			saveUserCriteriaSession(userCriteria);
 		} catch (final LoginFailedException e) {
 			throw new ActionException(e);
 		}
 		return new AuthentificationResult(userCriteria);
 	}
 
-	
+	@Override
 	public Class<AuthentificationAction> getActionType() {
 		return AuthentificationAction.class;
 	}
 
-	
+	@Override
 	public void undo(AuthentificationAction action, AuthentificationResult result, ExecutionContext context) throws ActionException {
 		// Not undoable
 	}

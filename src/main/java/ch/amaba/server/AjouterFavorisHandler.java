@@ -4,6 +4,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 
 import ch.amaba.model.bo.exception.DuplicateEntityException;
+import ch.amaba.server.utils.SpringFactory;
 import ch.amaba.shared.AjouterFavorisAction;
 import ch.amaba.shared.AjouterFavorisResult;
 
@@ -23,20 +24,23 @@ public class AjouterFavorisHandler extends AbstractHandler implements ActionHand
 		super(servletContext, requestProvider);
 	}
 
+	@Override
 	public AjouterFavorisResult execute(AjouterFavorisAction action, ExecutionContext context) throws ActionException {
 		try {
-			AbstractHandler.dao.ajouterFavori(getUserCriteriaSession().getIdUser(), action.getIdAmi());
+			SpringFactory.get().getDao().ajouterFavori(getUserCriteriaSession().getIdUser(), action.getIdAmi());
 		} catch (final DuplicateEntityException e) {
 			e.printStackTrace();
-			throw new ActionException("Ce favori existe déjà.");
+			throw new ActionException("Ce favori existe dï¿½jï¿½.");
 		}
 		return new AjouterFavorisResult();
 	}
 
+	@Override
 	public Class<AjouterFavorisAction> getActionType() {
 		return AjouterFavorisAction.class;
 	}
 
+	@Override
 	public void undo(AjouterFavorisAction arg0, AjouterFavorisResult arg1, ExecutionContext arg2) throws ActionException {
 		// TODO Auto-generated method stub
 

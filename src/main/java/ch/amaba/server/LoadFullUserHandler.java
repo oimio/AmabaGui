@@ -4,6 +4,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 
 import ch.amaba.model.bo.UserCriteria;
+import ch.amaba.server.utils.SpringFactory;
 import ch.amaba.shared.LoadFullUserAction;
 import ch.amaba.shared.LoadFullUserResult;
 
@@ -26,7 +27,7 @@ public class LoadFullUserHandler extends AbstractHandler implements ActionHandle
 	
 	public LoadFullUserResult execute(LoadFullUserAction action, ExecutionContext context) throws ActionException {
 		final UserCriteria userCriteriaSession = getUserCriteriaSession();
-		final UserCriteria loadFullUserData = AbstractHandler.dao.loadFullUserData(userCriteriaSession);
+		final UserCriteria loadFullUserData = SpringFactory.get().getDao().loadFullUserData(userCriteriaSession);
 		return new LoadFullUserResult(loadFullUserData);
 	}
 

@@ -6,6 +6,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 
 import ch.amaba.model.bo.CantonDTO;
+import ch.amaba.server.utils.SpringFactory;
 import ch.amaba.shared.LoadCantonsAction;
 import ch.amaba.shared.LoadCantonsResult;
 
@@ -29,7 +30,7 @@ public class LoadCantonsHandler extends AbstractHandler implements ActionHandler
 	public LoadCantonsResult execute(LoadCantonsAction action, ExecutionContext context) throws ActionException {
 		Set<CantonDTO> cantons = null;
 		try {
-			cantons = AbstractHandler.dao.loadCantons();
+			cantons = SpringFactory.get().getDao().loadCantons();
 		} catch (final Exception e) {
 			e.printStackTrace();
 		}

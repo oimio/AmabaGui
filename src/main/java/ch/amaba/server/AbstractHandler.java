@@ -4,9 +4,6 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import ch.amaba.dao.AmabaDao;
 import ch.amaba.model.bo.UserCriteria;
 import ch.amaba.server.constants.IConstants;
 
@@ -15,17 +12,10 @@ import com.google.inject.Provider;
 public class AbstractHandler {
 	protected final Provider<HttpServletRequest> requestProvider;
 	protected final ServletContext servletContext;
-	private ClassPathXmlApplicationContext beanFactory;
-	static AmabaDao dao;
 
 	public AbstractHandler(final ServletContext servletContext, final Provider<HttpServletRequest> requestProvider) {
 		this.servletContext = servletContext;
 		this.requestProvider = requestProvider;
-
-		if (beanFactory == null) {
-			beanFactory = new ClassPathXmlApplicationContext("application-context.xml");
-			AbstractHandler.dao = (AmabaDao) beanFactory.getBean("amabaDao");
-		}
 	}
 
 	/**

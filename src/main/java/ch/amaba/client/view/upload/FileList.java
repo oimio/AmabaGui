@@ -2,13 +2,13 @@ package ch.amaba.client.view.upload;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
-import java.util.List;
+import java.util.Set;
 
+import ch.amaba.client.ui.composite.PhotoPanel;
+import ch.amaba.client.utils.DateUtils;
 import ch.amaba.client.view.upload.state.UploadProgressState;
-import ch.amaba.shared.upload.FileDto;
+import ch.amaba.model.bo.PhotoDTO;
 
-import com.google.gwt.i18n.client.DateTimeFormat;
-import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlexTable;
 import com.google.gwt.user.client.ui.Panel;
@@ -21,7 +21,9 @@ public final class FileList extends Composite {
 	public FileList() {
 
 		filesTable = new FlexTable();
-		filesTable.getRowFormatter().addStyleName(0, "FileListHead");
+		filesTable.setWidth("200px");
+		filesTable.addStyleName("table");
+		// filesTable.getRowFormatter().addStyleName(0, "FileListHead");
 
 		final Panel filesPanel = new VerticalPanel();
 		filesPanel.setStyleName("FileList");
@@ -44,23 +46,25 @@ public final class FileList extends Composite {
 		@Override
 		public void propertyChange(final PropertyChangeEvent event) {
 
-			final List<FileDto> files = (List<FileDto>) event.getNewValue();
+			final Set<PhotoDTO> files = (Set<PhotoDTO>) event.getNewValue();
 
 			filesTable.clear(true);
 
 			filesTable.setText(0, 0, "Upload File");
 			filesTable.setText(0, 1, "Upload Date");
-
-			for (int i = 0; i < files.size(); i++) {
-				final FileDto file = files.get(i);
-				final String fileName = file.getFilename();
-
-				final Anchor anchor = new Anchor(fileName, "amaba/download?file=" + fileName);
-
-				final int row = i + 1;
-				filesTable.setWidget(row, 0, anchor);
-				filesTable.setText(row, 1, DateTimeFormat.getFormat(DateTimeFormat.PredefinedFormat.DATE_TIME_SHORT).format(file.getDateUploaded()));
+			int row = 0;
+			int col = 0;
+			for (final PhotoDTO photoDTO : files) {
+				final PhotoPanel photoPanel = new PhotoPanel("amaba/download?file=_" + photoDTO.getFileName(), DateUtils.getDate(photoDTO.getDateUpload()),
+				    photoDTO.getBusinessObjectId());
+				filesTable.setWidget(row, col, photoPanel);
+				col++;
+				if (col % 5 == 0) {
+					row++;
+					col = 0;
+				}
 			}
+
 		}
 	}
 

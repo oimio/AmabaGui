@@ -23,16 +23,12 @@ public class CacheUtils {
 
 	private static Map<String, Map<String, String>> traductions;
 
-	/**
-	 * Retourne l'enumID en fonction de la clee type+clee Ex : INTERETSPORT->2
-	 * */
-	private static Map<String, Integer> enumId;
-
 	public static Set<CantonDTO> getCantons() {
 		return CacheUtils.cantons;
 	}
 
 	public static void setCantons(Set<CantonDTO> cantons) {
+		System.out.println("Cantons initialized " + cantons);
 		CacheUtils.cantons = cantons;
 	}
 

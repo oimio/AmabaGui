@@ -26,7 +26,7 @@ public class AjouterFavorisAction extends UnsecuredActionImpl<AjouterFavorisResu
 	}
 
 	/**
-	 * Retourne l'id de l'ami à ajouter.
+	 * Retourne l'id de l'ami ajouter.
 	 * */
 	public Long getIdAmi() {
 		return idAmi;

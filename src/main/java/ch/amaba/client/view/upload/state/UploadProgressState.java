@@ -1,27 +1,27 @@
 package ch.amaba.client.view.upload.state;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
-import ch.amaba.shared.upload.FileDto;
+import ch.amaba.model.bo.PhotoDTO;
 
 public final class UploadProgressState extends PageableState {
 
 	public static final UploadProgressState INSTANCE = new UploadProgressState();
 	private final Map<String, Integer> uploadProgress;
-	private List<FileDto> files;
+	private Set<PhotoDTO> files;
 
 	private UploadProgressState() {
 		uploadProgress = new HashMap<String, Integer>();
 	}
 
-	public List<FileDto> getFiles() {
+	public Set<PhotoDTO> getFiles() {
 		return files;
 	}
 
-	public void setFiles(final List<FileDto> files) {
-		final List<FileDto> old = this.files;
+	public void setFiles(final Set<PhotoDTO> files) {
+		final Set<PhotoDTO> old = this.files;
 		this.files = files;
 		firePropertyChange("files", old, files);
 	}

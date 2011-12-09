@@ -53,20 +53,23 @@ public class CantonUtils<T> {
 		final Integer idCanton = idCantons.iterator().next();
 		final Set<CantonDTO> cantons = CacheUtils.getCantons();
 		String code = null;
-		for (final CantonDTO cantonDTO : cantons) {
-			if (idCanton.longValue() == cantonDTO.getBusinessObjectId()) {
-				code = cantonDTO.getCodeCanton();
-				break;
+		if (cantons != null) {
+			for (final CantonDTO cantonDTO : cantons) {
+				if (idCanton.longValue() == cantonDTO.getBusinessObjectId()) {
+					code = cantonDTO.getCodeCanton();
+					break;
+				}
 			}
 		}
+		if (code != null) {
+			final Map<String, String> map = CacheUtils.getTraductions().get("CANTON");
+			final Set<Entry<String, String>> entrySet = map.entrySet();
 
-		final Map<String, String> map = CacheUtils.getTraductions().get("CANTON");
-		final Set<Entry<String, String>> entrySet = map.entrySet();
-
-		for (final Entry<String, String> entry : entrySet) {
-			if (code.equals(entry.getKey())) {
-				cantonTraduction = (codeCanton ? code.toUpperCase() : entry.getValue());
-				break;
+			for (final Entry<String, String> entry : entrySet) {
+				if (code.equals(entry.getKey())) {
+					cantonTraduction = (codeCanton ? code.toUpperCase() : entry.getValue());
+					break;
+				}
 			}
 		}
 		return cantonTraduction;

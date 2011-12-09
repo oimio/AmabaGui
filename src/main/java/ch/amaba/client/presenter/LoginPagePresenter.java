@@ -5,6 +5,7 @@ import java.util.Set;
 
 import ch.amaba.client.IConstants;
 import ch.amaba.client.NameTokens;
+import ch.amaba.client.exception.ClientException;
 import ch.amaba.client.presenter.impl.Authentification;
 import ch.amaba.client.presenter.impl.DevenirMembre;
 import ch.amaba.client.utils.CacheUtils;
@@ -163,13 +164,13 @@ public class LoginPagePresenter extends Presenter<LoginPagePresenter.MyView, Log
 
 				@Override
 				public void onFailure(Throwable caught) {
-					// getView().setServerResponse("An error occured: " +
-					// caught.getMessage());
+					new ClientException(caught, "loadCatons");
 				}
 
 				@Override
 				public void onSuccess(LoadCantonsResult result) {
 					final Set<CantonDTO> cantons = result.getCantons();
+					System.out.println(cantons);
 					CacheUtils.setCantons(cantons);
 					getView().getCantonListBox().clear();
 					CantonUtils.populate(getView().getCantonListBox(), IConstants.ENUM_TYPE_CANTON);

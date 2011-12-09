@@ -6,6 +6,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 
 import ch.amaba.model.bo.UserCriteria;
+import ch.amaba.server.utils.SpringFactory;
 import ch.amaba.shared.ListeFavorisAction;
 import ch.amaba.shared.ListeFavorisResult;
 
@@ -25,17 +26,20 @@ public class ListeFavorisHandler extends AbstractHandler implements ActionHandle
 		super(servletContext, requestProvider);
 	}
 
+	@Override
 	public ListeFavorisResult execute(ListeFavorisAction action, ExecutionContext context) throws ActionException {
 
-		final Set<UserCriteria> listeFavoris = AbstractHandler.dao.listeFavoris(getUserCriteriaSession().getIdUser());
+		final Set<UserCriteria> listeFavoris = SpringFactory.get().getDao().listeFavoris(getUserCriteriaSession().getIdUser());
 
 		return new ListeFavorisResult(listeFavoris);
 	}
 
+	@Override
 	public Class<ListeFavorisAction> getActionType() {
 		return ListeFavorisAction.class;
 	}
 
+	@Override
 	public void undo(ListeFavorisAction arg0, ListeFavorisResult arg1, ExecutionContext arg2) throws ActionException {
 		// TODO Auto-generated method stub
 

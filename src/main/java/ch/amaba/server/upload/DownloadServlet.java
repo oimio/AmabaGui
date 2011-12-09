@@ -3,9 +3,7 @@ package ch.amaba.server.upload;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.URLDecoder;
-import java.util.Properties;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -18,28 +16,18 @@ import org.apache.commons.fileupload.util.Streams;
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.web.HttpSessionRequiredException;
+
+import ch.amaba.server.utils.SessionUtils;
 
 public final class DownloadServlet extends HttpServlet {
 
-	private static final String PROPERTIES_FILE = "WEB-INF/classes/uploadprogress.properties";
+	private static final long serialVersionUID = 1L;
+
 	private static final Logger LOGGER = LoggerFactory.getLogger(DownloadServlet.class);
-	private String uploadDirectory;
 
 	@Override
 	public void init() throws ServletException {
-		final Properties properties = new Properties();
-		InputStream fi = null;
-		try {
-			final File file = new File(DownloadServlet.PROPERTIES_FILE);
-			fi = new FileInputStream(file);
-			properties.load(fi);
-		} catch (final IOException ioe) {
-			throw new ServletException(ioe);
-		} finally {
-			IOUtils.closeQuietly(fi);
-		}
-
-		uploadDirectory = properties.getProperty("upload.directory", "target");
 	}
 
 	@Override
@@ -47,7 +35,8 @@ public final class DownloadServlet extends HttpServlet {
 		downloadFile(request, response);
 	}
 
-	private void downloadFile(final HttpServletRequest request, final HttpServletResponse response) throws IOException {
+	private void downloadFile(final HttpServletRequest request, final HttpServletResponse response) throws IOException, HttpSessionRequiredException {
+		final String userPhotoDirectory = SessionUtils.get().getUserPhotoDirectory(request);
 		String fileName = request.getParameter("file");
 		fileName = URLDecoder.decode(fileName);
 
@@ -57,17 +46,27 @@ public final class DownloadServlet extends HttpServlet {
 			throw new IOException(String.format("error downloading file %s", fileName));
 		}
 
-		final ServletOutputStream outputStream = response.getOutputStream();
+		ServletOutputStream outputStream = null;
 		final ServletContext context = getServletConfig().getServletContext();
 		final String mimetype = context.getMimeType(fileName);
 
-		final File file = new File(uploadDirectory, fileName);
-		response.setContentType((mimetype != null) ? mimetype : "application/octet-stream");
-		response.setContentLength((int) file.length());
-		response.setHeader("Content-Disposition", String.format("attachment; filename=\"%s\"", fileName));
-
-		Streams.copy(new FileInputStream(file), outputStream, true);
-
-		DownloadServlet.LOGGER.info(String.format("downloaded file %s", file.getAbsolutePath()));
+		final File file = new File(userPhotoDirectory, fileName);
+		if (file.exists()) {
+			response.setContentType((mimetype != null) ? mimetype : "application/octet-stream");
+			response.setContentLength((int) file.length());
+			response.setHeader("Content-Disposition", String.format("attachment; filename=\"%s\"", fileName));
+			FileInputStream fi = null;
+			try {
+				outputStream = response.getOutputStream();
+				fi = new FileInputStream(file);
+				Streams.copy(fi, outputStream, true);
+			} catch (final Exception e) {
+				e.printStackTrace();
+			} finally {
+				IOUtils.closeQuietly(outputStream);
+				IOUtils.closeQuietly(fi);
+			}
+			DownloadServlet.LOGGER.info(String.format("downloaded file %s", file.getAbsolutePath()));
+		}
 	}
 }
