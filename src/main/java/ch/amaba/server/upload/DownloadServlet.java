@@ -14,10 +14,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.fileupload.util.Streams;
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.HttpSessionRequiredException;
 
+import ch.amaba.model.bo.exception.HttpSessionRequiredException;
 import ch.amaba.server.utils.SessionUtils;
 
 public final class DownloadServlet extends HttpServlet {
@@ -32,13 +33,20 @@ public final class DownloadServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {
-		downloadFile(request, response);
+		try {
+			downloadFile(request, response);
+		} catch (final HttpSessionRequiredException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			throw new ServletException(e);
+		}
 	}
 
 	private void downloadFile(final HttpServletRequest request, final HttpServletResponse response) throws IOException, HttpSessionRequiredException {
-		final String userPhotoDirectory = SessionUtils.get().getUserPhotoDirectory(request);
+		// si id user non null, on charge la photo d'un user autre que la session.
+		final String idUser = request.getParameter("id");
 		String fileName = request.getParameter("file");
-		fileName = URLDecoder.decode(fileName);
+		fileName = URLDecoder.decode(fileName, "UTF-8");
 
 		final boolean invalidFileName = (null == fileName) || fileName.isEmpty() || fileName.contains("\\") || fileName.contains("/") || fileName.contains("..");
 
@@ -49,6 +57,13 @@ public final class DownloadServlet extends HttpServlet {
 		ServletOutputStream outputStream = null;
 		final ServletContext context = getServletConfig().getServletContext();
 		final String mimetype = context.getMimeType(fileName);
+
+		String userPhotoDirectory = null;
+		if (StringUtils.isNotBlank(idUser)) {
+			userPhotoDirectory = SessionUtils.get().getUserPhotoDirectoryHorsSession(Long.parseLong(idUser));
+		} else {
+			userPhotoDirectory = SessionUtils.get().getUserPhotoDirectory(request);
+		}
 
 		final File file = new File(userPhotoDirectory, fileName);
 		if (file.exists()) {

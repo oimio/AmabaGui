@@ -7,7 +7,7 @@
 
 	<g:VerticalPanel verticalAlignment="middle" horizontalAlignment="center">
 		<g:Label>Age de </g:Label>
-		<g:HorizontalPanel verticalAlignment="middle">
+		<g:HorizontalPanel verticalAlignment="middle" spacing='3'>
 			<g:ListBox ui:field="ageMinimum">
 				<g:item value='18' selected='true'>18</g:item>
 				<g:item value='20'>20</g:item>
@@ -19,7 +19,7 @@
 				<g:item value='50'>50</g:item>
 				<g:item value='60'>60</g:item>
 			</g:ListBox>
-			<g:Label> à </g:Label>
+			<g:Label text="à"/>
 			<g:ListBox selectedIndex="2" ui:field="ageMaximum">
 				<g:item value='25'>25</g:item>
 				<g:item value='30'>30</g:item>
@@ -32,7 +32,7 @@
 				<g:item value='60'>90</g:item>
 				<g:item value='-1'>Plus</g:item>
 			</g:ListBox>
-			<g:Label> ans </g:Label>
+			<g:Label text="ans"/>
 		</g:HorizontalPanel>
 	</g:VerticalPanel>
 </ui:UiBinder> 

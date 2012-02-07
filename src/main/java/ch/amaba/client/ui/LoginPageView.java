@@ -106,7 +106,7 @@ public class LoginPageView extends ViewImpl implements LoginPagePresenter.MyView
 		// MOCK to remove !!!!!!!
 		// supprimer ces lignes !!!!!!!!!!
 		// JUST FOR TEST
-		getEmailAuthTextBox().setText("hugo@gmail.com");
+		getEmailAuthTextBox().setText("elodie@gmail.com");
 		getPasswordAuthTextBox().setText("123");
 	}
 

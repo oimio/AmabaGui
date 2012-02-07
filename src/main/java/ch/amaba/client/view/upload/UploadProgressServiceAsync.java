@@ -17,4 +17,8 @@ public interface UploadProgressServiceAsync {
 	void readFiles(int page, int pageSize, AsyncCallback<Set<PhotoDTO>> asyncCallback);
 
 	void getEvents(AsyncCallback<List<Event>> asyncCallback);
+
+	void supprimerPhoto(Long idPhoto, AsyncCallback<Long> asyncCallback);
+
+	void flagPhotoAsPrincipale(Long idPhoto, AsyncCallback<Set<PhotoDTO>> asyncCallback);
 }

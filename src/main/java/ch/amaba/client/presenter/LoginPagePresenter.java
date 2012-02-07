@@ -22,6 +22,7 @@ import com.google.gwt.event.dom.client.FocusEvent;
 import com.google.gwt.event.dom.client.FocusHandler;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.event.shared.GwtEvent.Type;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.ListBox;
@@ -146,6 +147,7 @@ public class LoginPagePresenter extends Presenter<LoginPagePresenter.MyView, Log
 				public void onFailure(Throwable caught) {
 					// getView().setServerResponse("An error occured: " +
 					// caught.getMessage());
+					Window.alert(caught.getMessage());
 				}
 
 				@Override

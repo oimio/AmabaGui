@@ -18,13 +18,9 @@
 		}
 		
 		.border {
-			border: 1px solid black;
-		}
-		
-		.border {
-			border: 2px solid #145258;
+			/*border: 2px solid #145258;
 			margin: 1px;
-			padding: 1px;
+			padding: 1px;*/
 		}
 	</ui:style>
 	

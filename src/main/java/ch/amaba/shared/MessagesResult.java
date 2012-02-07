@@ -18,15 +18,12 @@ public class MessagesResult implements Result {
 	/**
 	 * For serialization only.
 	 */
-	public MessagesResult(final Set<MessageDTO> messages) {
-		this.messages = messages;
-	}
-
-	/**
-	 * For serialization only.
-	 */
 	@SuppressWarnings("unused")
 	private MessagesResult() {
+	}
+
+	public MessagesResult(final Set<MessageDTO> messages) {
+		this.messages = messages;
 	}
 
 	public Set<MessageDTO> getMessages() {

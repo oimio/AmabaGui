@@ -22,7 +22,7 @@
                   Mes photos
                 </div>
                 <div class="ContainerBody">
-                    <view:FileList ui:field='fileList'/>
+                    <view:PhotoListPanel ui:field='fileList'/>
                     <div class="Wrapper">
                         <view:Paging ui:field='paging'/>  
                     </div>

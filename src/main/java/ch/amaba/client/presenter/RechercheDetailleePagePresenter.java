@@ -15,6 +15,7 @@ import ch.amaba.model.bo.constants.TypeCaractereEnum;
 import ch.amaba.model.bo.constants.TypeInteretEnum;
 import ch.amaba.model.bo.constants.TypeMusiqueEnum;
 import ch.amaba.model.bo.constants.TypeProfessionEnum;
+import ch.amaba.model.bo.constants.TypeRaceEnum;
 import ch.amaba.model.bo.constants.TypeReligionEnum;
 import ch.amaba.model.bo.constants.TypeSportEnum;
 import ch.amaba.shared.LoadCantonsAction;
@@ -77,6 +78,8 @@ public class RechercheDetailleePagePresenter extends Presenter<RechercheDetaille
 		ListBox getSportListBox();
 
 		ListBox getCaractereListBox();
+
+		ListBox getRaceListBox();
 
 	}
 
@@ -143,6 +146,7 @@ public class RechercheDetailleePagePresenter extends Presenter<RechercheDetaille
 		ListBoxUtils.populateAvecTraduction(getView().getReligionListBox(), TypeReligionEnum.class, IConstants.ENUM_TYPE_RELIGION);
 		ListBoxUtils.populateAvecTraduction(getView().getSportListBox(), TypeSportEnum.class, IConstants.ENUM_TYPE_SPORT);
 		ListBoxUtils.populateAvecTraduction(getView().getCaractereListBox(), TypeCaractereEnum.class, IConstants.ENUM_TYPE_CARACTERE);
+		ListBoxUtils.populateAvecTraduction(getView().getRaceListBox(), TypeRaceEnum.class, IConstants.ENUM_TYPE_RACE);
 	}
 
 	@Override

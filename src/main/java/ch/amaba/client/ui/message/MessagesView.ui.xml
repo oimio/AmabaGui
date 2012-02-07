@@ -13,10 +13,10 @@
 			padding: 2px;
 		}
 	</ui:style>
-	<g:DecoratorPanel>
-		<g:VerticalPanel ui:field="htmlPanel" spacing="1">
-			<g:FlexTable ui:field="messagesTable" />
-
-		</g:VerticalPanel>
-	</g:DecoratorPanel>
+	<g:VerticalPanel width="100%">
+		<g:HorizontalPanel>
+			<g:Button text="Supprimer messages" ui:field="supprimerButton"/>
+		</g:HorizontalPanel>
+		<g:FlexTable ui:field="messagesTable" width="100%"/>
+	</g:VerticalPanel>
 </ui:UiBinder> 

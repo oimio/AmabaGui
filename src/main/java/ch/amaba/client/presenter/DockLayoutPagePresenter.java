@@ -2,7 +2,9 @@ package ch.amaba.client.presenter;
 
 import ch.amaba.client.NameTokens;
 import ch.amaba.client.context.ContextUI;
+import ch.amaba.client.presenter.handler.AfficherMessagesHandler;
 import ch.amaba.client.presenter.impl.AfficherFavoris;
+import ch.amaba.model.bo.constants.TypeMessageStatutEnum;
 import ch.amaba.shared.LoadFullUserAction;
 import ch.amaba.shared.LoadFullUserResult;
 
@@ -61,7 +63,13 @@ public class DockLayoutPagePresenter extends Presenter<DockLayoutPagePresenter.M
 
 		Label getMesPhotosLabel();
 
-		Label getMessagesLabel();
+		Label getMessagesEnvoyesLabel();
+
+		Label getMessagesSupprimesLabel();
+
+		Label getMessagesRecusLabel();
+
+		Label getMessagesNouveauxLabel();
 
 		Label getConfidentialiteLabel();
 
@@ -110,26 +118,18 @@ public class DockLayoutPagePresenter extends Presenter<DockLayoutPagePresenter.M
 				placeManager.revealPlace(myRequest);
 			}
 		}));
-		registerHandler(getView().getMessagesLabel().addClickHandler(new ClickHandler() {
-			@Override
-			public void onClick(ClickEvent event) {
-				final PlaceRequest myRequest = new PlaceRequest(NameTokens.messages);
-				placeManager.revealPlace(myRequest);
-			}
-		}));
+		// Messages
+		registerHandler(getView().getMessagesNouveauxLabel().addClickHandler(new AfficherMessagesHandler(placeManager, TypeMessageStatutEnum.NON_LU)));
+		registerHandler(getView().getMessagesRecusLabel().addClickHandler(new AfficherMessagesHandler(placeManager, TypeMessageStatutEnum.RECU)));
+		registerHandler(getView().getMessagesSupprimesLabel().addClickHandler(new AfficherMessagesHandler(placeManager, TypeMessageStatutEnum.SUPPRIME)));
+		registerHandler(getView().getMessagesEnvoyesLabel().addClickHandler(new AfficherMessagesHandler(placeManager, TypeMessageStatutEnum.ENVOYE)));
+
 		registerHandler(getView().getModifierDonneesLabel().addClickHandler(new ClickHandler() {
-
 			@Override
 			public void onClick(ClickEvent event) {
-				// final PlaceRequest myRequest = new
-				// PlaceRequest(NameTokens.modifierDonnees);
-				// placeManager.revealPlace(myRequest);
 				dispatcher.execute(new LoadFullUserAction(false), new AsyncCallback<LoadFullUserResult>() {
-
 					@Override
 					public void onFailure(Throwable caught) {
-						// getView().setServerResponse("An error occured: " +
-						// caught.getMessage());
 						Window.alert(caught.getMessage());
 					}
 
@@ -142,16 +142,16 @@ public class DockLayoutPagePresenter extends Presenter<DockLayoutPagePresenter.M
 
 					}
 				});
-
 			}
 		}));
-
+		System.out.println("Call onBind() method in class " + this.getClass().getName());
+		AfficherFavoris.process(dispatcher, getView());
 	}
 
 	@Override
 	protected void onReset() {
 		super.onReset();
-		AfficherFavoris.process(dispatcher, getView());
+		System.out.println("Call onReset() method in class " + this.getClass().getName());
 	}
 
 	@Override

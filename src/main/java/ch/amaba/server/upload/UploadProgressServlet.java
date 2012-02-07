@@ -10,11 +10,13 @@ import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.HttpSessionRequiredException;
 
 import ch.amaba.client.view.upload.UploadProgressService;
 import ch.amaba.dao.AmabaDao;
+import ch.amaba.dao.model.UserPhotoEntity;
 import ch.amaba.model.bo.PhotoDTO;
+import ch.amaba.model.bo.exception.EntityNotFoundException;
+import ch.amaba.model.bo.exception.HttpSessionRequiredException;
 import ch.amaba.server.utils.SessionUtils;
 import ch.amaba.server.utils.SpringFactory;
 import ch.amaba.shared.upload.Event;
@@ -101,4 +103,29 @@ public final class UploadProgressServlet extends RemoteServiceServlet implements
 		}
 		return count;
 	}
+
+	/**
+	 * @param idPhoto
+	 *          - id à supprimée
+	 * @return idPhoto, id de la photo supprimée
+	 */
+	@Override
+	public Long supprimerPhoto(Long idPhoto) throws EntityNotFoundException {
+		final UserPhotoEntity userPhotoEntity = new UserPhotoEntity();
+		userPhotoEntity.setEntityId(idPhoto);
+		try {
+			SpringFactory.get().getDao().supprimer(userPhotoEntity);
+		} catch (final EntityNotFoundException e) {
+			e.printStackTrace();
+			throw e;
+		}
+		return idPhoto;
+	}
+
+	@Override
+	public Set<PhotoDTO> flagPhotoAsPrincipale(Long idPhoto) throws HttpSessionRequiredException {
+		SpringFactory.get().getDao().flagPhotoPrincipale(SessionUtils.get().getUserSessionId(getThreadLocalRequest()), idPhoto);
+		return readFiles(-1, -1);
+	}
+
 }

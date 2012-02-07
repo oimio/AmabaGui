@@ -5,7 +5,7 @@
 }
 
 .menu {
-	font: bold 12px tahoma, arial, verdana, sans-serif;
+	font: bold 11px tahoma, arial, verdana, sans-serif;
 	color: #0174DF;
 	cursor: pointer;
 	margin: 2px;
@@ -13,6 +13,27 @@
 }
 
 .menuHeader {
-	font: bold 13px tahoma, arial, verdana, sans-serif;
+	font: bold 11px tahoma, arial, verdana, sans-serif;
 	color: #0174DF;
+}
+
+.messageRow {
+	width:250px;
+	text-align:left;
+	float:left;
+}
+.messageRowFrom {
+	width:125px;
+	text-align:left;
+	float:left;
+}
+.messageRowCheckBox {
+	width: 7px;
+	text-align:center;
+	float:center;
+}
+.messageRowDate {
+	width: 120px;
+	text-align:left;
+	float:left;
 }

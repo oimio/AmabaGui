@@ -3,24 +3,27 @@ package ch.amaba.client.context;
 import java.util.Set;
 
 import ch.amaba.model.bo.UserCriteria;
+import ch.amaba.model.bo.constants.TypeMessageStatutEnum;
 
 /**
  * Conserve les variables du context UI.
  * */
 public class ContextUI {
 
-	private static ContextUI contextUI;
+	private static final ContextUI contextUI = new ContextUI();
 
 	private UserCriteria userCriteria;
 
 	/** Résultat d'une recherche. */
 	private Set<UserCriteria> searchResult;
 
+	/**
+	 * Par défaut tous les messages recus (non lu et lu)
+	 * */
+	private TypeMessageStatutEnum typeMessageStatutEnum;
+
 	/** Retourne le Singleton. */
 	public static ContextUI get() {
-		if (ContextUI.contextUI == null) {
-			ContextUI.contextUI = new ContextUI();
-		}
 		return ContextUI.contextUI;
 	}
 
@@ -48,6 +51,18 @@ public class ContextUI {
 	/** Set le résultat de la recherche. */
 	public void setSearchResult(final Set<UserCriteria> searchResult) {
 		this.searchResult = searchResult;
+	}
+
+	/**
+	 * Retourne l'action pour l'affichage des messages (recus, envoyes ou
+	 * supprimes)
+	 * */
+	public TypeMessageStatutEnum getMessageAction() {
+		return typeMessageStatutEnum;
+	}
+
+	public void setMessageAction(TypeMessageStatutEnum typeMessageStatutEnum) {
+		this.typeMessageStatutEnum = typeMessageStatutEnum;
 	}
 
 }

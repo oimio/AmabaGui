@@ -26,6 +26,7 @@ public class LoadTraductionsHandler extends AbstractHandler implements ActionHan
 		super(servletContext, requestProvider);
 	}
 
+	@Override
 	public LoadTraductionsResult execute(LoadTraductionsAction action, ExecutionContext context) throws ActionException {
 		Map<String, Map<String, String>> traductions = null;
 		try {
@@ -34,14 +35,17 @@ public class LoadTraductionsHandler extends AbstractHandler implements ActionHan
 			traductions = SpringFactory.get().getDao().loadTraductions(langue);
 		} catch (final Exception e) {
 			e.printStackTrace();
+			throw new ActionException("Une erreur interne est survenue, merci de ressayer plus tard.");
 		}
 		return new LoadTraductionsResult(traductions);
 	}
 
+	@Override
 	public Class<LoadTraductionsAction> getActionType() {
 		return LoadTraductionsAction.class;
 	}
 
+	@Override
 	public void undo(LoadTraductionsAction arg0, LoadTraductionsResult arg1, ExecutionContext arg2) throws ActionException {
 		// TODO Auto-generated method stub
 

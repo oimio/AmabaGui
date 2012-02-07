@@ -32,6 +32,22 @@ public class DateUtils {
 	}
 
 	/**
+	 * Retourne la date au format dd.mm.aaaa (sans les heures, minutes et
+	 * secondes).
+	 * */
+	public static String getDateTime(final Date date) {
+		final StringBuffer toReturn = new StringBuffer();
+		// toReturn.append(DateUtils.getDay(date)).append("." +
+		// DateUtils.getMonth(date)).append("." +
+		// DateUtils.getYear(date)).append(" " + DateUtils.getHour(date))
+		// .append(":" + DateUtils.getMinute(date)).append(":" +
+		// DateUtils.getSecond(date));
+		toReturn.append(DateTimeFormat.getFormat("dd.MM.yyyy HH:mm:ss").format(date));
+
+		return toReturn.toString();
+	}
+
+	/**
 	 * Retourne le mois sur 2 chiffres (compris entre 1 et 12).
 	 * 
 	 * @param date

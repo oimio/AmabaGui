@@ -7,9 +7,12 @@ import java.util.Set;
 import ch.amaba.client.IConstants;
 import ch.amaba.model.bo.CantonDTO;
 import ch.amaba.model.bo.constants.TypeCaractereEnum;
+import ch.amaba.model.bo.constants.TypeCouleurCheveux;
+import ch.amaba.model.bo.constants.TypeCouleurYeux;
 import ch.amaba.model.bo.constants.TypeInteretEnum;
 import ch.amaba.model.bo.constants.TypeMusiqueEnum;
 import ch.amaba.model.bo.constants.TypeProfessionEnum;
+import ch.amaba.model.bo.constants.TypeRaceEnum;
 import ch.amaba.model.bo.constants.TypeReligionEnum;
 import ch.amaba.model.bo.constants.TypeSportEnum;
 
@@ -28,7 +31,9 @@ public class CacheUtils {
 	}
 
 	public static void setCantons(Set<CantonDTO> cantons) {
-		System.out.println("Cantons initialized " + cantons);
+		for (final CantonDTO cantonDTO : cantons) {
+			System.out.println(cantonDTO.getCodeCanton());
+		}
 		CacheUtils.cantons = cantons;
 	}
 
@@ -80,6 +85,18 @@ public class CacheUtils {
 			}
 			final TypeCaractereEnum[] caractere = TypeCaractereEnum.values();
 			for (final TypeCaractereEnum type : caractere) {
+				CacheUtils.enumMap.put(type.getClass().getName() + type.name(), type.getId());
+			}
+			final TypeCouleurCheveux[] cheveux = TypeCouleurCheveux.values();
+			for (final TypeCouleurCheveux type : cheveux) {
+				CacheUtils.enumMap.put(type.getClass().getName() + type.name(), type.getId());
+			}
+			final TypeCouleurYeux[] yeux = TypeCouleurYeux.values();
+			for (final TypeCouleurYeux type : yeux) {
+				CacheUtils.enumMap.put(type.getClass().getName() + type.name(), type.getId());
+			}
+			final TypeRaceEnum[] race = TypeRaceEnum.values();
+			for (final TypeRaceEnum type : race) {
 				CacheUtils.enumMap.put(type.getClass().getName() + type.name(), type.getId());
 			}
 		}

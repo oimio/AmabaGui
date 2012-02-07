@@ -13,7 +13,7 @@
 			padding: 2px;
 		}
 	</ui:style>
-	<g:DecoratorPanel>
+	<g:DecoratorPanel width="100%">
 		<g:VerticalPanel ui:field="htmlPanel" spacing="1">
 			<g:DisclosurePanel animationEnabled="true" width="400px"
 				open="true">

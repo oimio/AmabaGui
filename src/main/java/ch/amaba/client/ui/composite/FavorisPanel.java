@@ -28,16 +28,17 @@ public class FavorisPanel extends Composite {
 	Label cantonLabel;
 
 	@UiField(provided = true)
-	Image image;
+	MyImage photo;
+
+	@UiField
+	Image messageImage;
 
 	String id;
 
 	private static FavorisPanelUiBinder uiBinder = GWT.create(FavorisPanelUiBinder.class);
 
 	public FavorisPanel(final String prenom, Integer age, Integer idCanton, String id, final String imageUrl) {
-		if (imageUrl != null) {
-			image = new MyImage(imageUrl);
-		}
+		photo = new MyImage(imageUrl != null ? "amaba/download?id=" + id + "&file=_" + imageUrl : "images/no_photo.png");
 		initWidget(FavorisPanel.uiBinder.createAndBindUi(this));
 		prenomLabel.setText(prenom);
 		ageLabel.setText(age + " ans");
@@ -59,5 +60,9 @@ public class FavorisPanel extends Composite {
 
 	public Label getCantonLabel() {
 		return cantonLabel;
+	}
+
+	public Image getMessageImage() {
+		return messageImage;
 	}
 }

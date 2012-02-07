@@ -4,6 +4,7 @@ import java.util.Set;
 
 import ch.amaba.client.context.ContextUI;
 import ch.amaba.client.presenter.DockLayoutPagePresenter;
+import ch.amaba.client.presenter.handler.PremierContactHandler;
 import ch.amaba.client.ui.composite.FavorisPanel;
 import ch.amaba.client.utils.DateUtils;
 import ch.amaba.model.bo.UserCriteria;
@@ -18,13 +19,14 @@ import com.gwtplatform.dispatch.shared.DispatchAsync;
 
 public class AfficherFavoris {
 
-	public static void process(DispatchAsync dispatcher, final DockLayoutPagePresenter.MyView view) {
+	public static void process(final DispatchAsync dispatcher, final DockLayoutPagePresenter.MyView view) {
 		dispatcher.execute(new ListeFavorisAction(ContextUI.get().getUserCourant().getIdUser()), new AsyncCallback<ListeFavorisResult>() {
 
 			@Override
 			public void onFailure(Throwable caught) {
 				// getView().setServerResponse("An error occured: " +
 				// caught.getMessage());
+				caught.printStackTrace();
 				Window.alert(caught.getMessage());
 			}
 
@@ -37,8 +39,16 @@ public class AfficherFavoris {
 				int col = 0;
 				final Set<UserCriteria> listeFavoris = result.getListeFavoris();
 				for (final UserCriteria userCriteria : listeFavoris) {
-					final FavorisPanel userPanel = new FavorisPanel(userCriteria.getPrenom(), DateUtils.getAge(userCriteria.getDateNaissance()), userCriteria
-					    .getIdCantons().iterator().next(), Long.toString(userCriteria.getIdUser()), null);
+					final FavorisPanel userPanel = new FavorisPanel(userCriteria.getPrenom(),
+
+					DateUtils.getAge(userCriteria.getDateNaissance()),
+
+					userCriteria.getIdCantons().iterator().next(),
+
+					Long.toString(userCriteria.getIdUser()),
+
+					userCriteria.getPhotoPrincipaleFileName());
+					userPanel.getMessageImage().addClickHandler(new PremierContactHandler(dispatcher, userCriteria.getIdUser()));
 					t.setWidget(row, col, userPanel);
 					col++;
 					if ((col) % 2 == 0) {

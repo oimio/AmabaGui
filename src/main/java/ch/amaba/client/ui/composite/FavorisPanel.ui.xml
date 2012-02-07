@@ -6,21 +6,23 @@
 
 	<ui:style>
 		.border {
-			border: 1px solid blue;
+			border: 1px solid gray;
 			spacing: 2;
+			width: 110px;
+			height:85px;
 		}
 	</ui:style>
 	<g:VerticalPanel verticalAlignment="top" spacing="2"
 		styleName='{style.border}'>
-		<g:HTMLPanel>
-			<table cellpadding='0' cellspacing='0'>
+		<g:HTMLPanel height="100%">
+			<table cellpadding='0' cellspacing='0' width='100%' height='100%'>
 				<tr>
 					<td>
-						<c:MyImage ui:field="image" />
+						<c:MyImage ui:field="photo" />
 					</td>
 					<td>
-						<g:VerticalPanel horizontalAlignment="right" spacing='1'>
-							<g:HorizontalPanel spacing='4'>
+						<g:VerticalPanel horizontalAlignment="right" spacing='1' width="100%">
+							<g:HorizontalPanel spacing='2' horizontalAlignment='right' width="100%">
 								<g:Image url='images/courrier.png' styleName="cursor"
 									ui:field="messageImage" title='Envoyer un message privé' />
 								<g:Image url='images/close_small.png' styleName="cursor"
@@ -31,8 +33,8 @@
 						</g:VerticalPanel>
 					</td>
 				</tr>
-				<tr>
-					<td colspan='2'>
+				<tr valign='bottom'>
+					<td colspan='2' align='left'>
 						<g:Label ui:field="prenomLabel" />
 					</td>
 				</tr>

@@ -22,12 +22,17 @@ import ch.amaba.client.ui.composite.AgePanel;
 import ch.amaba.client.ui.composite.CantonsListBoxPanel;
 import ch.amaba.client.ui.composite.ChoixMultiplePanel;
 import ch.amaba.client.utils.ListBoxUtils;
+import ch.amaba.model.bo.CoquinCriteria;
+import ch.amaba.model.bo.PhysiqueCriteria;
 import ch.amaba.model.bo.ProfileCriteria;
 import ch.amaba.model.bo.UserCriteria;
 import ch.amaba.model.bo.constants.TypeCaractereEnum;
+import ch.amaba.model.bo.constants.TypeCouleurCheveux;
+import ch.amaba.model.bo.constants.TypeCouleurYeux;
 import ch.amaba.model.bo.constants.TypeInteretEnum;
 import ch.amaba.model.bo.constants.TypeMusiqueEnum;
 import ch.amaba.model.bo.constants.TypeProfessionEnum;
+import ch.amaba.model.bo.constants.TypeRaceEnum;
 import ch.amaba.model.bo.constants.TypeReligionEnum;
 import ch.amaba.model.bo.constants.TypeSexeEnum;
 import ch.amaba.model.bo.constants.TypeSportEnum;
@@ -75,6 +80,25 @@ public class RechercheDetailleeView extends ViewImpl implements MyView {
 	@UiField
 	ListBox marieListBox;
 
+	@UiField
+	ListBox celibataireListBox;
+
+	@UiField
+	ListBox divorceListBox;
+
+	@UiField
+	ListBox veufListBox;
+
+	@UiField
+	ListBox unSoirListBox;
+
+	@UiField
+	ListBox partouzeListBox;
+	@UiField
+	ListBox echangisteListBox;
+	@UiField
+	ListBox adultereListBox;
+
 	@UiField(provided = true)
 	ChoixMultiplePanel interetPanel;
 
@@ -93,6 +117,25 @@ public class RechercheDetailleeView extends ViewImpl implements MyView {
 	@UiField(provided = true)
 	ChoixMultiplePanel professionPanel;
 
+	@UiField(provided = true)
+	ChoixMultiplePanel couleurCheveuxPanel;
+
+	@UiField(provided = true)
+	ChoixMultiplePanel couleurYeuxPanel;
+
+	@UiField(provided = true)
+	ChoixMultiplePanel racePanel;
+
+	@UiField
+	ListBox tailleMin;
+	@UiField
+	ListBox tailleMax;
+
+	@UiField
+	ListBox poidsMin;
+	@UiField
+	ListBox poidsMax;
+
 	private static RechercheDetailleeViewUiBinder uiBinder = GWT.create(RechercheDetailleeViewUiBinder.class);
 	private final MultiWordSuggestOracle mySuggestions = new MultiWordSuggestOracle();
 	private final Widget widget;
@@ -104,6 +147,11 @@ public class RechercheDetailleeView extends ViewImpl implements MyView {
 		religionPanel = new ChoixMultiplePanel(TypeReligionEnum.class, IConstants.ENUM_TYPE_RELIGION, "Religion");
 		sportPanel = new ChoixMultiplePanel(TypeSportEnum.class, IConstants.ENUM_TYPE_SPORT, "Sport");
 		caracterePanel = new ChoixMultiplePanel(TypeCaractereEnum.class, IConstants.ENUM_TYPE_CARACTERE, "Caractère");
+
+		couleurCheveuxPanel = new ChoixMultiplePanel(TypeCouleurCheveux.class, IConstants.ENUM_TYPE_COULEUR_CHEVEUX, "Couleur cheveux");
+		couleurYeuxPanel = new ChoixMultiplePanel(TypeCouleurYeux.class, IConstants.ENUM_TYPE_COULEUR_YEUX, "Couleur yeux");
+
+		racePanel = new ChoixMultiplePanel(TypeRaceEnum.class, IConstants.ENUM_TYPE_RACE, "Type");
 
 		// Provided : constructeur dans la classe avec init des datas.
 		// suggestBox = new SuggestBox(mySuggestions);
@@ -144,11 +192,38 @@ public class RechercheDetailleeView extends ViewImpl implements MyView {
 		userCriteria.setIdCantons(ListBoxUtils.getValues(cantonsListBoxPanel.getCantonsListBox()));
 		// Profile
 		final ProfileCriteria profileCriteria = new ProfileCriteria();
-		profileCriteria.setGenre(Short.valueOf(genreListBox.getValue(genreListBox.getSelectedIndex())));
+		profileCriteria.setGenre(genreListBox.getSelectedIndex() == 0 ? null : Short.valueOf(genreListBox.getValue(genreListBox.getSelectedIndex())));
 		profileCriteria.setMarie(marieListBox.getSelectedIndex() == 0 ? null : Short.valueOf(marieListBox.getValue(marieListBox.getSelectedIndex())));
+		profileCriteria.setMarie(celibataireListBox.getSelectedIndex() == 0 ? null : Short.valueOf(celibataireListBox.getValue(celibataireListBox
+		    .getSelectedIndex())));
+		profileCriteria.setMarie(divorceListBox.getSelectedIndex() == 0 ? null : Short.valueOf(divorceListBox.getValue(divorceListBox.getSelectedIndex())));
+		profileCriteria.setMarie(veufListBox.getSelectedIndex() == 0 ? null : Short.valueOf(veufListBox.getValue(veufListBox.getSelectedIndex())));
 		userCriteria.setProfileCriteria(profileCriteria);
-		// Interet - sport - music - religion - profession
-		userCriteria.setIdInterets(interetPanel.getValues());
+		// Physique
+		PhysiqueCriteria physiqueCriteria = null;
+		if ((poidsMin.getSelectedIndex() != 0) || (poidsMax.getSelectedIndex() != 0) || (tailleMin.getSelectedIndex() != 0) || (tailleMax.getSelectedIndex() != 0)
+		    || !couleurCheveuxPanel.getValues().isEmpty() || !couleurYeuxPanel.getValues().isEmpty() || !racePanel.getValues().isEmpty()) {
+			physiqueCriteria = new PhysiqueCriteria();
+			physiqueCriteria.setPoidsMin(poidsMin.getSelectedIndex() == 0 ? null : Integer.valueOf(poidsMin.getValue(poidsMin.getSelectedIndex())));
+			physiqueCriteria.setPoidsMax(poidsMax.getSelectedIndex() == 0 ? null : Integer.valueOf(poidsMax.getValue(poidsMax.getSelectedIndex())));
+			physiqueCriteria.setTailleMin(tailleMin.getSelectedIndex() == 0 ? null : Integer.valueOf(tailleMin.getValue(tailleMin.getSelectedIndex())));
+			physiqueCriteria.setTailleMax(tailleMax.getSelectedIndex() == 0 ? null : Integer.valueOf(tailleMax.getValue(tailleMax.getSelectedIndex())));
+			physiqueCriteria.setCouleurCheveux(couleurCheveuxPanel.getValues());
+			physiqueCriteria.setCouleurYeux(couleurYeuxPanel.getValues());
+			physiqueCriteria.setRace(racePanel.getValues());
+			userCriteria.setPhysiqueCriteria(physiqueCriteria);
+		}
+		// Coquin
+		CoquinCriteria coquinCriteria = null;
+		if ((partouzeListBox.getSelectedIndex() != 0) || (echangisteListBox.getSelectedIndex() != 0) || (adultereListBox.getSelectedIndex() != 0)
+		    || (unSoirListBox.getSelectedIndex() != 0)) {
+			coquinCriteria = new CoquinCriteria();
+			coquinCriteria.setAdultere(adultereListBox.getSelectedIndex() == 0 ? null : Short.valueOf(Integer.toString(adultereListBox.getSelectedIndex())));
+			coquinCriteria.setPartouze(partouzeListBox.getSelectedIndex() == 0 ? null : Short.valueOf(Integer.toString(partouzeListBox.getSelectedIndex())));
+			coquinCriteria.setEchangiste(echangisteListBox.getSelectedIndex() == 0 ? null : Short.valueOf(Integer.toString(echangisteListBox.getSelectedIndex())));
+			coquinCriteria.setUnSoir(unSoirListBox.getSelectedIndex() == 0 ? null : Short.valueOf(Integer.toString(unSoirListBox.getSelectedIndex())));
+			userCriteria.setCoquinCriteria(coquinCriteria);
+		}
 		userCriteria.setIdSports(sportPanel.getValues());
 		userCriteria.setIdProfessions(professionPanel.getValues());
 		userCriteria.setIdReligions(religionPanel.getValues());
@@ -185,6 +260,11 @@ public class RechercheDetailleeView extends ViewImpl implements MyView {
 	@Override
 	public ListBox getCaractereListBox() {
 		return caracterePanel.getListBoxPanel().getListBox();
+	}
+
+	@Override
+	public ListBox getRaceListBox() {
+		return racePanel.getListBoxPanel().getListBox();
 	}
 
 }

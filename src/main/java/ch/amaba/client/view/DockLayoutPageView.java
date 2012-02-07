@@ -40,7 +40,14 @@ public class DockLayoutPageView extends ViewImpl implements DockLayoutPagePresen
 	Label confidentialiteLabel;
 
 	@UiField
-	Label messagesLabel;
+	Label messagesRecusLabel;
+	@UiField
+	Label messagesEnvoyesLabel;
+	@UiField
+	Label messagesSupprimesLabel;
+
+	@UiField
+	Label messagesNouveauxLabel;
 
 	@UiField
 	Label bodyLabel;
@@ -121,7 +128,22 @@ public class DockLayoutPageView extends ViewImpl implements DockLayoutPagePresen
 	}
 
 	@Override
-	public Label getMessagesLabel() {
-		return messagesLabel;
+	public Label getMessagesRecusLabel() {
+		return messagesRecusLabel;
+	}
+
+	@Override
+	public Label getMessagesEnvoyesLabel() {
+		return messagesEnvoyesLabel;
+	}
+
+	@Override
+	public Label getMessagesSupprimesLabel() {
+		return messagesSupprimesLabel;
+	}
+
+	@Override
+	public Label getMessagesNouveauxLabel() {
+		return messagesNouveauxLabel;
 	}
 }

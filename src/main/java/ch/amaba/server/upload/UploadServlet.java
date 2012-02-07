@@ -20,8 +20,8 @@ import org.apache.commons.fileupload.util.Streams;
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.HttpSessionRequiredException;
 
+import ch.amaba.model.bo.exception.HttpSessionRequiredException;
 import ch.amaba.server.utils.ImageUtils;
 import ch.amaba.server.utils.SessionUtils;
 import ch.amaba.server.utils.SpringFactory;
@@ -41,7 +41,7 @@ public final class UploadServlet extends HttpServlet {
 	protected void doPost(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {
 		try {
 			uploadFile(request);
-		} catch (final FileUploadException fue) {
+		} catch (final Exception fue) {
 			throw new ServletException(fue);
 		}
 	}

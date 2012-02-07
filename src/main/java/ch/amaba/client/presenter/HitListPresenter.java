@@ -4,19 +4,15 @@ import java.util.Set;
 
 import ch.amaba.client.NameTokens;
 import ch.amaba.client.context.ContextUI;
+import ch.amaba.client.presenter.handler.PremierContactHandler;
 import ch.amaba.client.ui.composite.ProfilPanel;
 import ch.amaba.client.utils.CantonUtils;
 import ch.amaba.client.utils.DateUtils;
 import ch.amaba.model.bo.UserCriteria;
-import ch.amaba.shared.AjouterFavorisAction;
-import ch.amaba.shared.AjouterFavorisResult;
 
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.shared.EventBus;
-import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.FlexTable;
+import com.google.gwt.user.client.ui.Label;
 import com.google.inject.Inject;
 import com.gwtplatform.dispatch.shared.DispatchAsync;
 import com.gwtplatform.mvp.client.Presenter;
@@ -59,37 +55,30 @@ public class HitListPresenter extends Presenter<HitListPresenter.MyView, HitList
 
 	@Override
 	protected void onBind() {
+		System.out.println(this.getClass().getName() + " onBind(...) ");
 		super.onBind();
+
+	}
+
+	@Override
+	protected void onReset() {
+		super.onReset();
+		System.out.println("onReset(...) " + this.getClass().getName());
 		/** Le résultat de la recherche. */
 		final Set<UserCriteria> searchResult = ContextUI.get().getSearchResult();
+		final FlexTable table = getView().getHitListFlowPanel();
+		table.clear();
 		if ((searchResult != null) && !searchResult.isEmpty()) {
-			final FlexTable table = getView().getHitListFlowPanel();
 			int row = 0;
 			int col = 0;
 			for (final UserCriteria userCriteria : searchResult) {
 				final ProfilPanel pp = new ProfilPanel();
-				pp.getImage().setUrl("images/012.jpg");
+				pp.getImage().setUrl("amaba/download?id=" + userCriteria.getIdUser() + "&file=_" + userCriteria.getPhotoPrincipaleFileName());
 				pp.getPrenom().setText(userCriteria.getPrenom());
 				pp.getAge().setText(DateUtils.getAge(userCriteria.getDateNaissance()) + " ans");
 				pp.getCanton().setText(CantonUtils.getCantonTraduction(userCriteria.getIdCantons()));
-				pp.getAjouterImage().addClickHandler(new ClickHandler() {
-					@Override
-					public void onClick(ClickEvent event) {
-						dispatcher.execute(new AjouterFavorisAction(userCriteria.getIdUser()), new AsyncCallback<AjouterFavorisResult>() {
-
-							@Override
-							public void onFailure(Throwable caught) {
-								Window.alert(caught.getMessage());
-							}
-
-							@Override
-							public void onSuccess(AjouterFavorisResult result) {
-								Window.alert("Vous pourrez d�sormais retrouver facilement ce profil dans votre liste de favoris.");
-							}
-						});
-
-					}
-				});
+				pp.getAjouterImage().addClickHandler(new PremierContactHandler(dispatcher, userCriteria.getIdUser()));
+				pp.getMessagePriveImage().addClickHandler(new PremierContactHandler(dispatcher, userCriteria.getIdUser()));
 
 				table.setWidget(row, col, pp);
 				col++;
@@ -98,13 +87,9 @@ public class HitListPresenter extends Presenter<HitListPresenter.MyView, HitList
 					col = 0;
 				}
 			}
+		} else {
+			table.setWidget(0, 0, new Label("Aucune personne ne correspond à vos recherches : supprimez des filtres de recherches"));
 		}
-	}
-
-	@Override
-	protected void onReset() {
-		super.onReset();
-
 	}
 
 	@Override

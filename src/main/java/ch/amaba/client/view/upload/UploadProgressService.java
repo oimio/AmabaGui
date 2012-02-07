@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Set;
 
 import ch.amaba.model.bo.PhotoDTO;
+import ch.amaba.model.bo.exception.EntityNotFoundException;
+import ch.amaba.model.bo.exception.HttpSessionRequiredException;
 import ch.amaba.shared.upload.Event;
 
 import com.google.gwt.user.client.rpc.RemoteService;
@@ -19,4 +21,8 @@ public interface UploadProgressService extends RemoteService {
 	Set<PhotoDTO> readFiles(int page, int pageSize);
 
 	List<Event> getEvents();
+
+	Long supprimerPhoto(Long idPhoto) throws EntityNotFoundException;
+
+	Set<PhotoDTO> flagPhotoAsPrincipale(Long idPhoto) throws HttpSessionRequiredException;
 }

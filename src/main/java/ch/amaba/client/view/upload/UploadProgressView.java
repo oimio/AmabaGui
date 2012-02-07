@@ -16,13 +16,13 @@ public final class UploadProgressView extends Composite {
 	FileSubmit fileSubmit;
 	@UiField
 	UploadProgress uploadProgress;
-	@UiField
-	FileList fileList;
+	@UiField(provided = true)
+	PhotoListPanel fileList;
 	@UiField
 	Paging paging;
 
 	public UploadProgressView() {
-
+		fileList = PhotoListPanel.get();
 		initWidget(UploadProgressView.uiBinder.createAndBindUi(this));
 
 	}

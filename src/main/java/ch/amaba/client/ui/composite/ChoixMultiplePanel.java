@@ -1,6 +1,9 @@
 package ch.amaba.client.ui.composite;
 
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 import ch.amaba.client.IConstants;
@@ -34,7 +37,7 @@ public class ChoixMultiplePanel extends Composite {
 	@UiField
 	VerticalPanel selectionHorizontalPanel;
 
-	private final Set<MySettingPanel> settings = new HashSet<MySettingPanel>();
+	private final Map<String, MySettingPanel> settings = new HashMap<String, MySettingPanel>();
 
 	public ChoixMultiplePanel(Class<? extends Enum<?>> enumClass, String type, String headerText) {
 		initWidget(ChoixMultiplePanel.uiBinder.createAndBindUi(this));
@@ -52,7 +55,9 @@ public class ChoixMultiplePanel extends Composite {
 				} else {
 					final String text = listBox.getItemText(listBox.getSelectedIndex());
 					final String value = listBox.getValue(listBox.getSelectedIndex());
-					ajouterPreference(text, value);
+					if ((value != null) && !IConstants.AUCUNE_SELECTION.equals(value)) {
+						ajouterPreference(text, value);
+					}
 				}
 			}
 		});
@@ -62,19 +67,20 @@ public class ChoixMultiplePanel extends Composite {
 	 * Ajout une nouvelle préférence dans la liste (un sport, un intérêt, une
 	 * religion, etc...)
 	 */
-	public void ajouterPreference(final String text, String id) {
-		final MySettingPanel msp = new MySettingPanel(text, id);
-		msp.getFermerImage().addClickHandler(new ClickHandler() {
+	public void ajouterPreference(final String text, final String id) {
+		if (settings.get(id + text) == null) {
 
-			@Override
-			public void onClick(ClickEvent event) {
-				if (settings.remove(msp)) {
-					getSelectionHorizontalPanel().remove(msp);
+			final MySettingPanel msp = new MySettingPanel(text, id);
+			msp.getFermerImage().addClickHandler(new ClickHandler() {
+
+				@Override
+				public void onClick(ClickEvent event) {
+					if (settings.remove(id + text) != null) {
+						getSelectionHorizontalPanel().remove(msp);
+					}
 				}
-			}
-		});
-		if (!settings.contains(msp)) {
-			settings.add(msp);
+			});
+			settings.put(id + text, msp);
 			getSelectionHorizontalPanel().add(msp);
 		}
 	}
@@ -92,7 +98,8 @@ public class ChoixMultiplePanel extends Composite {
 	 * */
 	public Set<Integer> getValues() {
 		final Set<Integer> values = new HashSet<Integer>();
-		for (final MySettingPanel panel : settings) {
+		final Collection<MySettingPanel> selection = settings.values();
+		for (final MySettingPanel panel : selection) {
 			values.add(panel.getId());
 		}
 		return values;

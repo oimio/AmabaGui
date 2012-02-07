@@ -9,4 +9,13 @@ public interface IMyCss extends CssResource {
 	public String menu();
 
 	public String menuHeader();
+
+	/** Tableau des messages */
+	public String messageRow();
+
+	public String messageRowCheckBox();
+
+	public String messageRowDate();
+
+	public String messageRowFrom();
 }

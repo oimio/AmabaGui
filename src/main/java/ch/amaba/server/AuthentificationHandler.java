@@ -24,6 +24,9 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.commons.lang.SerializationUtils;
 
 import ch.amaba.model.bo.UserCriteria;
+import ch.amaba.model.bo.exception.CompteBloqueException;
+import ch.amaba.model.bo.exception.CompteNonValideException;
+import ch.amaba.model.bo.exception.EmailNonValideException;
 import ch.amaba.model.bo.exception.LoginFailedException;
 import ch.amaba.server.utils.SpringFactory;
 import ch.amaba.shared.AuthentificationAction;
@@ -47,8 +50,9 @@ public class AuthentificationHandler extends AbstractHandler implements ActionHa
 
 	@Override
 	public AuthentificationResult execute(AuthentificationAction request, ExecutionContext context) throws ActionException {
-		final UserCriteria userCriteria;
+		UserCriteria userCriteria = null;
 		try {
+			// Retourne un user incomplet par sécurité (sans email, password, etc..)
 			userCriteria = SpringFactory.get().getDao().authentification(request.getEmail(), request.getPassword());
 			// Création du répertoire du user
 			final File file = new File("d:/data" + File.separator + userCriteria.getIdUser());
@@ -63,8 +67,16 @@ public class AuthentificationHandler extends AbstractHandler implements ActionHa
 			// sensibles
 			userCriteria.setPassword(null);
 			userCriteria.setEmail(null);
+			SpringFactory.get().getDao().saveUserConnection(complet.getIdUser(), getRequestProvider().get().getRemoteAddr());
 		} catch (final LoginFailedException e) {
-			throw new ActionException(e);
+			throw new ActionException("Email ou mot de passe incorrecte.");
+		} catch (final EmailNonValideException e) {
+			throw new ActionException(
+			    "Vous n'avez pas encore validé votre email : cliquez sur le lien contenu dans l'email que nous vous avons envoyé lors de votre inscription.");
+		} catch (final CompteBloqueException e) {
+			throw new ActionException("Votre compte a été bloqué.");
+		} catch (final CompteNonValideException e) {
+			throw new ActionException("Votre compte est en attente de validation par nos services. Vous recevrez sous moins de 48H une notification.");
 		}
 		return new AuthentificationResult(userCriteria);
 	}

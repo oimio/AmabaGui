@@ -36,7 +36,7 @@ public class CantonUtils<T> {
 		final Map<String, Map<String, String>> traductions = CacheUtils.getTraductions();
 		final Map<String, String> map = traductions.get(type);
 
-		cantonsListBox.addItem("-- - --", "-1");
+		cantonsListBox.addItem("Tous", "-1");
 		for (final CantonDTO cantonDTO : cantons) {
 			final String traduction = map.get(cantonDTO.getCodeCanton());
 			cantonsListBox.addItem(traduction + " (" + cantonDTO.getCodeCanton() + ")", Long.toString(cantonDTO.getBusinessObjectId()));

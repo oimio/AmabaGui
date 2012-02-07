@@ -25,13 +25,13 @@
 				<tr>
 					<td colspan='2'>
 						<g:TextBox text="Email" ui:field="emailAuthTextBox"
-							maxLength="55" width="150px"></g:TextBox>
+							maxLength="55" width="180px"></g:TextBox>
 					</td>
 				</tr>
 				<tr align='left'>
 					<td width='170px'>
 						<g:PasswordTextBox text="Password" ui:field="passwordAuthTextBox"
-							width="150px">123</g:PasswordTextBox>
+							width="180px">123</g:PasswordTextBox>
 					</td>
 					<td>
 						<g:Button text="Connection" width="100px" ui:field="sendButton" />

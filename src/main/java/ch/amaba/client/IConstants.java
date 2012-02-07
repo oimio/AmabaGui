@@ -25,6 +25,13 @@ public interface IConstants {
 
 	public static final String ENUM_TYPE_CANTON = "CANTON";
 
+	public static final String ENUM_TYPE_COULEUR_YEUX = "COUL_YEUX";
+
+	public static final String ENUM_TYPE_COULEUR_CHEVEUX = "COUL_CHEVX";
+
+	public static final String ENUM_TYPE_RACE = "RACE";
+
 	/** Technique */
 	public static final String CHOIX_MULTIPLE_WIDTH = "180px";
+
 }
