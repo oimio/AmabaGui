@@ -46,7 +46,7 @@
 		</g:north>
 		<g:center size='200'>
 			<g:VerticalPanel styleName='{style.borderGreen}'
-				width='100%' height='100%' ui:field="bodyPanel">
+				width='100%' height='100%' ui:field="bodyPanel" verticalAlignment="top">
 				<g:Label ui:field="bodyLabel" styleName='{style.border}'>Body</g:Label>
 			</g:VerticalPanel>
 		</g:center>
@@ -62,7 +62,7 @@
 					<g:StackLayoutPanel unit='PX' animationDuration="0">
 						<g:stack>
 							<g:customHeader size='25'>
-								<g:Label styleName='{css.getCss.menuHeader}'>Recherche</g:Label>
+								<g:Label >Recherche</g:Label>
 							</g:customHeader>
 							<g:VerticalPanel width="100%">
 								<g:Label ui:field="rechercheDetaillee" styleName='{css.getCss.menu}'>Recherche

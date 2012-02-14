@@ -22,10 +22,17 @@ package ch.amaba.client.ui;
 import java.util.List;
 
 import ch.amaba.client.presenter.LoginPagePresenter;
+import ch.amaba.client.utils.NumberUtils;
+import ch.amaba.client.utils.StringUtils;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.BlurEvent;
+import com.google.gwt.event.dom.client.KeyCodes;
+import com.google.gwt.event.dom.client.KeyDownEvent;
+import com.google.gwt.event.dom.client.KeyUpEvent;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.HTMLPanel;
@@ -226,5 +233,34 @@ public class LoginPageView extends ViewImpl implements LoginPagePresenter.MyView
 	@Override
 	public PasswordTextBox getPasswordAuthTextBox() {
 		return passwordAuthTextBox;
+	}
+
+	@UiHandler("jourTextBox")
+	void handle(BlurEvent e) {
+		final String text = jourTextBox.getText();
+		if (!StringUtils.isBlank(text) && NumberUtils.isInteger(text)) {
+			if (text.length() == 1) {
+				jourTextBox.setText(new StringBuffer("0").append(text).toString());
+			}
+		}
+	}
+
+	@UiHandler("jourTextBox")
+	void handle(KeyDownEvent e) {
+		final int nativeKeyCode = e.getNativeKeyCode();
+		if (((nativeKeyCode < 96) || (nativeKeyCode > 108)) && (nativeKeyCode != KeyCodes.KEY_TAB) && (nativeKeyCode != KeyCodes.KEY_DELETE)
+		    && (nativeKeyCode != KeyCodes.KEY_BACKSPACE) && (nativeKeyCode != KeyCodes.KEY_LEFT) && (nativeKeyCode != KeyCodes.KEY_RIGHT)
+		    && (nativeKeyCode != KeyCodes.KEY_HOME)) {
+			e.preventDefault();
+			e.stopPropagation();
+		}
+	}
+
+	@UiHandler("jourTextBox")
+	void handle(KeyUpEvent e) {
+		if ((e.getNativeKeyCode() != KeyCodes.KEY_TAB) && (e.getNativeKeyCode() != KeyCodes.KEY_SHIFT) && (e.getNativeKeyCode() != KeyCodes.KEY_LEFT)
+		    && (e.getNativeKeyCode() != KeyCodes.KEY_RIGHT)) {
+			moisTextBox.setFocus(jourTextBox.getText().length() == 2);
+		}
 	}
 }

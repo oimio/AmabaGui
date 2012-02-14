@@ -8,6 +8,7 @@ import java.util.List;
 
 import ch.amaba.client.IConstants;
 import ch.amaba.client.presenter.LoginPagePresenter;
+import ch.amaba.client.utils.DateUtils;
 import ch.amaba.client.utils.StringUtils;
 import ch.amaba.model.bo.UserCriteria;
 import ch.amaba.shared.DevenirMembreAction;
@@ -81,11 +82,22 @@ public class DevenirMembre {
 		if (IConstants.AUCUNE_SELECTION.equals(cantonId)) {
 			errorMessages.add("Le nom est obligatoire.");
 		}
+		DateTimeFormat df = DateTimeFormat.getFormat("ddMMyyyy HH:mm:ss");
+		df = DateTimeFormat.getFormat("yyyy-MM-dd");
+		Date dateNaissance = null;
+		try {
+			dateNaissance = df.parse(annee + "-" + mois + "-" + jour);
+			if (DateUtils.getAge(dateNaissance) < 18) {
+				errorMessages.add("Vous devez être majeur - avoir au moins 18 ans - pour vous inscrire.");
+			}
+		} catch (final Exception e) {
+			errorMessages.add("La date de naissance est incorecte.");
+		}
 		view.getErrorPanel().setVisible(!errorMessages.isEmpty());
 		view.setError(errorMessages);
 		if (errorMessages.isEmpty()) {
 			final UserCriteria criteria = new UserCriteria();
-			DateTimeFormat df = DateTimeFormat.getFormat("ddMMyyyy HH:mm:ss");
+
 			criteria.setEmail(email + df.format(new Date()));
 			criteria.setNom(nom);
 			criteria.setPrenom(prenom);
@@ -93,17 +105,17 @@ public class DevenirMembre {
 			criteria.setIdCantons(new HashSet<Integer>(Arrays.asList(1)));
 			criteria.setPassword(password);
 
-			df = DateTimeFormat.getFormat("yyyy-MM-dd");
-			final Date parse = df.parse(annee + "-" + mois + "-" + jour);
-			criteria.setDateNaissance(parse);
+			criteria.setDateNaissance(dateNaissance);
 
 			dispatcher.execute(new DevenirMembreAction(criteria), new AsyncCallback<DevenirMembreResult>() {
 
+				@Override
 				public void onFailure(Throwable caught) {
 					// view.setServerResponse("An error occured: " +
 					caught.getMessage();
 				}
 
+				@Override
 				public void onSuccess(DevenirMembreResult result) {
 					Window.alert("Pour valider votre inscription, merci de consulter votre boite mail et de cliquer sur le lien d'activation.");
 				}

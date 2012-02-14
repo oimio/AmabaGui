@@ -8,18 +8,27 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.FlexTable;
+import com.google.gwt.user.client.ui.HTMLPanel;
+import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.Widget;
 import com.gwtplatform.mvp.client.ViewImpl;
 
 /**
+ * Vue des messages (nouveaux, recus, envoyes et supprimes) :<br>
+ * <ul>
+ * <li>- header</li>
+ * <li>- panel de la liste des lessages</li>
+ * <li>- panel contenant le text d'un message</li>
+ * </ul>
+ * 
  * @author ROG
  */
 public class MessagesView extends ViewImpl implements MessagesPresenter.MyView {
 
-	interface ConfidentialiteViewUiBinder extends UiBinder<Widget, MessagesView> {
+	interface MessagesViewUiBinder extends UiBinder<Widget, MessagesView> {
 	}
 
-	private static ConfidentialiteViewUiBinder uiBinder = GWT.create(ConfidentialiteViewUiBinder.class);
+	private static MessagesViewUiBinder uiBinder = GWT.create(MessagesViewUiBinder.class);
 
 	public Widget widget;
 	@UiField
@@ -27,6 +36,15 @@ public class MessagesView extends ViewImpl implements MessagesPresenter.MyView {
 
 	@UiField
 	Button supprimerButton;
+
+	@UiField
+	HTMLPanel messageTextPanel;
+
+	@UiField
+	Label messageDate;
+
+	@UiField
+	Label messageText;
 
 	public MessagesView() {
 		widget = MessagesView.uiBinder.createAndBindUi(this);
@@ -56,8 +74,27 @@ public class MessagesView extends ViewImpl implements MessagesPresenter.MyView {
 		return messagesTable;
 	}
 
+	@Override
 	public Button getSupprimerButton() {
 		return supprimerButton;
 	}
 
+	@Override
+	public HTMLPanel getMessageTextPanel() {
+		return messageTextPanel;
+	}
+
+	public Widget getWidget() {
+		return widget;
+	}
+
+	@Override
+	public Label getMessageDate() {
+		return messageDate;
+	}
+
+	@Override
+	public Label getMessageText() {
+		return messageText;
+	}
 }

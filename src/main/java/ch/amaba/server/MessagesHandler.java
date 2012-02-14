@@ -29,9 +29,9 @@ public class MessagesHandler extends AbstractHandler implements ActionHandler<Me
 	@Override
 	public MessagesResult execute(MessagesAction action, ExecutionContext context) throws ActionException {
 
-		final Set<MessageDTO> messagesEnvoyes = SpringFactory.get().getDao().getMessages(getUserCriteriaSession().getIdUser(), action.getMessageAction());
+		final Set<MessageDTO> messages = SpringFactory.get().getDao().getMessages(getUserCriteriaSession().getIdUser(), action.getMessageAction());
 
-		return new MessagesResult(messagesEnvoyes);
+		return new MessagesResult(messages);
 	}
 
 	@Override

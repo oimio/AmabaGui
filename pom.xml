@@ -21,17 +21,21 @@
 					<webXml>war\WEB-INF\web.xml</webXml>
 				</configuration>
 			</plugin>
-			<!-- <plugin> -->
-			<!-- <groupId>org.codehaus.mojo</groupId> -->
-			<!-- <artifactId>gwt-maven-plugin</artifactId> -->
-			<!-- <configuration> -->
-			<!-- <server>com.google.appengine.tools.development.gwt.AppEngineLauncher</server> -->
-			<!-- <hostedWebapp>${webappDirectory}</hostedWebapp> -->
-			<!-- <copyWebapp>true</copyWebapp> -->
-			<!-- <runTarget>Amaba.html</runTarget> -->
-			<!-- <module>ch.amaba.Amaba</module> -->
-			<!-- </configuration> -->
-			<!-- </plugin> -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>gwt-maven-plugin</artifactId>
+				<version>2.4.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<runTarget>com.mycompany.gwt.Module/Module.html</runTarget>
+				</configuration>
+			</plugin>
 		</plugins>
 		<outputDirectory>src/main/webapp/WEB-INF/classes</outputDirectory>
 		<sourceDirectory>src/main/java</sourceDirectory>
@@ -87,7 +91,16 @@
 	</properties>
 
 	<dependencies>
-		<!-- Google Web Toolkit dependencies -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>jaf</groupId>
+			<artifactId>activation</artifactId>
+			<version>1.0.2</version>
+		</dependency>
 		<dependency>
 			<groupId>com.google.gwt</groupId>
 			<artifactId>gwt-user</artifactId>
@@ -260,12 +273,6 @@
 			<classifier>sources</classifier>
 		</dependency>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.2</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
 			<groupId>commons-fileupload</groupId>
 			<artifactId>commons-fileupload</artifactId>
 			<version>1.2.2</version>
@@ -276,6 +283,14 @@
 			<version>1.5.3</version>
 		</dependency>
 
+
+
+		<!-- <dependency> -->
+		<!-- <groupId>junit</groupId> -->
+		<!-- <artifactId>junit</artifactId> -->
+		<!-- <version>4.9</version> -->
+		<!-- <scope>test</scope> -->
+		<!-- </dependency> -->
 	</dependencies>
 	<reporting>
 		<plugins>

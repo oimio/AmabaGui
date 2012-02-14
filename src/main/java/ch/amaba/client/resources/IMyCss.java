@@ -18,4 +18,10 @@ public interface IMyCss extends CssResource {
 	public String messageRowDate();
 
 	public String messageRowFrom();
+
+	public String messageText();
+
+	public String messageDate();
+
+	public String messageTextPanel();
 }

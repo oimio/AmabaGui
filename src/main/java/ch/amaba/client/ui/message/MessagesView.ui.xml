@@ -13,10 +13,24 @@
 			padding: 2px;
 		}
 	</ui:style>
+	<ui:with type="ch.amaba.client.utils.CssUtils" field="css" />
+
 	<g:VerticalPanel width="100%">
 		<g:HorizontalPanel>
-			<g:Button text="Supprimer messages" ui:field="supprimerButton"/>
+			<g:Button text="Supprimer messages" ui:field="supprimerButton" />
 		</g:HorizontalPanel>
-		<g:FlexTable ui:field="messagesTable" width="100%"/>
+		<g:ScrollPanel height="250px" width="100%">
+			<g:FlexTable ui:field="messagesTable" width="100%" />
+		</g:ScrollPanel>
+		<g:ScrollPanel height="150px" width="100%">
+			<g:HTMLPanel ui:field="messageTextPanel" styleName='{css.getCss.messageTextPanel}'
+				height="150px">
+				<g:VerticalPanel>
+					<g:Label ui:field="messageDate" styleName='{css.getCss.messageDate}' />
+					<g:Label ui:field="messageText" styleName='{css.getCss.messageText}'
+						width="100%" />
+				</g:VerticalPanel>
+			</g:HTMLPanel>
+		</g:ScrollPanel>
 	</g:VerticalPanel>
 </ui:UiBinder> 
