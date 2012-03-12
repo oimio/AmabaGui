@@ -29,9 +29,12 @@ import ch.amaba.client.utils.CantonUtils;
 import ch.amaba.client.utils.DateUtils;
 import ch.amaba.model.bo.UserCriteria;
 import ch.amaba.model.bo.constants.TypeCaractereEnum;
+import ch.amaba.model.bo.constants.TypeCouleurCheveux;
+import ch.amaba.model.bo.constants.TypeCouleurYeux;
 import ch.amaba.model.bo.constants.TypeInteretEnum;
 import ch.amaba.model.bo.constants.TypeMusiqueEnum;
 import ch.amaba.model.bo.constants.TypeProfessionEnum;
+import ch.amaba.model.bo.constants.TypeRaceEnum;
 import ch.amaba.model.bo.constants.TypeReligionEnum;
 import ch.amaba.model.bo.constants.TypeSportEnum;
 
@@ -50,12 +53,12 @@ import com.gwtplatform.mvp.client.ViewImpl;
 /**
  * @author ROG
  */
-public class ModifierDonneesPageView extends ViewImpl implements ModifierDonneesPagePresenter.MyView {
+public class ModifierDonneesView extends ViewImpl implements ModifierDonneesPagePresenter.MyView {
 
-	interface MainPageViewUiBinder extends UiBinder<Widget, ModifierDonneesPageView> {
+	interface ModifierDonneesViewUiBinder extends UiBinder<Widget, ModifierDonneesView> {
 	}
 
-	private static MainPageViewUiBinder uiBinder = GWT.create(MainPageViewUiBinder.class);
+	private static ModifierDonneesViewUiBinder uiBinder = GWT.create(ModifierDonneesViewUiBinder.class);
 
 	public Widget widget;
 
@@ -113,16 +116,28 @@ public class ModifierDonneesPageView extends ViewImpl implements ModifierDonnees
 	@UiField(provided = true)
 	ChoixMultiplePanel professionPanel;
 
+	@UiField(provided = true)
+	ChoixMultiplePanel couleurCheveuxPanel;
+
+	@UiField(provided = true)
+	ChoixMultiplePanel couleurYeuxPanel;
+
+	@UiField(provided = true)
+	ChoixMultiplePanel racePanel;
+
 	VerticalPanel errorPanel;
 
-	public ModifierDonneesPageView() {
+	public ModifierDonneesView() {
 		interetPanel = new ChoixMultiplePanel(TypeInteretEnum.class, IConstants.ENUM_TYPE_INTERET, "Intérêts");
 		musicPanel = new ChoixMultiplePanel(TypeMusiqueEnum.class, IConstants.ENUM_TYPE_MUSIC, "Musique");
 		professionPanel = new ChoixMultiplePanel(TypeProfessionEnum.class, IConstants.ENUM_TYPE_PROFESSION, "Profession");
 		religionPanel = new ChoixMultiplePanel(TypeReligionEnum.class, IConstants.ENUM_TYPE_RELIGION, "Religion");
 		sportPanel = new ChoixMultiplePanel(TypeSportEnum.class, IConstants.ENUM_TYPE_SPORT, "Sport");
 		caracterePanel = new ChoixMultiplePanel(TypeCaractereEnum.class, IConstants.ENUM_TYPE_CARACTERE, "Caractère");
-		widget = ModifierDonneesPageView.uiBinder.createAndBindUi(this);
+		couleurCheveuxPanel = new ChoixMultiplePanel(TypeCouleurCheveux.class, IConstants.ENUM_TYPE_COULEUR_CHEVEUX, "Couleur cheveux", 1, 1);
+		couleurYeuxPanel = new ChoixMultiplePanel(TypeCouleurYeux.class, IConstants.ENUM_TYPE_COULEUR_YEUX, "Couleur yeux", 1, 1);
+		racePanel = new ChoixMultiplePanel(TypeRaceEnum.class, IConstants.ENUM_TYPE_RACE, "Type", 1, 1);
+		widget = ModifierDonneesView.uiBinder.createAndBindUi(this);
 	}
 
 	@Override

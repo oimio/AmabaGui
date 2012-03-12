@@ -7,6 +7,7 @@ import ch.amaba.client.presenter.LoginPagePresenter;
 import ch.amaba.client.presenter.MesPhotosPresenter;
 import ch.amaba.client.presenter.MessagesPresenter;
 import ch.amaba.client.presenter.ModifierDonneesPagePresenter;
+import ch.amaba.client.presenter.ProfileDetaillePresenter;
 import ch.amaba.client.presenter.RechercheDetailleePagePresenter;
 import ch.amaba.client.presenter.ResponsePresenter;
 
@@ -52,5 +53,7 @@ public interface MyGinjector extends Ginjector {
 	Provider<MesPhotosPresenter> getMesPhotosPresenter();
 
 	Provider<MessagesPresenter> getMessagesPresenter();
+
+	Provider<ProfileDetaillePresenter> getProfileDetaillePresenter();
 
 }

@@ -8,6 +8,6 @@ public class MyVerticalPanel extends VerticalPanel {
 	public MyVerticalPanel() {
 		super();
 		setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
-		setWidth("135px");
+		// setWidth("135px");
 	}
 }

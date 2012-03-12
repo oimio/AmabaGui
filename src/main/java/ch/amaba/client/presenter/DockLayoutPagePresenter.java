@@ -2,7 +2,7 @@ package ch.amaba.client.presenter;
 
 import ch.amaba.client.NameTokens;
 import ch.amaba.client.context.ContextUI;
-import ch.amaba.client.presenter.handler.AfficherMessagesHandler;
+import ch.amaba.client.presenter.action.AfficherMessagesClickEvent;
 import ch.amaba.client.presenter.impl.AfficherFavoris;
 import ch.amaba.model.bo.constants.TypeMessageStatutEnum;
 import ch.amaba.shared.LoadFullUserAction;
@@ -16,11 +16,9 @@ import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.ScrollPanel;
 import com.google.inject.Inject;
 import com.gwtplatform.dispatch.shared.DispatchAsync;
 import com.gwtplatform.mvp.client.Presenter;
-import com.gwtplatform.mvp.client.View;
 import com.gwtplatform.mvp.client.annotations.ContentSlot;
 import com.gwtplatform.mvp.client.annotations.NameToken;
 import com.gwtplatform.mvp.client.annotations.ProxyStandard;
@@ -52,7 +50,7 @@ public class DockLayoutPagePresenter extends Presenter<DockLayoutPagePresenter.M
 	/**
 	 * {@link LoginPagePresenter}'s view.
 	 */
-	public interface MyView extends View {
+	public interface MyView extends IViewAmis {
 		Button getSendButton();
 
 		Label getRechercheDetaillee();
@@ -73,7 +71,6 @@ public class DockLayoutPagePresenter extends Presenter<DockLayoutPagePresenter.M
 
 		Label getConfidentialiteLabel();
 
-		ScrollPanel getFavorisPanel();
 	}
 
 	public static final String nameToken = "dock";
@@ -119,10 +116,10 @@ public class DockLayoutPagePresenter extends Presenter<DockLayoutPagePresenter.M
 			}
 		}));
 		// Messages
-		registerHandler(getView().getMessagesNouveauxLabel().addClickHandler(new AfficherMessagesHandler(placeManager, TypeMessageStatutEnum.NON_LU)));
-		registerHandler(getView().getMessagesRecusLabel().addClickHandler(new AfficherMessagesHandler(placeManager, TypeMessageStatutEnum.RECU)));
-		registerHandler(getView().getMessagesSupprimesLabel().addClickHandler(new AfficherMessagesHandler(placeManager, TypeMessageStatutEnum.SUPPRIME)));
-		registerHandler(getView().getMessagesEnvoyesLabel().addClickHandler(new AfficherMessagesHandler(placeManager, TypeMessageStatutEnum.ENVOYE)));
+		registerHandler(getView().getMessagesNouveauxLabel().addClickHandler(new AfficherMessagesClickEvent(placeManager, TypeMessageStatutEnum.NON_LU)));
+		registerHandler(getView().getMessagesRecusLabel().addClickHandler(new AfficherMessagesClickEvent(placeManager, TypeMessageStatutEnum.RECU)));
+		registerHandler(getView().getMessagesSupprimesLabel().addClickHandler(new AfficherMessagesClickEvent(placeManager, TypeMessageStatutEnum.SUPPRIME)));
+		registerHandler(getView().getMessagesEnvoyesLabel().addClickHandler(new AfficherMessagesClickEvent(placeManager, TypeMessageStatutEnum.ENVOYE)));
 
 		registerHandler(getView().getModifierDonneesLabel().addClickHandler(new ClickHandler() {
 			@Override
@@ -145,7 +142,7 @@ public class DockLayoutPagePresenter extends Presenter<DockLayoutPagePresenter.M
 			}
 		}));
 		System.out.println("Call onBind() method in class " + this.getClass().getName());
-		AfficherFavoris.process(dispatcher, getView());
+		AfficherFavoris.process(dispatcher, getView(), placeManager, 2);
 	}
 
 	@Override

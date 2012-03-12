@@ -40,6 +40,9 @@ public class ProfilPanel extends Composite {
 	@UiField
 	Image ajouterImage;
 
+	// @UiField
+	// Image profileDetailleImage;
+
 	public ProfilPanel() {
 		initWidget(ProfilPanel.uiBinder.createAndBindUi(this));
 	}
@@ -71,5 +74,9 @@ public class ProfilPanel extends Composite {
 	public Image getAjouterImage() {
 		return ajouterImage;
 	}
+
+	// public Image getProfileDetailleImage() {
+	// return profileDetailleImage;
+	// }
 
 }

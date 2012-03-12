@@ -33,6 +33,9 @@ public class FavorisPanel extends Composite {
 	@UiField
 	Image messageImage;
 
+	@UiField
+	Image profileDetailleImage;
+
 	String id;
 
 	private static FavorisPanelUiBinder uiBinder = GWT.create(FavorisPanelUiBinder.class);
@@ -64,5 +67,9 @@ public class FavorisPanel extends Composite {
 
 	public Image getMessageImage() {
 		return messageImage;
+	}
+
+	public Image getProfileDetailleImage() {
+		return profileDetailleImage;
 	}
 }

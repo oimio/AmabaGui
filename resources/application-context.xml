@@ -26,6 +26,7 @@
 			<list>
 				<value>ch.amaba.dao.model.Audit</value>
 				<value>ch.amaba.dao.model.CantonEntity</value>
+				<value>ch.amaba.dao.model.CaractereEntity</value>
 				<value>ch.amaba.dao.model.ContactEntity</value>
 				<value>ch.amaba.dao.model.DefaultEntity</value>
 				<value>ch.amaba.dao.model.InteretEntity</value>
@@ -34,12 +35,14 @@
 				<value>ch.amaba.dao.model.PaysEntity</value>
 				<value>ch.amaba.dao.model.PreferenceEntity</value>
 				<value>ch.amaba.dao.model.ProfessionEntity</value>
+				<value>ch.amaba.dao.model.RaceEntity</value>
 				<value>ch.amaba.dao.model.ReligionEntity</value>
 				<value>ch.amaba.dao.model.SexeEntity</value>
 				<value>ch.amaba.dao.model.SportEntity</value>
 				<value>ch.amaba.dao.model.TraductionEntity</value>
 				<value>ch.amaba.dao.model.UserAdressEntity</value>
 				<value>ch.amaba.dao.model.UserAmiEntity</value>
+				<value>ch.amaba.dao.model.UserCaractereEntity</value>
 				<value>ch.amaba.dao.model.UserConnectionEntity</value>
 				<value>ch.amaba.dao.model.UserContactEntity</value>
 				<value>ch.amaba.dao.model.UserCoquinEntity</value>
@@ -53,6 +56,7 @@
 				<value>ch.amaba.dao.model.UserPreferenceEntity</value>
 				<value>ch.amaba.dao.model.UserProfessionEntity</value>
 				<value>ch.amaba.dao.model.UserProfileEntity</value>
+				<value>ch.amaba.dao.model.UserRaceEntity</value>
 				<value>ch.amaba.dao.model.UserReligionEntity</value>
 				<value>ch.amaba.dao.model.UserSportEntity</value>
 				<value>ch.amaba.dao.model.UserStatutEntity</value>
@@ -76,6 +80,7 @@
 				<prop key="hibernate.max_fetch_depth">3</prop>
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
 				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
 
 			</props>
 		</property>
@@ -85,6 +90,10 @@
 	<!-- <prop key="sessionFactory" ref="sessionFactory" /> -->
 	<!-- </bean> -->
 	<bean id="amabaDao" class="ch.amaba.dao.AmabaDao">
+		<!-- <prop key="sessionFactory" ref="sessionFactory" /> -->
+		<constructor-arg index="0" ref="sessionFactory" />
+	</bean>
+		<bean id="messageDAO" class="ch.amaba.dao.MessageDAO">
 		<!-- <prop key="sessionFactory" ref="sessionFactory" /> -->
 		<constructor-arg index="0" ref="sessionFactory" />
 	</bean>

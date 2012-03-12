@@ -4,6 +4,12 @@
 	text-align: center;
 }
 
+.title {
+	font-weight: bold;
+	color: #0174DF;
+	text-align: center;
+}
+
 .menu {
 	font: bold 11px tahoma, arial, verdana, sans-serif;
 	color: #0174DF;
@@ -14,49 +20,85 @@
 
 .menuHeader {
 	color: #0174DF;
-	font-size:5px;
+	font-size: 5px;
 }
 
 .messageRow {
-	width:250px;
-	text-align:left;
-	float:left;
+	width: 250px;
+	text-align: left;
+	float: left;
 }
+
 .messageRowFrom {
-	width:125px;
-	text-align:left;
-	float:left;
+	width: 125px;
+	text-align: left;
+	float: left;
 }
+
 .messageRowCheckBox {
 	width: 7px;
-	text-align:center;
-	float:center;
+	text-align: center;
+	float: center;
 }
+
 .messageRowDate {
 	width: 120px;
-	text-align:left;
-	float:left;
+	text-align: left;
+	float: left;
 }
 
 .messageText {
-	margin:10px;
-	padding:10px;
-	text-align:left;
-	float:left;
+	margin: 10px;
+	padding: 10px;
+	text-align: left;
+	float: left;
 	color: #001001;
 	border: 1px solid lightgrey;
-	width:100%;
-	height:100%;
+	width: 100%;
+	height: 100%;
 }
+
 .messageDate {
 	font: bold 11px tahoma, arial, verdana, sans-serif;
 	color: #0174DF;
-	margin:5px;
-	padding:5px;
-	text-align:left;
-	float:left;
+	margin: 5px;
+	padding: 5px;
+	text-align: left;
+	float: left;
 	color: #001001;
 }
-.messageTextPanel{
-	width:100%;
+
+.messageTextPanel {
+	width: 100%;
+}
+
+.profileDetailleInfo {
+	font: bold 11px tahoma, arial, verdana, sans-serif;
+	color: #0174DF;
+}
+
+.amisTitle {
+	cursor: pointer;
+	cursor: hand;
+	font-weight: bold;
+	font-size: 11px;
+	padding: 3px;
+	border: 1px solid #bbbbbb;
+	border-bottom: 0px;
+	background: #d3def6 url(images/hborder.png) repeat-x 0px -989px;
+}
+
+.blockColor {
+	spacing:2px;
+	padding: 3px;
+	margin: 3px;
+	border: 1px solid #bbbbbb;
+	background: #d3def6 url(images/hborder.png) repeat-x 0px -989px;
+}
+
+.settingValue {
+	padding: 2px;
+	font: bold 10px tahoma, arial, verdana, sans-serif;
+	color: #0174DF;
+	border: 1px solid lightgrey;
 }

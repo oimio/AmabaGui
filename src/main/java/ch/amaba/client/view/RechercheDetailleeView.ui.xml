@@ -16,7 +16,9 @@
 			font-size: 9px;
 		}
 	</ui:style>
-	<ui:with type="ch.amaba.client.NameTokens" field="nameTokens"></ui:with>
+
+	<ui:with type="ch.amaba.client.utils.CssUtils" field="css" />
+
 	<g:VerticalPanel styleName='{style.small}'>
 		<g:Label>RECHERCHE DETAILLEE</g:Label>
 		<g:DecoratorPanel>
@@ -24,17 +26,17 @@
 				<table>
 					<tr>
 						<td>
-							<g:VerticalPanel width='80px'>
+							<g:VerticalPanel width='80px' styleName='{css.getCss.blockColor}'>
 								<g:RadioButton ui:field="homme" name='sexeDet'>Homme</g:RadioButton>
 								<g:RadioButton ui:field="femme" name='sexeDet'
 									value='true'>Femme</g:RadioButton>
 							</g:VerticalPanel>
 						</td>
 						<td>
-							<npui:AgePanel ui:field="agePanel" />
+							<npui:AgePanel ui:field="agePanel" styleName='{css.getCss.blockColor}'/>
 						</td>
 						<td>
-							<npui:MyVerticalPanel>
+							<npui:MyVerticalPanel styleName='{css.getCss.blockColor}'>
 								<g:Label> Genre </g:Label>
 								<g:ListBox ui:field="genreListBox">
 									<g:item value='-1'>Sans importance</g:item>
@@ -45,15 +47,15 @@
 							</npui:MyVerticalPanel>
 						</td>
 						<td>
-							<npui:CantonsListBoxPanel ui:field="cantonsListBoxPanel" />
+							<npui:CantonsListBoxPanel ui:field="cantonsListBoxPanel" styleName='{css.getCss.blockColor}'/>
 						</td>
 					</tr>
 
 					<tr>
 						<td>
-							<npui:MyVerticalPanel>
+							<npui:MyVerticalPanel styleName='{css.getCss.blockColor}'>
 								<g:Label>Célibataire</g:Label>
-								<g:ListBox title='Pas de marié ?! Choisissez OUI !'
+								<g:ListBox title='Surtout pas de personnes mariés ?! Choisissez OUI !'
 									ui:field="celibataireListBox">
 									<g:item value='-1'>Sans importance</g:item>
 									<g:item value='1'>Non</g:item>
@@ -62,7 +64,7 @@
 							</npui:MyVerticalPanel>
 						</td>
 						<td>
-							<npui:MyVerticalPanel>
+							<npui:MyVerticalPanel styleName='{css.getCss.blockColor}'>
 								<g:Label>Marié</g:Label>
 								<g:ListBox title='Vous rechercherchez une personne mariée ? Choisissez `Oui`'
 									ui:field="marieListBox">
@@ -73,7 +75,7 @@
 							</npui:MyVerticalPanel>
 						</td>
 						<td>
-							<npui:MyVerticalPanel>
+							<npui:MyVerticalPanel styleName='{css.getCss.blockColor}'>
 								<g:Label>Divorcé</g:Label>
 								<g:ListBox title='Absolument pas marié?! Choisissez NON !'
 									ui:field="divorceListBox">
@@ -84,7 +86,7 @@
 							</npui:MyVerticalPanel>
 						</td>
 						<td>
-							<npui:MyVerticalPanel>
+							<npui:MyVerticalPanel styleName='{css.getCss.blockColor}'>
 								<g:Label>Veuf</g:Label>
 								<g:ListBox title='Absolument pas marié?! Choisissez NON !'
 									ui:field="veufListBox">
@@ -98,7 +100,7 @@
 					<tr>
 						<td colspan='4'>
 							<g:DisclosurePanel open="false"
-								title="Cliquer pour afficher les filtres">
+								title="Cliquer pour afficher les filtres"  styleName='{css.getCss.blockColor}'>
 								<g:header>Critères physiques</g:header>
 								<g:VerticalPanel>
 									<g:HorizontalPanel verticalAlignment="middle"
@@ -162,7 +164,7 @@
 					<tr valign='top'>
 						<td colspan='4'>
 							<g:DisclosurePanel open="false"
-								title="Cliquer pour afficher les filtres">
+								title="Cliquer pour afficher les filtres" styleName='{css.getCss.blockColor}'>
 								<g:header>Intérêts, sports et musique</g:header>
 								<g:HorizontalPanel verticalAlignment="top">
 									<npui:ChoixMultiplePanel ui:field="interetPanel" />
@@ -175,7 +177,7 @@
 					<tr>
 						<td colspan='4'>
 							<g:DisclosurePanel open="false"
-								title="Cliquer pour afficher les filtres">
+								title="Cliquer pour afficher les filtres" styleName='{css.getCss.blockColor}'>
 								<g:header>Religion, profession, caractères</g:header>
 								<g:HorizontalPanel verticalAlignment="top">
 									<npui:ChoixMultiplePanel ui:field="religionPanel" />
@@ -188,7 +190,7 @@
 					<tr>
 						<td colspan='4'>
 							<g:DisclosurePanel open="false"
-								title="Cliquer pour afficher les filtres">
+								title="Cliquer pour afficher les filtres" styleName='{css.getCss.blockColor}'>
 								<g:header>Adultes (réservé à un public averti)</g:header>
 								<g:VerticalPanel styleName='{style.rose}'>
 									<g:HorizontalPanel verticalAlignment="middle"

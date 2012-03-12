@@ -27,7 +27,7 @@ import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.Widget;
 
 /**
- * ListBox des sports
+ * ListBox panel avec un header et un {@link ListBox}.
  * 
  * @author ROG
  */
@@ -38,17 +38,19 @@ public class ListBoxPanel extends Composite {
 	private static ListBoxUiBinder uiBinder = GWT.create(ListBoxUiBinder.class);
 
 	@UiField
-	ListBox listBox;
+	MyListBox listBox;
 
 	@UiField
 	Label headerLabel;
+	int visibleItems = 3;
 
 	public ListBoxPanel() {
 		initWidget(ListBoxPanel.uiBinder.createAndBindUi(this));
 		listBox.setWidth(IConstants.CHOIX_MULTIPLE_WIDTH);
+		listBox.setVisibleItemCount(visibleItems);
 	}
 
-	public ListBox getListBox() {
+	public MyListBox getListBox() {
 		return listBox;
 	}
 

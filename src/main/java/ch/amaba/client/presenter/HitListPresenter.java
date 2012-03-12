@@ -4,7 +4,8 @@ import java.util.Set;
 
 import ch.amaba.client.NameTokens;
 import ch.amaba.client.context.ContextUI;
-import ch.amaba.client.presenter.handler.PremierContactHandler;
+import ch.amaba.client.presenter.action.PremierContactClickEvent;
+import ch.amaba.client.presenter.action.ProfileDetailleClickEvent;
 import ch.amaba.client.ui.composite.ProfilPanel;
 import ch.amaba.client.utils.CantonUtils;
 import ch.amaba.client.utils.DateUtils;
@@ -77,9 +78,19 @@ public class HitListPresenter extends Presenter<HitListPresenter.MyView, HitList
 				pp.getPrenom().setText(userCriteria.getPrenom());
 				pp.getAge().setText(DateUtils.getAge(userCriteria.getDateNaissance()) + " ans");
 				pp.getCanton().setText(CantonUtils.getCantonTraduction(userCriteria.getIdCantons()));
-				pp.getAjouterImage().addClickHandler(new PremierContactHandler(dispatcher, userCriteria.getIdUser()));
-				pp.getMessagePriveImage().addClickHandler(new PremierContactHandler(dispatcher, userCriteria.getIdUser()));
+				pp.getAjouterImage().addClickHandler(new PremierContactClickEvent(dispatcher, userCriteria.getIdUser()));
+				pp.getMessagePriveImage().addClickHandler(new PremierContactClickEvent(dispatcher, userCriteria.getIdUser()));
+				// pp.getProfileDetailleImage().addClickHandler(new ClickHandler() {
+				// @Override
+				// public void onClick(ClickEvent event) {
+				// ContextUI.get().setProfileDetailleId(userCriteria.getIdUser());
+				// final PlaceRequest myRequest = new
+				// PlaceRequest(NameTokens.profileDetaille);
+				// placeManager.revealPlace(myRequest);
+				// }
+				// });
 
+				pp.getInfosImage().addClickHandler(new ProfileDetailleClickEvent(placeManager, userCriteria.getIdUser()));
 				table.setWidget(row, col, pp);
 				col++;
 				if (col % 6 == 0) {

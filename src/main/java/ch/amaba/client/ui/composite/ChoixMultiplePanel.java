@@ -41,7 +41,17 @@ public class ChoixMultiplePanel extends Composite {
 
 	public ChoixMultiplePanel(Class<? extends Enum<?>> enumClass, String type, String headerText) {
 		initWidget(ChoixMultiplePanel.uiBinder.createAndBindUi(this));
+		process(enumClass, type, headerText, 3, IConstants.MAX_SELECTION);
+	}
+
+	public ChoixMultiplePanel(Class<? extends Enum<?>> enumClass, String type, String headerText, final int visibleItems, final int maxSettings) {
+		initWidget(ChoixMultiplePanel.uiBinder.createAndBindUi(this));
+		process(enumClass, type, headerText, visibleItems, maxSettings);
+	}
+
+	private void process(Class<? extends Enum<?>> enumClass, String type, String headerText, final int visibleItems, final int maxSettings) {
 		final ListBox listBox = getListBoxPanel().getListBox();
+		listBox.setVisibleItemCount(visibleItems);
 		getListBoxPanel().setHeaderText(headerText);
 		// Populate listBox
 		ListBoxUtils.populateAvecTraduction(listBox, enumClass, type);
@@ -50,7 +60,15 @@ public class ChoixMultiplePanel extends Composite {
 		getListBoxPanel().getListBox().addClickHandler(new ClickHandler() {
 			@Override
 			public void onClick(ClickEvent event) {
-				if (settings.size() >= IConstants.MAX_SELECTION) {
+				if (maxSettings == 1) {
+					settings.clear();
+					final String text = listBox.getItemText(listBox.getSelectedIndex());
+					final String value = listBox.getValue(listBox.getSelectedIndex());
+					if ((value != null) && !IConstants.AUCUNE_SELECTION.equals(value)) {
+						getSelectionHorizontalPanel().clear();
+						ajouterPreference(text, value);
+					}
+				} else if (settings.size() >= maxSettings) {
 					Window.alert("L'ajout est limité à " + IConstants.MAX_SELECTION + " éléments.");
 				} else {
 					final String text = listBox.getItemText(listBox.getSelectedIndex());
@@ -69,10 +87,8 @@ public class ChoixMultiplePanel extends Composite {
 	 */
 	public void ajouterPreference(final String text, final String id) {
 		if (settings.get(id + text) == null) {
-
 			final MySettingPanel msp = new MySettingPanel(text, id);
 			msp.getFermerImage().addClickHandler(new ClickHandler() {
-
 				@Override
 				public void onClick(ClickEvent event) {
 					if (settings.remove(id + text) != null) {

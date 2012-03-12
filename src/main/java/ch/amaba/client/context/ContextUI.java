@@ -65,4 +65,17 @@ public class ContextUI {
 		this.typeMessageStatutEnum = typeMessageStatutEnum;
 	}
 
+	Long profileDetailleId;
+
+	public Long getProfileDetailleId() {
+		return profileDetailleId;
+	}
+
+	/**
+	 * L'id du profile détaillé que l'on souhaite voir.
+	 * */
+	public void setProfileDetailleId(final Long profileDetailleId) {
+		this.profileDetailleId = profileDetailleId;
+	}
+
 }

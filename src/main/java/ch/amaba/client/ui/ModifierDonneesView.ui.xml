@@ -1,0 +1,180 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:npui="urn:import:ch.amaba.client.ui.composite">
+
+	<ui:with type="ch.amaba.client.utils.CssUtils" field="css" />
+
+	<g:DecoratorPanel width="100%">
+		<g:VerticalPanel ui:field="htmlPanel" spacing="1">
+			<g:DisclosurePanel animationEnabled="true" width="400px"
+				open="true">
+				<g:customHeader>
+					<g:HorizontalPanel verticalAlignment="bottom"
+						height="40px">
+						<g:Image url="images/chef.png"></g:Image>
+						<g:Label title='Devenir membre'>Modifier mes données personnelles</g:Label>
+					</g:HorizontalPanel>
+				</g:customHeader>
+				<g:HTMLPanel>
+					<table>
+						<tr>
+							<td colspan='3'>
+								<g:HorizontalPanel spacing="2"
+									verticalAlignment="top">
+									<g:VerticalPanel>
+										<npui:MyVerticalPanel styleName='{css.getCss.blockColor}'>
+											<g:Label>Je suis(*) </g:Label>
+											<npui:MyListBox ui:field="codeSexeListBox">
+												<g:item value='-1'>-- - --</g:item>
+												<g:item value='1'>un Homme</g:item>
+												<g:item value='2'>une Femme</g:item>
+											</npui:MyListBox>
+										</npui:MyVerticalPanel>
+										<npui:MyVerticalPanel styleName='{css.getCss.blockColor}'>
+											<g:Label>Date naissance (*)</g:Label>
+											<g:HorizontalPanel>
+												<npui:MyTextBox width="18px" maxLength="2"
+													ui:field="jourTextBox" />
+												<npui:MyTextBox width="18px" maxLength="2"
+													ui:field="moisTextBox" />
+												<npui:MyTextBox width="36px" maxLength="4"
+													ui:field="anneeTextBox" />
+											</g:HorizontalPanel>
+										</npui:MyVerticalPanel>
+									</g:VerticalPanel>
+									<g:VerticalPanel>
+										<npui:MyVerticalPanel styleName='{css.getCss.blockColor}'>
+											<g:Label>Nom(*)</g:Label>
+											<npui:MyTextBox ui:field="nomTextBox"
+												maxLength="75" />
+										</npui:MyVerticalPanel>
+										<npui:MyVerticalPanel styleName='{css.getCss.blockColor}'>
+											<g:Label>Prénom(*)</g:Label>
+											<npui:MyTextBox ui:field="prenomTextBox"
+												maxLength="75" />
+										</npui:MyVerticalPanel>
+									</g:VerticalPanel>
+
+									<g:VerticalPanel>
+										<npui:MyVerticalPanel styleName='{css.getCss.blockColor}'>
+											<g:Label>Célibataire</g:Label>
+											<npui:MyListBox
+												title='Surtout pas de personnes mariés ?! Choisissez OUI !'
+												ui:field="celibataireListBox">
+												<g:item value='-1'>Sans importance</g:item>
+												<g:item value='1'>Non</g:item>
+												<g:item value='2'>Oui</g:item>
+											</npui:MyListBox>
+										</npui:MyVerticalPanel>
+										<npui:MyVerticalPanel styleName='{css.getCss.blockColor}'>
+											<g:Label>Marié</g:Label>
+											<npui:MyListBox
+												title='Vous rechercherchez une personne mariée ? Choisissez `Oui`'
+												ui:field="marieListBox">
+												<g:item value='-1'>Sans importance</g:item>
+												<g:item value='0'>Non</g:item>
+												<g:item value='1'>Oui</g:item>
+											</npui:MyListBox>
+										</npui:MyVerticalPanel>
+									</g:VerticalPanel>
+									<g:VerticalPanel>
+										<npui:MyVerticalPanel styleName='{css.getCss.blockColor}'>
+											<g:Label>Divorcé</g:Label>
+											<npui:MyListBox title='Absolument pas marié?! Choisissez NON !'
+												ui:field="divorceListBox">
+												<g:item value='-1'>Sans importance</g:item>
+												<g:item value='1'>Non</g:item>
+												<g:item value='2'>Oui</g:item>
+											</npui:MyListBox>
+										</npui:MyVerticalPanel>
+										<npui:MyVerticalPanel styleName='{css.getCss.blockColor}'>
+											<g:Label>Veuf</g:Label>
+											<npui:MyListBox title='Absolument pas marié?! Choisissez NON !'
+												ui:field="veufListBox">
+												<g:item value='-1'>Sans importance</g:item>
+												<g:item value='1'>Non</g:item>
+												<g:item value='2'>Oui</g:item>
+											</npui:MyListBox>
+										</npui:MyVerticalPanel>
+									</g:VerticalPanel>
+								</g:HorizontalPanel>
+							</td>
+						</tr>
+						<tr>
+							<td colspan='3'>
+								<g:HorizontalPanel>
+									<npui:PoidsPanel ui:field="poidsPanel" />
+									<npui:TaillePanel ui:field="taillePanel" />
+									<npui:ChoixMultiplePanel ui:field="couleurCheveuxPanel" />
+									<npui:ChoixMultiplePanel ui:field="couleurYeuxPanel" />
+									<npui:ChoixMultiplePanel ui:field="racePanel" />
+								</g:HorizontalPanel>
+							</td>
+						</tr>
+						<tr>
+							<td colspan='3'>
+								<g:HorizontalPanel>
+									<npui:MyVerticalPanel styleName='{css.getCss.blockColor}'>
+										<g:Label>Ancien Password(*)</g:Label>
+										<npui:MyPasswordTextBox ui:field="passwordAncienTextBox"
+											maxLength="45" />
+									</npui:MyVerticalPanel>
+									<npui:MyVerticalPanel styleName='{css.getCss.blockColor}'>
+										<g:Label>Nouveau Password(*)</g:Label>
+										<npui:MyPasswordTextBox ui:field="passwordTextBox"
+											maxLength="45" />
+									</npui:MyVerticalPanel>
+									<npui:MyVerticalPanel styleName='{css.getCss.blockColor}'>
+										<g:Label>Nouveau Password confirmez(*)</g:Label>
+										<npui:MyPasswordTextBox ui:field="passwordRepeatTextBox"
+											maxLength="45" />
+									</npui:MyVerticalPanel>
+								</g:HorizontalPanel>
+							</td>
+						</tr>
+						<tr>
+							<td colspan='2'>
+								<npui:CantonsListBoxPanel ui:field="cantonsListBoxPanel"
+									styleName='{css.getCss.blockColor}' />
+							</td>
+						</tr>
+						<tr>
+							<td colspan='3'>
+								<g:DisclosurePanel animationEnabled="true"
+									open="false">
+									<g:customHeader>
+										<g:HorizontalPanel verticalAlignment="bottom"
+											height="40px">
+											<g:Image url="images/chef.png"></g:Image>
+											<g:Label title='Devenir membre'>Sports</g:Label>
+										</g:HorizontalPanel>
+									</g:customHeader>
+									<g:VerticalPanel>
+										<g:HorizontalPanel>
+											<npui:ChoixMultiplePanel ui:field="sportPanel" />
+											<npui:ChoixMultiplePanel ui:field="musicPanel" />
+											<npui:ChoixMultiplePanel ui:field="interetPanel" />
+										</g:HorizontalPanel>
+										<g:HorizontalPanel>
+											<npui:ChoixMultiplePanel ui:field="professionPanel" />
+											<npui:ChoixMultiplePanel ui:field="religionPanel" />
+											<npui:ChoixMultiplePanel ui:field="caracterePanel" />
+										</g:HorizontalPanel>
+									</g:VerticalPanel>
+
+								</g:DisclosurePanel>
+
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<g:Button text='Modifier mes données' ui:field="modifierButton" />
+							</td>
+						</tr>
+					</table>
+				</g:HTMLPanel>
+
+			</g:DisclosurePanel>
+		</g:VerticalPanel>
+	</g:DecoratorPanel>
+</ui:UiBinder> 

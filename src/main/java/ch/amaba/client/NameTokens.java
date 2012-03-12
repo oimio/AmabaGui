@@ -41,6 +41,8 @@ public class NameTokens {
 
 	public static final String messages = "!messages";
 
+	public static final String profileDetaille = "!profileDetaille";
+
 	public static String getLoginPage() {
 		return NameTokens.login;
 	}

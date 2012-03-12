@@ -1,13 +1,12 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-	xmlns:g="urn:import:com.google.gwt.user.client.ui">
-
-	<ui:with type="ch.amaba.client.NameTokens"
-		field="nameTokens"></ui:with>
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:m="urn:import:ch.amaba.client.ui.composite"
+	>
 
 	<g:VerticalPanel verticalAlignment="middle"
 		horizontalAlignment="center">
 		<g:Label>Cantons</g:Label>
-		<g:ListBox ui:field="cantonsListBox"></g:ListBox>
+		<m:MyListBox ui:field="cantonsListBox"/>
 	</g:VerticalPanel>
 </ui:UiBinder> 

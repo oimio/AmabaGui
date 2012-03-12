@@ -5,7 +5,7 @@ import java.util.Set;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 
-import ch.amaba.model.bo.UserCriteria;
+import ch.amaba.model.bo.AmiDTO;
 import ch.amaba.server.utils.SpringFactory;
 import ch.amaba.shared.ListeFavorisAction;
 import ch.amaba.shared.ListeFavorisResult;
@@ -29,7 +29,12 @@ public class ListeFavorisHandler extends AbstractHandler implements ActionHandle
 	@Override
 	public ListeFavorisResult execute(ListeFavorisAction action, ExecutionContext context) throws ActionException {
 
-		final Set<UserCriteria> listeFavoris = SpringFactory.get().getDao().listeFavoris(getUserCriteriaSession().getIdUser());
+		Long idUser = action.getIdAmi();
+		if (idUser == null) {
+			idUser = getUserCriteriaSession().getIdUser();
+		}
+
+		final Set<AmiDTO> listeFavoris = SpringFactory.get().getDao().findAmis(idUser);
 
 		return new ListeFavorisResult(listeFavoris);
 	}

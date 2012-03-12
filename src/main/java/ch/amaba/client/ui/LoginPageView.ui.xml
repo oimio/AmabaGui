@@ -14,24 +14,27 @@
 			padding: 2px;
 		}
 	</ui:style>
+	
+	<ui:with type="ch.amaba.client.utils.CssUtils" field="css" />
+	
 	<g:DecoratorPanel>
 		<g:HTMLPanel ui:field="htmlPanel">
 			<table border='0'>
 				<tr>
 					<td colspan='2'>
-						<g:Label text="Authentification"></g:Label>
+						<g:Label text="Authentification" styleName='{css.getCss.blockColor}'></g:Label>
 					</td>
 				</tr>
 				<tr>
 					<td colspan='2'>
 						<g:TextBox text="Email" ui:field="emailAuthTextBox"
-							maxLength="55" width="180px"></g:TextBox>
+							maxLength="55" width="180px" styleName='{css.getCss.blockColor}'/>
 					</td>
 				</tr>
 				<tr align='left'>
 					<td width='170px'>
 						<g:PasswordTextBox text="Password" ui:field="passwordAuthTextBox"
-							width="180px">123</g:PasswordTextBox>
+							width="180px" styleName='{css.getCss.blockColor}'>123</g:PasswordTextBox>
 					</td>
 					<td>
 						<g:Button text="Connection" width="100px" ui:field="sendButton" />

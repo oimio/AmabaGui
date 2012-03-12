@@ -18,13 +18,15 @@
 			</tr>
 			<tr>
 				<td colspan='2'>
-					<g:HorizontalPanel spacing="2" width="100%" horizontalAlignment="center" verticalAlignment="middle">
+					<g:HorizontalPanel spacing="2" width="100%"
+						horizontalAlignment="center" verticalAlignment="middle">
 						<g:Image styleName="cursor" url="images/ajouter.png"
 							ui:field="ajouterImage" title="Ajouter à vos favoris" />
 						<g:Image styleName="cursor" url="images/courrier.png"
 							ui:field="messagePriveImage" title="Envoyer un message privé" />
 						<g:Image styleName="cursor" url="images/infos.png"
 							ui:field="infosImage" title="Afficher le profil détaillé" />
+						
 					</g:HorizontalPanel>
 				</td>
 			</tr>

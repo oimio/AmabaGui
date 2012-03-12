@@ -37,6 +37,18 @@ public class CacheUtils {
 		CacheUtils.cantons = cantons;
 	}
 
+	/**
+	 * Retourne la traduction pour la clé et value (voir DB, table traduction);
+	 * */
+	public static String getTraduction(String keyDB, String valueDB) {
+		String traduction = valueDB;
+		final Map<String, String> map = CacheUtils.getTraductions().get(keyDB);
+		if ((map != null) && (map.size() > 0)) {
+			traduction = map.get(valueDB);
+		}
+		return traduction;
+	}
+
 	public static Map<String, Map<String, String>> getTraductions() {
 		return CacheUtils.traductions;
 	}

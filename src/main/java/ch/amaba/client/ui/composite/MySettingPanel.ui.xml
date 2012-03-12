@@ -1,15 +1,20 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
-
-<ui:style>
-		.border {
-			border: 1px solid red;
-		}
-	</ui:style>
-	<g:HorizontalPanel verticalAlignment="bottom" height="16px"
-		spacing="2" styleName='{style.border}'>
-		<g:Label ui:field="label" width='80px'/>
-		<g:Image url='images/close_small.png' ui:field="fermerImage" />
-	</g:HorizontalPanel>
+	<ui:with type="ch.amaba.client.utils.CssUtils" field="css" />
+	<g:HTMLPanel styleName='{css.getCss.settingValue}'>
+		<table width='100%'>
+			<tr>
+				<td align='left'>
+					<g:Label ui:field="label" width="100%" />
+				</td>
+				<td align='right'>
+					<g:FlowPanel>
+						<g:Image url='images/close_small.png' ui:field="fermerImage"
+							width='16px' />
+					</g:FlowPanel>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
 </ui:UiBinder> 

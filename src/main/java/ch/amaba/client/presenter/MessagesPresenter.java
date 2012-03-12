@@ -5,8 +5,8 @@ import java.util.Set;
 
 import ch.amaba.client.NameTokens;
 import ch.amaba.client.context.ContextUI;
-import ch.amaba.client.presenter.handler.ChangeMessageStatutHandler;
-import ch.amaba.client.presenter.handler.GetMessageTextHandler;
+import ch.amaba.client.presenter.action.ChangeMessageStatutClickEvent;
+import ch.amaba.client.presenter.action.GetMessageTextClickEvent;
 import ch.amaba.client.ui.composite.MessagePanel;
 import ch.amaba.client.utils.DateUtils;
 import ch.amaba.model.bo.MessageDTO;
@@ -105,7 +105,7 @@ public class MessagesPresenter extends Presenter<MessagesPresenter.MyView, Messa
 	protected void onBind() {
 		super.onBind();
 		messagesTable = getView().getMessagesTable();
-		getView().getSupprimerButton().addClickHandler(new ChangeMessageStatutHandler(dispatcher, getSelectionIds(), getView(), TypeMessageStatutEnum.SUPPRIME));
+		getView().getSupprimerButton().addClickHandler(new ChangeMessageStatutClickEvent(dispatcher, getSelectionIds(), getView(), TypeMessageStatutEnum.SUPPRIME));
 	}
 
 	@Override
@@ -153,7 +153,7 @@ public class MessagesPresenter extends Presenter<MessagesPresenter.MyView, Messa
 					if (TypeMessageStatutEnum.NON_LU.equals(messageDTO.getTypeMessageStatutEnum())) {
 						messagePanelRow.getSujet().addStyleName("fontBold");
 					}
-					messagePanelRow.getSujet().addClickHandler(new GetMessageTextHandler(dispatcher, messageDTO, getView()));
+					messagePanelRow.getSujet().addClickHandler(new GetMessageTextClickEvent(dispatcher, messageDTO, getView()));
 					messagePanelRow.setTypeMessageStatutEnum(messageDTO.getTypeMessageStatutEnum());
 					messagesTable.setWidget(row++, 0, messagePanelRow);
 				}

@@ -2,9 +2,6 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 
-	<ui:with type="ch.amaba.client.NameTokens"
-		field="nameTokens"></ui:with>
-
 	<g:VerticalPanel verticalAlignment="middle" horizontalAlignment="center">
 		<g:Label>Age de </g:Label>
 		<g:HorizontalPanel verticalAlignment="middle" spacing='3'>

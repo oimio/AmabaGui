@@ -24,4 +24,15 @@ public interface IMyCss extends CssResource {
 	public String messageDate();
 
 	public String messageTextPanel();
+
+	public String profileDetailleInfo();
+
+	public String amisTitle();
+
+	public String blockColor();
+
+	public String title();
+
+	/** Le css pour un setting (value + bouton supprimer) */
+	public String settingValue();
 }

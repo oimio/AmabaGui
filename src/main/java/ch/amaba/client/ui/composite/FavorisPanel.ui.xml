@@ -27,6 +27,8 @@
 									ui:field="messageImage" title='Envoyer un message privé' />
 								<g:Image url='images/close_small.png' styleName="cursor"
 									ui:field="fermerImage" title='Supprimer des favoris' />
+									<g:Image url='images/infos.png' ui:field="profileDetailleImage"
+							styleName="cursor" title='Voir le profile détaillé' />
 							</g:HorizontalPanel>
 							<g:Label ui:field="ageLabel" />
 							<g:Label ui:field="cantonLabel" />

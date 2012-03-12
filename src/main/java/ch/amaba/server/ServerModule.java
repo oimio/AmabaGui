@@ -12,6 +12,7 @@ import ch.amaba.shared.LoadFullUserAction;
 import ch.amaba.shared.LoadTraductionsAction;
 import ch.amaba.shared.MessageTextAction;
 import ch.amaba.shared.MessagesAction;
+import ch.amaba.shared.ProfileDetailleAction;
 import ch.amaba.shared.RechercheDetailleeAction;
 import ch.amaba.shared.SupprimerDefinitivementAction;
 
@@ -40,5 +41,6 @@ public class ServerModule extends HandlerModule {
 		bindHandler(SupprimerDefinitivementAction.class, SupprimerDefinitivementHandler.class);
 		bindHandler(ChangerStatutMessageAction.class, ChangerStatutMessageHandler.class);
 		bindHandler(MessageTextAction.class, GetMessageTextHandler.class);
+		bindHandler(ProfileDetailleAction.class, ProfileDetailleHandler.class);
 	}
 }
