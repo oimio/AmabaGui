@@ -1,0 +1,11 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with type="ch.amaba.client.utils.CssUtils" field="css"/>
+	<g:HorizontalPanel width="100%" verticalAlignment="middle" horizontalAlignment="left">
+		<g:CheckBox ui:field="selection" styleName='{css.getCss.messageRowCheckBox}'/>
+		<g:Label ui:field="date" styleName='{css.getCss.messageRowDate}' />
+		<g:Label ui:field="from" styleName='{css.getCss.messageRowFrom}' />
+		<g:Label ui:field="sujet" styleName='{css.getCss.messageRow}' />
+	</g:HorizontalPanel>
+</ui:UiBinder> 

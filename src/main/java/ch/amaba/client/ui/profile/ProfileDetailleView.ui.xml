@@ -1,0 +1,128 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:npui="urn:import:ch.amaba.client.ui.composite">
+
+	<ui:with type="ch.amaba.client.NameTokens" field="nameTokens"></ui:with>
+	<ui:style>
+		.error {
+			background-color: red;
+			border: 1px solid red;
+			font-weight: bold;
+			color: white;
+			margin: 5px;
+			padding: 2px;
+		}
+	</ui:style>
+	<ui:with type="ch.amaba.client.utils.CssUtils" field="css" />
+
+	<g:HTMLPanel ui:field="htmlPanel" styleName='{css.getCss.messageTextPanel}'
+		height="150px" width='100%'>
+
+		<table cellpadding='0' cellspacing='0' border='1'>
+			<tr valign='top'>
+				<td align='left'>
+					<table cellpadding='0' cellspacing='0' border='1'>
+						<tr valign='top'>
+							<td>
+								<g:Image ui:field="photoPrincipale" />
+							</td>
+							<td>
+								<table>
+									<tr>
+										<td>
+											<g:Label ui:field="sexe" styleName='{css.getCss.profileDetailleInfo}'
+												width="100%" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<g:HorizontalPanel spacing="2">
+												<g:Label ui:field="nom" styleName='{css.getCss.profileDetailleInfo}' />
+												<g:Label ui:field="prenom" styleName='{css.getCss.profileDetailleInfo}' />
+												<g:Label text=', ' styleName='{css.getCss.profileDetailleInfo}' />
+												<g:Label ui:field="age" styleName='{css.getCss.profileDetailleInfo}' />
+											</g:HorizontalPanel>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td>
+					<g:VerticalPanel>
+						<g:Label ui:field="nombreEnfants" styleName='{css.getCss.profileDetailleInfo}'
+							width="100%" />
+						<g:Label ui:field="divorce" styleName='{css.getCss.profileDetailleInfo}'
+							width="100%" />
+						<g:Label ui:field="marie" styleName='{css.getCss.profileDetailleInfo}'
+							width="100%" />
+						<g:Label ui:field="veuf" styleName='{css.getCss.profileDetailleInfo}'
+							width="100%" />
+						<g:Label ui:field="genre" styleName='{css.getCss.profileDetailleInfo}'
+							width="100%" />
+						<g:Label ui:field="relationSerieuse" styleName='{css.getCss.profileDetailleInfo}'
+							width="100%" />
+						<g:FlowPanel ui:field="races" />
+						<g:FlowPanel ui:field="caracteres" />
+					</g:VerticalPanel>
+				</td>
+				<td>
+					<table>
+						<tr>
+							<td>Taille</td>
+							<td>
+								<g:Label ui:field="taille" />
+							</td>
+						</tr>
+						<tr>
+							<td>Poids</td>
+							<td>
+								<g:Label ui:field="poids" />
+							</td>
+						</tr>
+						<tr>
+							<td>Couleur cheveux</td>
+							<td>
+								<g:Label ui:field="cheveux" />
+							</td>
+						</tr>
+						<tr>
+							<td>Couleur yeux</td>
+							<td>
+								<g:Label ui:field="yeux" />
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td colspan='3'>
+					<g:ScrollPanel>
+						<g:HorizontalPanel verticalAlignment="top"
+							horizontalAlignment="left">
+							<g:FlowPanel ui:field="interets" />
+							<g:FlowPanel ui:field="musiques" />
+							<g:FlowPanel ui:field="sports" />
+							<g:FlowPanel ui:field="religions" />
+							<g:FlowPanel ui:field="professions" />
+						</g:HorizontalPanel>
+					</g:ScrollPanel>
+				</td>
+			</tr>
+			<tr>
+				<td colspan='3'>
+					<g:ScrollPanel>
+						<g:Label text="Amis" styleName="{css.getCss.amisTitle}" />
+					</g:ScrollPanel>
+				</td>
+			</tr>
+			<tr>
+				<td colspan='3'>
+					<g:ScrollPanel ui:field="favorisPanel" />
+				</td>
+			</tr>
+		</table>
+
+	</g:HTMLPanel>
+</ui:UiBinder> 

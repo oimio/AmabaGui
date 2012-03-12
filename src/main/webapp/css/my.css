@@ -16,22 +16,74 @@ html,body {
 	font: normal 11px tahoma, arial, verdana, sans-serif;
 }
 
-.border{
-  border: 1px solid black;
+.gwt-Label {
+	font: normal 11px tahoma, arial, verdana, sans-serif;
+}
+
+.gwt-StackLayoutPanel .gwt-StackLayoutPanelHeader {
+  cursor: pointer;
+  cursor: hand;
+  font-weight: bold;
+  font-size: 8px;
+  padding: 3px;
+  border: 1px solid #bbbbbb;
+  border-bottom: 0px;
+  background: #d3def6 url(images/hborder.png) repeat-x 0px -989px;
+}
+.border {
+	border: 1px solid black;
 }
 
 #my-button-id {
 	font-weight: bold;
 }
 
-#border{
-  border: 1px solid black;
-}
-#error-background {
-	background-color: red;
-	color:white;
+#border {
+	border: 1px solid black;
 }
 
-.cursor{
-  cursor:pointer;
+#error-background {
+	background-color: red;
+	color: white;
+}
+
+.cursor {
+	cursor: pointer;
+}
+
+/* Survol des images */
+.glass {
+	cursor: pointer;
+	background-color: #000;
+	opacity: 0.7;
+	filter: alpha(opacity = 70);
+}
+
+.photoPrincipale {
+	background-color: blue;
+	color: white;
+}
+
+.table-header {
+	padding: 2px;
+	background-color: blue;
+	color: white;
+	font: bold 11px tahoma, arial, verdana, sans-serif;
+}
+
+.fontBold{
+  font-weight:bold;
+}
+
+.myLabel {
+	height: 14px;
+	border: 1px solid lightgrey;
+	background-color: #EEEFFF;
+	font: bold 10px tahoma, arial, verdana, sans-serif;
+}
+.myListBox {
+	height: 19px;
+	border: 1px solid lightgrey;
+	background-color: #EEEFFF;
+	font: bold 10px tahoma, arial, verdana, sans-serif;
 }

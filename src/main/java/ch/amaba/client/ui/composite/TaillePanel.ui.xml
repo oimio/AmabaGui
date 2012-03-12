@@ -1,0 +1,20 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:npui="urn:import:ch.amaba.client.ui.composite">
+
+	<ui:with type="ch.amaba.client.utils.CssUtils" field="css" />
+	<npui:MyVerticalPanel styleName='{css.getCss.blockColor}'>
+		<g:Label>Taille</g:Label>
+		<npui:MyListBox title='Liste des sélections possibles' ui:field="tailleListBox">
+			<g:item value='-1'>--</g:item>
+			<g:item value='140'>1,40 m</g:item>
+			<g:item value='150'>1,50 m</g:item>
+			<g:item value='160'>1,60 m</g:item>
+			<g:item value='170'>1,70 m</g:item>
+			<g:item value='180'>1,80 m</g:item>
+			<g:item value='190'>1,90 m</g:item>
+			<g:item value='200'>2,00 m</g:item>
+			<g:item value='210'>2,10 m</g:item>
+		</npui:MyListBox>
+	</npui:MyVerticalPanel>
+</ui:UiBinder> 

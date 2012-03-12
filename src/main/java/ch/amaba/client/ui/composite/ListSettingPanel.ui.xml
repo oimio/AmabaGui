@@ -1,0 +1,11 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+	<ui:with type="ch.amaba.client.utils.CssUtils" field="css"/>
+	
+	<g:VerticalPanel verticalAlignment="bottom" horizontalAlignment="center" spacing="2" styleName='{css.getCss.blockColor}'>
+		<g:Label ui:field="label" width='80px' styleName='{css.getCss.title}'/>
+		<g:VerticalPanel ui:field="list"/>
+	</g:VerticalPanel>
+</ui:UiBinder> 

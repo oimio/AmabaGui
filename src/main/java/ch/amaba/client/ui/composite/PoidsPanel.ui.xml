@@ -1,0 +1,21 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:npui="urn:import:ch.amaba.client.ui.composite">
+
+	<ui:with type="ch.amaba.client.utils.CssUtils" field="css" />
+	<npui:MyVerticalPanel styleName='{css.getCss.blockColor}'>
+		<g:Label>Poids</g:Label>
+		<npui:MyListBox title='Liste des sélections possibles' ui:field="poidsListBox">
+			<g:item value='-1'>--</g:item>
+			<g:item value='40'>40</g:item>
+			<g:item value='60'>50</g:item>
+			<g:item value='60'>60</g:item>
+			<g:item value='60'>70</g:item>
+			<g:item value='80'>80</g:item>
+			<g:item value='60'>90</g:item>
+			<g:item value='100'>100</g:item>
+			<g:item value='120'>120</g:item>
+		</npui:MyListBox>
+	</npui:MyVerticalPanel>
+
+</ui:UiBinder> 
